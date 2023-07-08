@@ -1,8 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dy2805chf0en1"]
+[gd_scene load_steps=12 format=3 uid="uid://dy2805chf0en1"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_rwybm"]
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_56mxv"]
-[ext_resource type="Texture2D" uid="uid://dsk1vxckx8f1b" path="res://Project Dish Bitch.png" id="3_u8e07"]
+[ext_resource type="Texture2D" uid="uid://bmdegv2rjq7j2" path="res://Assets/TitleText.png" id="3_4eo46"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="4_xrb50"]
 [ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="5_l162h"]
 
@@ -72,6 +72,27 @@ _data = {
 "Fade_Out": SubResource("Animation_evt7g")
 }
 
+[sub_resource type="Animation" id="Animation_pm230"]
+resource_name = "Title_Float"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG/Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 2.3, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1.03526, 1, 1, 1),
+"update": 0,
+"values": [Vector2(340, 154), Vector2(340, 161), Vector2(340, 169), Vector2(340, 149), Vector2(340, 139), Vector2(340, 154)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k11sc"]
+_data = {
+"Title_Float": SubResource("Animation_pm230")
+}
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -113,9 +134,9 @@ text = "Exit"
 layout_mode = 0
 offset_left = 340.0
 offset_top = 154.0
-offset_right = 1530.0
-offset_bottom = 423.0
-texture = ExtResource("3_u8e07")
+offset_right = 1640.0
+offset_bottom = 402.0
+texture = ExtResource("3_4eo46")
 
 [node name="SelectUIAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_xrb50")
@@ -144,6 +165,12 @@ libraries = {
 "": SubResource("AnimationLibrary_ulqrb")
 }
 
+[node name="TitleFloat" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_k11sc")
+}
+
 [connection signal="pressed" from="BG/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="BG/Exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="TitleFloat" to="." method="_on_title_float_animation_finished"]

@@ -1,0 +1,118 @@
+[gd_scene load_steps=14 format=3 uid="uid://ffsr87kc4uqg"]
+
+[ext_resource type="Script" path="res://Location.gd" id="1_crnwd"]
+[ext_resource type="Texture2D" uid="uid://begq5evsdyt3d" path="res://Assets/Meadow.png" id="2_x80yp"]
+[ext_resource type="Texture2D" uid="uid://c3wqtl8qrylny" path="res://Assets/castle_background.png" id="5_8yrtu"]
+[ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="5_d3tyh"]
+[ext_resource type="Texture2D" uid="uid://d21j44nwn2cs6" path="res://Assets/HORSEY.jpg" id="6_cejmu"]
+[ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="7_mnbfk"]
+[ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="8_7065l"]
+[ext_resource type="Texture2D" uid="uid://cmkhqr1h41nci" path="res://Assets/summer_meadow_solid_image.png" id="8_v0uek"]
+[ext_resource type="Texture2D" uid="uid://bdossjbsnu20m" path="res://Assets/StableText.png" id="10_783p7"]
+[ext_resource type="Texture2D" uid="uid://bh6g2rhqn16r3" path="res://Assets/CastleText.png" id="10_qcnpk"]
+[ext_resource type="Texture2D" uid="uid://b8xs480gqhi35" path="res://Assets/LocationPrompt.png" id="11_ptq6y"]
+
+[sub_resource type="Animation" id="Animation_5bilk"]
+resource_name = "BG_Movement"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5750, -3250), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0lk8f"]
+_data = {
+"BG_Movement": SubResource("Animation_5bilk")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_crnwd")
+
+[node name="BG" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_right = 7680.0
+offset_bottom = 4320.0
+texture = ExtResource("5_d3tyh")
+
+[node name="BGAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0lk8f")
+}
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_mnbfk")
+autoplay = true
+
+[node name="SelectUIAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_7065l")
+volume_db = 20.0
+
+[node name="BattlefieldButton" type="Button" parent="."]
+offset_left = 177.0
+offset_top = 305.0
+offset_right = 607.0
+offset_bottom = 549.0
+icon = ExtResource("5_8yrtu")
+expand_icon = true
+
+[node name="StableButton" type="Button" parent="."]
+offset_left = 1244.0
+offset_top = 314.0
+offset_right = 1674.0
+offset_bottom = 558.0
+icon = ExtResource("6_cejmu")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MeadowButton" type="Button" parent="."]
+offset_left = 704.0
+offset_top = 309.0
+offset_right = 1134.0
+offset_bottom = 553.0
+icon = ExtResource("8_v0uek")
+expand_icon = true
+
+[node name="MeadowText" type="TextureRect" parent="."]
+offset_left = 776.0
+offset_top = 545.0
+offset_right = 1276.0
+offset_bottom = 695.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_x80yp")
+
+[node name="StableText" type="TextureRect" parent="."]
+offset_left = 1308.0
+offset_top = 552.0
+offset_right = 1808.0
+offset_bottom = 702.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_783p7")
+
+[node name="CastleText" type="TextureRect" parent="."]
+offset_left = 259.0
+offset_top = 545.0
+offset_right = 759.0
+offset_bottom = 695.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_qcnpk")
+
+[node name="PrompText" type="TextureRect" parent="."]
+offset_left = 397.0
+offset_top = 728.0
+offset_right = 2319.0
+offset_bottom = 1035.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_ptq6y")
+
+[connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
+[connection signal="pressed" from="BattlefieldButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="StableButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MeadowButton" to="." method="_on_button_pressed"]
