@@ -1,0 +1,149 @@
+[gd_scene load_steps=10 format=3 uid="uid://dy2805chf0en1"]
+
+[ext_resource type="Script" path="res://mainmenu.gd" id="1_rwybm"]
+[ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_56mxv"]
+[ext_resource type="Texture2D" uid="uid://dsk1vxckx8f1b" path="res://Project Dish Bitch.png" id="3_u8e07"]
+[ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="4_xrb50"]
+[ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="5_l162h"]
+
+[sub_resource type="Animation" id="Animation_yml0d"]
+resource_name = "Fade_In"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kshco"]
+_data = {
+"Fade_In": SubResource("Animation_yml0d")
+}
+
+[sub_resource type="Animation" id="Animation_evt7g"]
+resource_name = "Fade_Out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ulqrb"]
+_data = {
+"Fade_Out": SubResource("Animation_evt7g")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rwybm")
+
+[node name="BG" type="TextureRect" parent="."]
+show_behind_parent = true
+light_mask = 512
+visibility_layer = 256
+z_as_relative = false
+layout_mode = 0
+offset_right = 1917.0
+offset_bottom = 1080.0
+texture = ExtResource("2_56mxv")
+
+[node name="Play" type="Button" parent="BG"]
+layout_mode = 0
+offset_left = 850.0
+offset_top = 800.0
+offset_right = 1050.0
+offset_bottom = 875.0
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="Exit" type="Button" parent="BG"]
+layout_mode = 0
+offset_left = 851.0
+offset_top = 904.0
+offset_right = 1051.0
+offset_bottom = 979.0
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[node name="Title" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 154.0
+offset_right = 1530.0
+offset_bottom = 423.0
+texture = ExtResource("3_u8e07")
+
+[node name="SelectUIAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_xrb50")
+volume_db = 20.0
+
+[node name="Main Theme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_l162h")
+autoplay = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Fade" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(48, 27)
+color = Color(0, 0, 0, 0)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kshco")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ulqrb")
+}
+
+[connection signal="pressed" from="BG/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="BG/Exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
