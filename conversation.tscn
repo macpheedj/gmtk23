@@ -11,6 +11,7 @@ offset_top = 578.0
 offset_right = 1822.0
 offset_bottom = 982.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_group_ = true
 
 [node name="SpeechBG" type="ColorRect" parent="SpeechBorder"]
 offset_left = 2.0
@@ -29,24 +30,53 @@ text = "test dialogue"
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="SpeakerPortrait" type="Sprite2D" parent="."]
+[node name="SpeakerPortraitR" type="Sprite2D" parent="."]
 position = Vector2(1524, 391)
 
-[node name="SpeakerBorder" type="ColorRect" parent="."]
+[node name="SpeakerPortraitL" type="Sprite2D" parent="."]
+position = Vector2(406, 391)
+
+[node name="SpeakerBorderR" type="ColorRect" parent="."]
+visible = false
 offset_left = 1318.0
 offset_top = 548.0
 offset_right = 1722.0
 offset_bottom = 602.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_group_ = true
 
-[node name="SpeakerBG" type="ColorRect" parent="SpeakerBorder"]
+[node name="SpeakerBGR" type="ColorRect" parent="SpeakerBorderR"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 402.0
 offset_bottom = 52.0
 
-[node name="Speaker" type="RichTextLabel" parent="SpeakerBorder/SpeakerBG"]
+[node name="SpeakerR" type="RichTextLabel" parent="SpeakerBorderR/SpeakerBGR"]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 53.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+
+[node name="SpeakerBorderL" type="ColorRect" parent="."]
+visible = false
+offset_left = 198.0
+offset_top = 548.0
+offset_right = 602.0
+offset_bottom = 602.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_group_ = true
+
+[node name="SpeakerBGL" type="ColorRect" parent="SpeakerBorderL"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 402.0
+offset_bottom = 52.0
+
+[node name="SpeakerL" type="RichTextLabel" parent="SpeakerBorderL/SpeakerBGL"]
 layout_mode = 0
 offset_right = 400.0
 offset_bottom = 53.0

@@ -2,6 +2,7 @@ extends Node2D
 class_name Conversation
 
 
+var speakers = []
 var dialogueIndex = 0
 # TODO: read this from a json file or something
 var dialogues = [
@@ -14,12 +15,33 @@ var dialogues = [
 		"speaker": "Prince Gog",
 		"portrait": "gog_angry",
 		"message": "Now I'm angry!!!"
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_blush",
+		"message": "Oh that's kinda cute actually"
+	},
+	{
+		"speaker": "Prince Goog",
+		"portrait": "gog_default",
+		"message": "And I'm here too"
+	},
+	{
+		"speaker": "Prince Gogog",
+		"portrait": "gog_angry",
+		"message": "So am I don't forget about me!"
 	}
 ]
 
 
 func _ready():
+	countSpeakers()
 	displayNextMessage()
+
+
+func countSpeakers():
+	dialogues.map(func(item): if speakers.find(item.speaker) == -1: speakers.push_back(item.speaker))
+	return speakers.size()
 
 
 func isFinishedTyping() -> bool:
@@ -28,10 +50,19 @@ func isFinishedTyping() -> bool:
 func displayNextMessage():
 	var dialogue = dialogues[dialogueIndex]
 	var portrait = load("res://assets/" + dialogue.portrait + ".png")
-	$SpeakerPortrait.set_texture(portrait)
-	$SpeechBorder/SpeechBG/Speech.visible_characters = 0
-	$SpeechBorder/SpeechBG/Speech.text = dialogue.message
-	$SpeakerBorder/SpeakerBG/Speaker.text = "[center]" + dialogue.speaker + "[/center]"
+
+	if speakers.find(dialogue.speaker) % 2 == 0:
+		$SpeakerPortraitR.set_texture(portrait)
+		$SpeakerBorderR.visible = true
+		$SpeechBorder/SpeechBG/Speech.visible_characters = 0
+		$SpeechBorder/SpeechBG/Speech.text = dialogue.message
+		$SpeakerBorderR/SpeakerBGR/SpeakerR.text = "[center]" + dialogue.speaker + "[/center]"
+	else:
+		$SpeakerPortraitL.set_texture(portrait)
+		$SpeakerBorderL.visible = true
+		$SpeechBorder/SpeechBG/Speech.visible_characters = 0
+		$SpeechBorder/SpeechBG/Speech.text = dialogue.message
+		$SpeakerBorderL/SpeakerBGL/SpeakerL.text = "[center]" + dialogue.speaker + "[/center]"
 
 	if $TypeTimer.is_stopped():
 		$TypeTimer.start()
