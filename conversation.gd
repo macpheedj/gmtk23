@@ -22,14 +22,19 @@ var dialogues = [
 		"message": "Oh that's kinda cute actually"
 	},
 	{
-		"speaker": "Prince Goog",
-		"portrait": "gog_default",
+		"speaker": "Chessa",
+		"portrait": "chessa_default",
 		"message": "And I'm here too"
 	},
 	{
 		"speaker": "Prince Gogog",
 		"portrait": "gog_angry",
-		"message": "So am I don't forget about me!"
+		"message": "So am I don't forget about me!",
+		"prompts": [
+			"Hello there",
+			"I didn't see you there",
+			"You are there, it seems"
+		]
 	}
 ]
 
@@ -45,7 +50,7 @@ func countSpeakers():
 
 
 func isFinishedTyping() -> bool:
-	return $SpeechBorder/SpeechBG/Speech.visible_characters >= $SpeechBorder/SpeechBG/Speech.text.length()
+	return $Speech/BG/Text.visible_characters >= $Speech/BG/Text.text.length()
 
 
 func displayNextMessage():
@@ -57,10 +62,10 @@ func displayNextMessage():
 
 	if speakers.find(dialogue.speaker) % 2 == 0:
 		$SpeakerPortraitR.set_texture(portrait)
-		$SpeakerBorderR.visible = true
-		$SpeechBorder/SpeechBG/Speech.visible_characters = 0
-		$SpeechBorder/SpeechBG/Speech.text = dialogue.message
-		$SpeakerBorderR/SpeakerBGR/SpeakerR.text = "[center]" + dialogue.speaker + "[/center]"
+		$Speech/BG/Text.visible_characters = 0
+		$Speech/BG/Text.text = dialogue.message
+		$SpeakerR.visible = true
+		$SpeakerR/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
 
 		if $SpeakerPortraitR.position.y != 390:
 			$SpeakerPortraitR.position.y = 390
@@ -68,17 +73,25 @@ func displayNextMessage():
 
 	else:
 		$SpeakerPortraitL.set_texture(portrait)
-		$SpeakerBorderL.visible = true
-		$SpeechBorder/SpeechBG/Speech.visible_characters = 0
-		$SpeechBorder/SpeechBG/Speech.text = dialogue.message
-		$SpeakerBorderL/SpeakerBGL/SpeakerL.text = "[center]" + dialogue.speaker + "[/center]"
+		$Speech/BG/Text.visible_characters = 0
+		$Speech/BG/Text.text = dialogue.message
+		$SpeakerL.visible = true
+		$SpeakerL/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
 
 		if $SpeakerPortraitL.position.y != 390:
 			$SpeakerPortraitL.position.y = 390
 			$SpeakerPortraitR.position.y = 410
 
+	# if dialogue.prompts:
+	# 	displayPrompt(dialogue.prompts)
+
 	if $TypeTimer.is_stopped():
 		$TypeTimer.start()
+
+
+func displayPrompt(prompts):
+
+	pass
 
 
 func advanceMessage():
@@ -94,11 +107,11 @@ func _process(_delta):
 		if isFinishedTyping():
 			advanceMessage()
 		else:
-			$SpeechBorder/SpeechBG/Speech.visible_characters = $SpeechBorder/SpeechBG/Speech.text.length()
+			$Speech/BG/Text.visible_characters = $Speech/BG/Text.text.length()
 
 
 func _on_type_timer_timeout():
 	if not isFinishedTyping():
-		$SpeechBorder/SpeechBG/Speech.visible_characters += 1
+		$Speech/BG/Text.visible_characters += 1
 	else:
 		$TypeTimer.stop()
