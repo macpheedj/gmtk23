@@ -38,8 +38,11 @@ func displayNextMessage():
 
 
 func advanceMessage():
-	dialogueIndex += 1
-	displayNextMessage()
+	if dialogueIndex == dialogues.size() - 1:
+		print("bzzt wrongo")
+	else:
+		dialogueIndex += 1
+		displayNextMessage()
 
 
 func _process(_delta):
