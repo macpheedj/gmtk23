@@ -2,46 +2,60 @@ extends Node2D
 class_name Conversation
 
 
+var awaitingPrompt = false
 var speakers = []
+var shownPrompts = []
 var dialogueIndex = 0
 # TODO: read this from a json file or something
 var dialogues = [
 	{
 		"speaker": "Prince Gog",
 		"portrait": "gog_default",
-		"message": "Blather blather blather this is test dialogue don't read too much into it, no big deal I am after all a prince."
-	},
-	{
-		"speaker": "Prince Gog",
-		"portrait": "gog_angry",
-		"message": "Now I'm angry!!!"
-	},
-	{
-		"speaker": "Prince Gog",
-		"portrait": "gog_blush",
-		"message": "Oh that's kinda cute actually"
+		"message": "Blather blather blather"
 	},
 	{
 		"speaker": "Chessa",
 		"portrait": "chessa_default",
-		"message": "And I'm here too"
+		"message": "I am here"
 	},
 	{
-		"speaker": "Prince Gogog",
+		"speaker": "Prince Gog",
 		"portrait": "gog_angry",
-		"message": "So am I don't forget about me!",
+		"message": "blah blah blah",
 		"prompts": [
 			"Hello there",
 			"I didn't see you there",
-			"You are there, it seems"
+			"You are here, it seems"
+		],
+		"responses": [
+			{
+				"speaker": "Chessa",
+				"portrait": "chessa_default",
+				"message": "Why I never!",
+			},
+			{
+				"speaker": "Chessa",
+				"portrait": "chessa_default",
+				"message": "I like that",
+			},
+			{
+				"speaker": "Chessa",
+				"portrait": "chessa_default",
+				"message": "Fart butt fart butt",
+			},
 		]
-	}
+	},
+	{
+		"speaker": "Chessa",
+		"portrait": "chessa_default",
+		"message": "lol"
+	},
 ]
 
 
 func _ready():
 	countSpeakers()
-	displayNextMessage()
+	displayNextMessage(null)
 
 
 func countSpeakers():
@@ -53,12 +67,12 @@ func isFinishedTyping() -> bool:
 	return $Speech/BG/Text.visible_characters >= $Speech/BG/Text.text.length()
 
 
-func displayNextMessage():
-	var dialogue = dialogues[dialogueIndex]
+func displayNextMessage(overrideDialogue):
+	var dialogue = overrideDialogue if overrideDialogue else dialogues[dialogueIndex]
 	var portrait = load("res://assets/" + dialogue.portrait + ".png")
 
-	print("speaker name: " + dialogue.speaker)
-	print("index: " + str(speakers.find(dialogue.speaker)))
+	# print("speaker name: " + dialogue.speaker)
+	# print("index: " + str(speakers.find(dialogue.speaker)))
 
 	if speakers.find(dialogue.speaker) % 2 == 0:
 		$SpeakerPortraitR.set_texture(portrait)
@@ -69,7 +83,7 @@ func displayNextMessage():
 
 		if $SpeakerPortraitR.position.y != 390:
 			$SpeakerPortraitR.position.y = 390
-			$SpeakerPortraitL.position.y = 410
+			$SpeakerPortraitL.position.y = 430
 
 	else:
 		$SpeakerPortraitL.set_texture(portrait)
@@ -80,18 +94,24 @@ func displayNextMessage():
 
 		if $SpeakerPortraitL.position.y != 390:
 			$SpeakerPortraitL.position.y = 390
-			$SpeakerPortraitR.position.y = 410
+			$SpeakerPortraitR.position.y = 430
 
-	# if dialogue.prompts:
-	# 	displayPrompt(dialogue.prompts)
 
 	if $TypeTimer.is_stopped():
 		$TypeTimer.start()
 
+func togglePrompts():
+	for prompt in [$Prompt1, $Prompt2, $Prompt3]:
+		prompt.visible = not prompt.visible
+		prompt.disabled = not prompt.disabled
+
 
 func displayPrompt(prompts):
-
-	pass
+	shownPrompts.push_back(dialogueIndex) # save reference to prompt @ index so we dont double-show it
+	$Prompt1.text = prompts[0]
+	$Prompt2.text = prompts[1]
+	$Prompt3.text = prompts[2]
+	togglePrompts()
 
 
 func advanceMessage():
@@ -99,11 +119,11 @@ func advanceMessage():
 		print("bzzt wrongo")
 	else:
 		dialogueIndex += 1
-		displayNextMessage()
+		displayNextMessage(null)
 
 
 func _process(_delta):
-	if Input.is_action_just_pressed("text_advance"):
+	if not awaitingPrompt and Input.is_action_just_pressed("text_advance"):
 		if isFinishedTyping():
 			advanceMessage()
 		else:
@@ -115,3 +135,25 @@ func _on_type_timer_timeout():
 		$Speech/BG/Text.visible_characters += 1
 	else:
 		$TypeTimer.stop()
+		if dialogues[dialogueIndex].has("prompts") and shownPrompts.find(dialogueIndex) == -1:
+			awaitingPrompt = true
+			displayPrompt(dialogues[dialogueIndex].prompts)
+
+
+# TODO: update state if callback represents correct answer linking prince + princess
+func _on_prompt_1_pressed():
+	awaitingPrompt = false
+	togglePrompts()
+	displayNextMessage(dialogues[dialogueIndex].responses[0])
+
+
+func _on_prompt_2_pressed():
+	awaitingPrompt = false
+	togglePrompts()
+	displayNextMessage(dialogues[dialogueIndex].responses[1])
+
+
+func _on_prompt_3_pressed():
+	awaitingPrompt = false
+	togglePrompts()
+	displayNextMessage(dialogues[dialogueIndex].responses[2])

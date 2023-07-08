@@ -6,10 +6,10 @@
 script = ExtResource("1_mfhgd")
 
 [node name="SpeakerPortraitR" type="Sprite2D" parent="."]
-position = Vector2(1524, 410)
+position = Vector2(1524, 430)
 
 [node name="SpeakerPortraitL" type="Sprite2D" parent="."]
-position = Vector2(406, 410)
+position = Vector2(406, 430)
 
 [node name="Speech" type="ColorRect" parent="."]
 offset_left = 98.0
@@ -32,90 +32,6 @@ offset_left = 100.0
 offset_top = 50.0
 offset_right = 1620.0
 offset_bottom = 350.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 36
-text = "test dialogue"
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="Prompt1" type="ColorRect" parent="."]
-visible = false
-offset_left = 460.0
-offset_top = 150.0
-offset_right = 1460.0
-offset_bottom = 225.0
-color = Color(0, 0, 0, 1)
-metadata/_edit_group_ = true
-
-[node name="BG" type="ColorRect" parent="Prompt1"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 998.0
-offset_bottom = 73.0
-
-[node name="Prompt" type="RichTextLabel" parent="Prompt1/BG"]
-layout_mode = 0
-offset_left = 52.0
-offset_top = 5.0
-offset_right = 948.0
-offset_bottom = 66.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 36
-text = "test dialogue"
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="Prompt2" type="ColorRect" parent="."]
-visible = false
-offset_left = 460.0
-offset_top = 300.0
-offset_right = 1460.0
-offset_bottom = 375.0
-color = Color(0, 0, 0, 1)
-metadata/_edit_group_ = true
-
-[node name="BG" type="ColorRect" parent="Prompt2"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 998.0
-offset_bottom = 73.0
-
-[node name="Prompt" type="RichTextLabel" parent="Prompt2/BG"]
-layout_mode = 0
-offset_left = 52.0
-offset_top = 5.0
-offset_right = 948.0
-offset_bottom = 66.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 36
-text = "test dialogue"
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="Prompt3" type="ColorRect" parent="."]
-visible = false
-offset_left = 460.0
-offset_top = 450.0
-offset_right = 1460.0
-offset_bottom = 525.0
-color = Color(0, 0, 0, 1)
-metadata/_edit_group_ = true
-
-[node name="BG" type="ColorRect" parent="Prompt3"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 998.0
-offset_bottom = 73.0
-
-[node name="Prompt" type="RichTextLabel" parent="Prompt3/BG"]
-layout_mode = 0
-offset_left = 52.0
-offset_top = 5.0
-offset_right = 948.0
-offset_bottom = 66.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 36
 text = "test dialogue"
@@ -173,4 +89,34 @@ bbcode_enabled = true
 [node name="TypeTimer" type="Timer" parent="."]
 wait_time = 0.05
 
+[node name="Prompt1" type="Button" parent="."]
+visible = false
+offset_left = 460.0
+offset_top = 150.0
+offset_right = 1460.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 36
+disabled = true
+
+[node name="Prompt2" type="Button" parent="."]
+visible = false
+offset_left = 460.0
+offset_top = 300.0
+offset_right = 1460.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 36
+disabled = true
+
+[node name="Prompt3" type="Button" parent="."]
+visible = false
+offset_left = 460.0
+offset_top = 450.0
+offset_right = 1460.0
+offset_bottom = 525.0
+theme_override_font_sizes/font_size = 36
+disabled = true
+
 [connection signal="timeout" from="TypeTimer" to="." method="_on_type_timer_timeout"]
+[connection signal="pressed" from="Prompt1" to="." method="_on_prompt_1_pressed"]
+[connection signal="pressed" from="Prompt2" to="." method="_on_prompt_2_pressed"]
+[connection signal="pressed" from="Prompt3" to="." method="_on_prompt_3_pressed"]
