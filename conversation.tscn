@@ -14,12 +14,14 @@ color = Color(0, 0, 0, 1)
 metadata/_edit_group_ = true
 
 [node name="SpeechBG" type="ColorRect" parent="SpeechBorder"]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 1722.0
 offset_bottom = 402.0
 
 [node name="Speech" type="RichTextLabel" parent="SpeechBorder/SpeechBG"]
+layout_mode = 0
 offset_left = 100.0
 offset_top = 50.0
 offset_right = 1620.0
