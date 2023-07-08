@@ -6,54 +6,11 @@ var awaitingPrompt = false
 var speakers = []
 var shownPrompts = []
 var dialogueIndex = 0
-# TODO: read this from a json file or something
-var dialogues = [
-	{
-		"speaker": "Prince Gog",
-		"portrait": "gog_default",
-		"message": "Blather blather blather"
-	},
-	{
-		"speaker": "Chessa",
-		"portrait": "chessa_default",
-		"message": "I am here"
-	},
-	{
-		"speaker": "Prince Gog",
-		"portrait": "gog_angry",
-		"message": "blah blah blah",
-		"prompts": [
-			"Hello there",
-			"I didn't see you there",
-			"You are here, it seems"
-		],
-		"responses": [
-			{
-				"speaker": "Chessa",
-				"portrait": "chessa_default",
-				"message": "Why I never!",
-			},
-			{
-				"speaker": "Chessa",
-				"portrait": "chessa_default",
-				"message": "I like that",
-			},
-			{
-				"speaker": "Chessa",
-				"portrait": "chessa_default",
-				"message": "Fart butt fart butt",
-			},
-		]
-	},
-	{
-		"speaker": "Chessa",
-		"portrait": "chessa_default",
-		"message": "lol"
-	},
-]
+var dialogues = null
 
 
-func _ready():
+func setup(json):
+	dialogues = json
 	countSpeakers()
 	displayNextMessage(null)
 
