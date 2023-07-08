@@ -47,9 +47,13 @@ func countSpeakers():
 func isFinishedTyping() -> bool:
 	return $SpeechBorder/SpeechBG/Speech.visible_characters >= $SpeechBorder/SpeechBG/Speech.text.length()
 
+
 func displayNextMessage():
 	var dialogue = dialogues[dialogueIndex]
 	var portrait = load("res://assets/" + dialogue.portrait + ".png")
+
+	print("speaker name: " + dialogue.speaker)
+	print("index: " + str(speakers.find(dialogue.speaker)))
 
 	if speakers.find(dialogue.speaker) % 2 == 0:
 		$SpeakerPortraitR.set_texture(portrait)
@@ -57,12 +61,21 @@ func displayNextMessage():
 		$SpeechBorder/SpeechBG/Speech.visible_characters = 0
 		$SpeechBorder/SpeechBG/Speech.text = dialogue.message
 		$SpeakerBorderR/SpeakerBGR/SpeakerR.text = "[center]" + dialogue.speaker + "[/center]"
+
+		if $SpeakerPortraitR.position.y != 390:
+			$SpeakerPortraitR.position.y = 390
+			$SpeakerPortraitL.position.y = 410
+
 	else:
 		$SpeakerPortraitL.set_texture(portrait)
 		$SpeakerBorderL.visible = true
 		$SpeechBorder/SpeechBG/Speech.visible_characters = 0
 		$SpeechBorder/SpeechBG/Speech.text = dialogue.message
 		$SpeakerBorderL/SpeakerBGL/SpeakerL.text = "[center]" + dialogue.speaker + "[/center]"
+
+		if $SpeakerPortraitL.position.y != 390:
+			$SpeakerPortraitL.position.y = 390
+			$SpeakerPortraitR.position.y = 410
 
 	if $TypeTimer.is_stopped():
 		$TypeTimer.start()
