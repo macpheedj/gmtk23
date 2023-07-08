@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://dy2805chf0en1"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_rwybm"]
-[ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Background-3.png" id="2_x1ljj"]
+[ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_56mxv"]
 [ext_resource type="Texture2D" uid="uid://dsk1vxckx8f1b" path="res://Project Dish Bitch.png" id="3_u8e07"]
-[ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Menu Select.wav" id="5_7lj47"]
-[ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://MainThemeFinal.mp3" id="5_blqey"]
+[ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="4_xrb50"]
+[ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="5_l162h"]
 
 [sub_resource type="Animation" id="Animation_yml0d"]
 resource_name = "Fade_In"
@@ -89,7 +89,7 @@ z_as_relative = false
 layout_mode = 0
 offset_right = 1917.0
 offset_bottom = 1080.0
-texture = ExtResource("2_x1ljj")
+texture = ExtResource("2_56mxv")
 
 [node name="Play" type="Button" parent="BG"]
 layout_mode = 0
@@ -118,11 +118,11 @@ offset_bottom = 423.0
 texture = ExtResource("3_u8e07")
 
 [node name="SelectUIAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_7lj47")
+stream = ExtResource("4_xrb50")
 volume_db = 20.0
 
 [node name="Main Theme" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_blqey")
+stream = ExtResource("5_l162h")
 autoplay = true
 
 [node name="Timer" type="Timer" parent="."]

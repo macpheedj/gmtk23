@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgqgmxhmq3heh"
-path="res://.godot/imported/Background-3.png-0fe20bfb6acd2ea6c48e92e7bc1ca075.ctex"
+uid="uid://dsk1vxckx8f1b"
+path="res://.godot/imported/Project Dish Bitch.png-c5bf1862d68d97dbd080b1ceefb0a542.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Background-3.png"
-dest_files=["res://.godot/imported/Background-3.png-0fe20bfb6acd2ea6c48e92e7bc1ca075.ctex"]
+source_file="res://Assets/Project Dish Bitch.png"
+dest_files=["res://.godot/imported/Project Dish Bitch.png-c5bf1862d68d97dbd080b1ceefb0a542.ctex"]
 
 [params]
 
