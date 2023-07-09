@@ -11,6 +11,8 @@ var speakers = []
 var shownPrompts = []
 var dialogueIndex = 0
 var dialogues = null
+var previousSpeaker = null
+var previousSpeakerSide = null
 
 
 func setup(json):
@@ -32,6 +34,37 @@ func isFinishedTyping() -> bool:
 	return $Speech/BG/Text.visible_characters >= $Speech/BG/Text.text.length()
 
 
+func setSpeaker(swap, dialogue, portrait):
+	var speakerPortrait = null
+	var speaker = null
+	var speakerName = null
+
+	if (previousSpeakerSide == "RIGHT" and not swap) or (previousSpeakerSide == "LEFT" and swap):
+		previousSpeakerSide = "RIGHT"
+		speakerPortrait = $SpeakerPortraitR
+		speakerPortrait.flip_h = true
+		speaker = $SpeakerR
+		speakerName = $SpeakerR/BG/Name
+		if $SpeakerPortraitR.position.y != 490:
+			$SpeakerPortraitR.position.y = 490
+			$SpeakerPortraitL.position.y = 530
+	elif (previousSpeakerSide == "RIGHT" and swap) or (previousSpeakerSide == "LEFT" and not swap):
+		previousSpeakerSide = "LEFT"
+		speakerPortrait = $SpeakerPortraitL
+		speakerPortrait.flip_h = false
+		speaker = $SpeakerL
+		speakerName = $SpeakerL/BG/Name
+		if $SpeakerPortraitL.position.y != 490:
+			$SpeakerPortraitL.position.y = 490
+			$SpeakerPortraitR.position.y = 530
+	
+	speakerPortrait.set_texture(portrait)
+	$Speech/BG/Text.visible_characters = 0
+	$Speech/BG/Text.text = dialogue.message
+	speaker.visible = true
+	speakerName.text = "[center]" + dialogue.speaker + "[/center]"
+
+
 func displayNextMessage(overrideDialogue):
 	var dialogue = overrideDialogue if overrideDialogue else dialogues[dialogueIndex]
 
@@ -42,28 +75,16 @@ func displayNextMessage(overrideDialogue):
 
 	var portrait = load("res://assets/" + dialogue.portrait + ".png")
 
-	if speakers.find(dialogue.speaker) % 2 == 0:
-		$SpeakerPortraitR.set_texture(portrait)
-		$Speech/BG/Text.visible_characters = 0
-		$Speech/BG/Text.text = dialogue.message
-		$SpeakerR.visible = true
-		$SpeakerR/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
+	if previousSpeaker == null:
+		previousSpeaker = dialogue.speaker
+		previousSpeakerSide = "RIGHT"
 
-		if $SpeakerPortraitR.position.y != 490:
-			$SpeakerPortraitR.position.y = 490
-			$SpeakerPortraitL.position.y = 530
-
+	if dialogue.speaker == previousSpeaker:
+		setSpeaker(false, dialogue, portrait)
 	else:
-		$SpeakerPortraitL.set_texture(portrait)
-		$Speech/BG/Text.visible_characters = 0
-		$Speech/BG/Text.text = dialogue.message
-		$SpeakerL.visible = true
-		$SpeakerL/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
+		setSpeaker(true, dialogue, portrait)
 
-		if $SpeakerPortraitL.position.y != 490:
-			$SpeakerPortraitL.position.y = 490
-			$SpeakerPortraitR.position.y = 530
-
+	previousSpeaker = dialogue.speaker
 
 	if $TypeTimer.is_stopped():
 		$TypeTimer.start()
