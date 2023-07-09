@@ -6,7 +6,7 @@
     },
     {
         "speaker": "Chessa",
-        "portrait": "chessa_default",
+        "portrait": "chessa_blush",
         "message": "I thought it went wonderfully - he is a man of many layers and I like that."
     },
     {
@@ -93,7 +93,7 @@
         "responses": [
             {
                 "speaker": "Chessa",
-                "portrait": "chessa_default",
+                "portrait": "chessa_angry",
                 "message": "I can think of nothing I wish to hear of less. Though I suppose that belies his choosing that for you. Trying to chase you away, it would seem. The man I met was deeper than the vastest of oceans."
             },
             {
@@ -103,7 +103,7 @@
             },
             {
                 "speaker": "Chessa",
-                "portrait": "chessa_default",
+                "portrait": "chessa_blush",
                 "message": "Now you are speaking my language... the language of love! The first time I read INSERT_POEM_JOKE_HERE, I immediately understood what it meant to [i]truly [b]feel[/b][/i]. The depth to the piece was so immense that I felt as if I could drown."
             }
         ]

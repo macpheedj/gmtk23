@@ -52,7 +52,7 @@
             },
             {
                 "speaker": "Chessa",
-                "portrait": "chessa_default",
+                "portrait": "chessa_blush",
                 "message": "Ahhhhh see! That's the thing about him that drives me wild. You can [i]feel[/i] the weight of his words. I imagine his singing voice is like that of an Angel. [b]Ahhhh to think of him serenading me with INSERT_SONG_JOKE_HERE as the moon shines brightly above us, be still my heart![/b]"
             },
             {
@@ -170,7 +170,7 @@
     },
     {
         "speaker": "Chessa",
-        "portrait": "chessa_default",
+        "portrait": "chessa_blush",
         "message": "I know… it's all gone by so fast it'll be kinda sad when it's all over."
     },
     {

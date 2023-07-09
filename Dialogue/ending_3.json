@@ -1,1 +1,67 @@
-[]
+[
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]You step out of the carriage into the meadow. Your machinations brought you to this moment. You glance over. Gog licks his hand and distributes the slime across what may or may not be hair on his head.[/i]"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]Beside you, Gog kneels and pulls something out of a fold in his skin. The corners of your vision darken...[/i]"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]As he's about to speak, a soft tune floats over the sea of flowers. Princessa Chessa sits on a blanket, surrounded by easels, paint, and philosophy tomes! [b]Just as you planned.[/b][/i]"
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "Oh, I'm sorry, did my painting, singing, and heartfelt research into the philosophies of our lands interrupt you?"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Painting?"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Singing?"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "AND"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_angry",
+        "message": "[i]CROAK[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Philosophy??"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "All of the things I'm good at!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]Gog shifts towards Chessa awkwardly while still on one knee.[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_blush",
+        "message": "Will you... and just to be clear I mean you, Princessa Chessa, marry me?!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]A frog spurned. A kingdom saved. An unexpected romance stoked.[/i]"
+    }
+]

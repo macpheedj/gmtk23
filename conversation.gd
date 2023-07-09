@@ -35,6 +35,15 @@ func isFinishedTyping() -> bool:
 	return $Speech/BG/Text.visible_characters >= $Speech/BG/Text.text.length()
 
 
+func narrate(message):
+	$SpeakerL.visible = false
+	$SpeakerR.visible = false
+	$SpeakerPortraitL.visible = false
+	$SpeakerPortraitR.visible = false
+	$Speech/BG/Text.visible_characters = 0
+	$Speech/BG/Text.text = message
+
+
 func setSpeaker(swap, dialogue, portrait):
 	var speakerPortrait = null
 	var speaker = null
@@ -63,6 +72,7 @@ func setSpeaker(swap, dialogue, portrait):
 	$Speech/BG/Text.visible_characters = 0
 	$Speech/BG/Text.text = dialogue.message
 	speaker.visible = true
+	speakerPortrait.visible = true
 	speakerName.text = "[center]" + dialogue.speaker + "[/center]"
 
 
@@ -72,6 +82,13 @@ func displayNextMessage(overrideDialogue):
 	if dialogue.has("transition"):
 		fadeout.emit()
 		dialogueIndex += 1
+		return
+	
+	if $TypeTimer.is_stopped():
+		$TypeTimer.start()
+
+	if dialogue.speaker == "narrator":
+		narrate(dialogue.message)
 		return
 
 	var portrait = load("res://assets/" + dialogue.portrait + ".png")
@@ -86,9 +103,6 @@ func displayNextMessage(overrideDialogue):
 		setSpeaker(true, dialogue, portrait)
 
 	previousSpeaker = dialogue.speaker
-
-	if $TypeTimer.is_stopped():
-		$TypeTimer.start()
 
 func togglePrompts():
 	for prompt in [$Prompt1, $Prompt2, $Prompt3]:
