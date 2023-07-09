@@ -2,30 +2,30 @@
     {
         "speaker": "Wilhelmina",
         "portrait": "wilhelmina_default",
-        "message": "EMCEE..."
+        "message": "Rhae..."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_confused",
         "message": "[i](This can't happen)[/i]"
     },
     {
         "speaker": "Wilhelmina",
         "portrait": "wilhelmina_default",
-        "message": "EMCEE...?"
+        "message": "Rhae...?"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_confused",
         "message": "[i](How can one person be so supremely unloveable?)[/i]"
     },
     {
         "speaker": "Wilhelmina",
         "portrait": "wilhelmina_angry",
-        "message": "EMCEE!"
+        "message": "Rhae!"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Huh, what, sorry... I'm here, I'm here!"
     },
@@ -35,12 +35,12 @@
         "message": "Are you alright? You've seen out of it all day you've barely told us about your date."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_confused",
         "message": "[i](He said my feet are of such purity that he doesn't mind their lack of webbing...)[/i]"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Well a Lady must keep some secrets right?"
     },
@@ -50,7 +50,7 @@
         "message": "Not at tea time, no ma'am! We're here for polite discussion and now I must insist it's your turn."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_eyebags",
         "message": "Well, if I must:",
         "prompts": [
@@ -73,7 +73,7 @@
             {
                 "speaker": "Chessa",
                 "portrait": "chessa_angry",
-                "message": "Games are for children EMCEE, I don't have time for such juvenile activities. [i]sigh[/i] I certainly do hope my Prince comes to me and sweeps me away."
+                "message": "Games are for children Rhae, I don't have time for such juvenile activities. [i]sigh[/i] I certainly do hope my Prince comes to me and sweeps me away."
             },
             {
                 "speaker": "Chessa",
@@ -95,10 +95,10 @@
     {
         "speaker": "Sienna",
         "portrait": "sienna_default",
-        "message": "More so than you dear, but this isn't about me. Come now, EMCEE, I'm sure you have more to discuss?"
+        "message": "More so than you dear, but this isn't about me. Come now, Rhae, I'm sure you have more to discuss?"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_eyebags",
         "message": "I guess...",
         "prompts": [
@@ -111,7 +111,7 @@
             {
                 "speaker": "Sienna",
                 "portrait": "sienna_default",
-                "message": "EMCEE I can always appreciate a finely tuned craft but honestly I sense nothing in that description that interests me. I personally look forward to meeting my Prince on the Battlefield of love! To think, the day is so close..."
+                "message": "Rhae I can always appreciate a finely tuned craft but honestly I sense nothing in that description that interests me. I personally look forward to meeting my Prince on the Battlefield of love! To think, the day is so close..."
             },
             {
                 "speaker": "Sienna",
@@ -146,17 +146,17 @@
         "message": "Very true… but I want more [i]gossip![/i] What else do you have MC?"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_confused",
         "message": "[i](Would it just be easier to kill him? Would that really be that bad?)[/i]"
     },
     {
         "speaker": "Wilhelmina",
         "portrait": "wilhelmina_angry",
-        "message": "EMCEE! Your mind wanders again!!"
+        "message": "Rhae! Your mind wanders again!!"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_eyebags",
         "message": "Ah! My apologies, much to ruminate on of late...",
         "prompts": [
@@ -174,7 +174,7 @@
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_default",
-                "message": "I… well, technically the whole lower half of my leg would be considered the \"toe\" so I don't even know if that's possible? EMCEE... Maybe its time to turn it in for the day? In the meantime I am going to continue practicing for my big moment where my love is realized."
+                "message": "I… well, technically the whole lower half of my leg would be considered the \"toe\" so I don't even know if that's possible? Rhae... Maybe its time to turn it in for the day? In the meantime I am going to continue practicing for my big moment where my love is realized."
             },
             {
                 "speaker": "Wilhelmina",
@@ -189,12 +189,12 @@
         ]
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_eyebags",
         "message": "The horse is right. I'm turning in for the night."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Next we all meet it'll be at one our weddings! [i](Hopefully one of [b]yours.[/b])[/i] I will miss these parties, though. Ta-ta!"
     },
