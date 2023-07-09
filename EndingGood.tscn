@@ -1,0 +1,74 @@
+[gd_scene load_steps=9 format=3 uid="uid://bocqlgoy75g4k"]
+
+[ext_resource type="Texture2D" uid="uid://cmkhqr1h41nci" path="res://Assets/summer_meadow_solid_image.png" id="1_oerhw"]
+[ext_resource type="Script" path="res://EndingGood.gd" id="1_rmxmp"]
+[ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_r6bri"]
+[ext_resource type="AudioStream" uid="uid://pixmtglky80f" path="res://Assets/ending_good.mp3" id="4_mow4f"]
+
+[sub_resource type="Animation" id="Animation_8cqcj"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_52b6g"]
+_data = {
+"FadeIn": SubResource("Animation_8cqcj")
+}
+
+[sub_resource type="Animation" id="Animation_pf6l2"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_58xae"]
+_data = {
+"FadeOut": SubResource("Animation_pf6l2")
+}
+
+[node name="EndingGood" type="Node2D"]
+script = ExtResource("1_rmxmp")
+
+[node name="SummerMeadowSolidImage" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(6, 6)
+texture = ExtResource("1_oerhw")
+
+[node name="Conversation" parent="." instance=ExtResource("2_r6bri")]
+
+[node name="Fade" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_52b6g")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_58xae")
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mow4f")

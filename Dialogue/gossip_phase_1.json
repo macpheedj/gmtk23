@@ -1,6 +1,6 @@
 [
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Soooo Ladies, do tell, how was your date with the Prince?"
     },
@@ -20,7 +20,7 @@
         "message": "Indeed, every part of him embodies what it means to be royalty."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_confused",
         "message": "Goodness, I must say; I wasn't expecting such... [i]enthusiasm.[/i]"
     },
@@ -35,17 +35,17 @@
         "message": "...and a mighty powerful one at that!"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_angry",
         "message": "Powerful, huh?"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "[i](Maybe I can use this to my advantage... it's time to play matchmaker)"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "I suppose I get where you are coming from... On our date today he did tell me about:",
         "prompts": [
@@ -63,17 +63,17 @@
             {
                 "speaker": "Sienna",
                 "portrait": "sienna_upset",
-                "message": "Horse milk? No offense EMCEE I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
+                "message": "Horse milk? No offense Rhae I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
             },
             {
                 "speaker": "Sienna",
                 "portrait": "sienna_upset",
-                "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously EMCEE. The Gog I know is a much stronger, fiercer man."
+                "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously Rhae. The Gog I know is a much stronger, fiercer man."
             },
             {
                 "speaker": "Sienna",
                 "portrait": "sienna_default",
-                "message": "He talked to you about his attendant? Hahaha look out EMCEE I fear our prince might be trying to set you up! He probably can tell you lack the strength and cut throat nature to run a country."
+                "message": "He talked to you about his attendant? Hahaha look out Rhae I fear our prince might be trying to set you up! He probably can tell you lack the strength and cut throat nature to run a country."
             }
         ]
     },
@@ -83,12 +83,12 @@
         "message": "My, my Sienna how very... expected of you. Domineering as ever. I fear your missing so much of our dear Gog though. He has a mystifying depth when you actually bother to look."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_eyebags",
         "message": "[i](Depth? She can't be serious... the man is shallower than the pool he spawned from!)[/i]"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Oh, Chessa love, how right you are. You'd love to hear about:",
         "prompts": [
@@ -106,7 +106,7 @@
             {
                 "speaker": "Chessa",
                 "portrait": "chessa_default",
-                "message": "I suppose I can understand the worth in such information, but really EMCEE? Horse Milk? Where is the romance in [i]that?[/i] The man I met was deeper than the vastest of oceans."
+                "message": "I suppose I can understand the worth in such information, but really Rhae? Horse Milk? Where is the romance in [i]that?[/i] The man I met was deeper than the vastest of oceans."
             },
             {
                 "speaker": "Chessa",
@@ -116,7 +116,7 @@
             {
                 "speaker": "Chessa",
                 "portrait": "chessa_default",
-                "message": "He told you a shocking amount about his butler... I feel sorry for you EMCEE. In our date, he told me tales that made me fall for him immediately. My Gog was deeper than the vastest ocean."
+                "message": "He told you a shocking amount about his butler... I feel sorry for you Rhae. In our date, he told me tales that made me fall for him immediately. My Gog was deeper than the vastest ocean."
             }
         ]
     },
@@ -126,7 +126,7 @@
         "message": "Hah Chessa dear, do you not think that a bit melodramatic? Nothing wrong with a man of intellect, of course, but really when it comes to finding a suitor there is nothing more important than [i]pedigree.[/i]"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_angry",
         "message": "How right you are Wilhelmina. And nothing says pedigree like:",
         "prompts": [
@@ -149,12 +149,12 @@
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_angry",
-                "message": "EMCEE, I finished schooling and never looked back, no need for poetry and philosophy. I'm more interested in his upbringing and making sure his background meets my needs."
+                "message": "Rhae, I finished schooling and never looked back, no need for poetry and philosophy. I'm more interested in his upbringing and making sure his background meets my needs."
             },
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_default",
-                "message": "EMCEE, having an attendant is important for [i]any[/i] member of the royalty, little though I care for... Crambot? I want to know more about the prince's upbringing, and making sure his background meets my needs."
+                "message": "Rhae, having an attendant is important for [i]any[/i] member of the royalty, little though I care for... Crambot? I want to know more about the prince's upbringing, and making sure his background meets my needs."
             }
         ]
     },
@@ -169,12 +169,12 @@
         "message": "..."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Well ladies this has been truly enlightening. Sounds as though our next round of dates is this weekend."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Same time next week for tea?"
     }

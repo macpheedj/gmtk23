@@ -1,16 +1,16 @@
 [
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "My goodness it sounds like you were all busy! It's soooooo good to see everyone looking in such high spirits! I am happy your dates went so well!!"
     },
     {
         "speaker": "Wilhelmina",
         "portrait": "wilhelmina_blush",
-        "message": "Better than well, EMCEE. I must say our prince is never bereft of surprises."
+        "message": "Better than well, Rhae. I must say our prince is never bereft of surprises."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Oh I couldn't agree with you more Wilhelmina. He's a true fount of the unexpected."
     },
@@ -20,17 +20,17 @@
         "message": "I am always so impressed that someone of his renown can be so easy to talk to."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_eyebags",
         "message": "He certainly has a gift for talking [i]at[/i] you. You're right about that."
     },
     {
         "speaker": "Chessa",
         "portrait": "chessa_default",
-        "message": "Speaking of, we have been talking your ear off EMCEE you must tell us about your time as well now. Please dish."
+        "message": "Speaking of, we have been talking your ear off Rhae you must tell us about your time as well now. Please dish."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Well it won't compare to your time I'm sure, but I suppose I could tell you a bit about:",
         "prompts": [
@@ -53,7 +53,7 @@
             {
                 "speaker": "Chessa",
                 "portrait": "chessa_blush",
-                "message": "Ahhhhh see! That's the thing about him that drives me wild. You can [i]feel[/i] the weight of his words. I imagine his singing voice is like that of an Angel. [b]Ahhhh to think of him serenading me with INSERT_SONG_JOKE_HERE as the moon shines brightly above us, be still my heart![/b]"
+                "message": "Ahhhhh see! That's the thing about him that drives me wild. You can [i]feel[/i] the weight of his words. I imagine his singing voice is like that of an Angel. [b]Ahhhh to think of him serenading me with \"The Luna Sea Takes Us\" as the moon shines brightly above us, be still my heart![/b]"
             },
             {
                 "speaker": "Chessa",
@@ -68,17 +68,17 @@
         "message": "Okkkaaaayyy Chessa calm yourself. Your enthusiasm is noted, but perhaps a bit much for the tea table."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Don't be too harsh on her Wilhemina. When the undertow of love pulls your head beneath the waves, it can be difficult to surface!"
     },
     {
         "speaker": "Wilhelmina",
         "portrait": "wilhelmina_default",
-        "message": "Annnnnd what of yourself, EMCEE? Have you found yourself swept away yet?"
+        "message": "Annnnnd what of yourself, Rhae? Have you found yourself swept away yet?"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Ohhhh welll you know it's hard not to be when he talks about:",
         "prompts": [
@@ -96,7 +96,7 @@
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_default",
-                "message": "I... EMCEE this is a proper table, please keep your head out of the gutter. Personally, I have been more taken by his knowledge in self-care and betterment, myself."
+                "message": "I... Rhae this is a proper table, please keep your head out of the gutter. Personally, I have been more taken by his knowledge in self-care and betterment, myself."
             },
             {
                 "speaker": "Wilhelmina",
@@ -123,7 +123,7 @@
     {
         "speaker": "Sienna",
         "portrait": "sienna_upset",
-        "message": "Oh, uhm... how rude of me to cut you off EMCEE!"
+        "message": "Oh, uhm... how rude of me to cut you off Rhae!"
     },
     {
         "speaker": "Sienna",
@@ -131,7 +131,7 @@
         "message": "Please, you were telling us about your date?"
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Right, right... so, according to what Gog was telling me:",
         "prompts": [
@@ -184,12 +184,12 @@
         "message": "I'm already planning the renovations necessary for my move-in."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_eyebags",
         "message": "I'll keep my fingers crossed for you, Wilhelmina. I would hate to see all the planning go to waste."
     },
     {
-        "speaker": "EMCEE",
+        "speaker": "Rhae",
         "portrait": "princess_default",
         "message": "Well ladies, same time next week?"
     }

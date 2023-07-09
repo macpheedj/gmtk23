@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://2aq7oix77y0d"]
 
 [ext_resource type="Script" path="res://DatingPhase3.gd" id="1_4duwg"]
-[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="1_iyuvj"]
+[ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="1_8rpmv"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_f4bor"]
 
 [sub_resource type="Animation" id="Animation_s6apf"]
@@ -47,15 +47,13 @@ _data = {
 [node name="DatingPhase3" type="TextureRect"]
 offset_right = 1920.0
 offset_bottom = 1080.0
+texture = ExtResource("1_8rpmv")
 script = ExtResource("1_4duwg")
-
-[node name="CastleBackground" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-texture = ExtResource("1_iyuvj")
 
 [node name="Conversation" parent="." instance=ExtResource("2_f4bor")]
 
 [node name="Fade" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0

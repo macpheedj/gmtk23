@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://crh030wjqlpyf"]
+[gd_scene load_steps=8 format=3 uid="uid://crh030wjqlpyf"]
 
 [ext_resource type="Script" path="res://DatingPhase2.gd" id="1_0kcg4"]
-[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_5gdcv"]
+[ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_46lm5"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_kp1mx"]
 
-[sub_resource type="ImageTexture" id="ImageTexture_xgjta"]
-
-[sub_resource type="Animation" id="Animation_8jwio"]
+[sub_resource type="Animation" id="Animation_47eq2"]
 resource_name = "FadeIn"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -21,12 +19,12 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7l1tg"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a10ql"]
 _data = {
-"FadeIn": SubResource("Animation_8jwio")
+"FadeIn": SubResource("Animation_47eq2")
 }
 
-[sub_resource type="Animation" id="Animation_vhtjq"]
+[sub_resource type="Animation" id="Animation_khy4b"]
 resource_name = "FadeOut"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -41,36 +39,16 @@ tracks/0/keys = {
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_3cpwh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Fade:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_onoqr"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_belcv"]
 _data = {
-"FadeOut": SubResource("Animation_vhtjq"),
-"RESET": SubResource("Animation_3cpwh")
+"FadeOut": SubResource("Animation_khy4b")
 }
 
 [node name="DatingPhase2" type="TextureRect"]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = SubResource("ImageTexture_xgjta")
+texture = ExtResource("2_46lm5")
 script = ExtResource("1_0kcg4")
-
-[node name="CastleBackground" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
-texture = ExtResource("2_5gdcv")
 
 [node name="Conversation" parent="." instance=ExtResource("3_kp1mx")]
 
@@ -78,14 +56,14 @@ texture = ExtResource("2_5gdcv")
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0, 0, 0, 0)
+color = Color(0, 0, 0, 1)
 
 [node name="FadeIn" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_7l1tg")
+"": SubResource("AnimationLibrary_a10ql")
 }
 
 [node name="FadeOut" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_onoqr")
+"": SubResource("AnimationLibrary_belcv")
 }
