@@ -168,34 +168,49 @@
         "responses": [
             {
                 "speaker": "Wilhelmina",
-                "portrait": "wilhelmina_default",
-                "message": "Response 1"
+                "portrait": "wilhelmina_blush",
+                "message": "Do [i]I[/i] know about Horse Cotillion? I was voted most eligible bachelorette when I graduated! I have dreamt of the day where [b]I meet my love in the stables. There he takes my hand and we share a dance and proclaim our love.[/b] To not guess as much you [i]really[/i] must be tired. Maybe you should turn in for the day…"
             },
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_default",
-                "message": "Response 2"
+                "message": "I… well, technically the whole lower half of my leg would be considered the \"toe\" so I don't even know if that's possible? EMCEE... Maybe its time to turn it in for the day? In the meantime I am going to continue practicing for my big moment where my love is realized."
             },
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_default",
-                "message": "Response 3"
+                "message": "In a world of anthropomorphic animals such as ours, \"paces\" seems like a horrible choice to denote distance. You really are exhausted, huh? Maybe it's time to call it a day? In the meantime I am going to continue practicing for my big moment where my love is realized."
             },
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_default",
-                "message": "Response 4"
+                "message": "Oh sweetie, you really are exhausted huh? Maybe it's time to call it a day? In the meantime I am going to continue practicing for my big moment where my love is realized."
             }
         ]
     },
     {
-        "speaker": "Chessa",
-        "portrait": "chessa_default",
-        "message": "Snarky thing to say"
+        "speaker": "EMCEE",
+        "portrait": "princess_eyebags",
+        "message": "The horse is right. I'm turning in for the night."
     },
     {
         "speaker": "EMCEE",
         "portrait": "princess_default",
-        "message": "Next time we meet it'll be at one our weddings! [i](Hopefully one of [b]yours.[/b])[/i] I will miss these parties, though. Ta-ta!"
+        "message": "Next we all meet it'll be at one our weddings! [i](Hopefully one of [b]yours.[/b])[/i] I will miss these parties, though. Ta-ta!"
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_default",
+        "message": "..."
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "..."
+    },
+    {
+        "speaker": "Sienna",
+        "portrait": "sienna_default",
+        "message": "...I'm sure she's fine."
     }
 ]
