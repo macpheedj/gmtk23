@@ -16,7 +16,8 @@
         "prompts": [
             "Hello there",
             "I didn't see you there",
-            "You are here, it seems"
+            "You are here, it seems",
+            "(yoda voice) Here, you are"
         ],
         "responses": [
             {
@@ -33,6 +34,11 @@
                 "speaker": "Chessa",
                 "portrait": "chessa_default",
                 "message": "Fart butt fart butt"
+            },
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "club soda"
             }
         ]
     },

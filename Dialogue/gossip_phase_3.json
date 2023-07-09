@@ -46,7 +46,7 @@
     },
     {
         "speaker": "Chessa",
-        "portrait": "chessa_default",
+        "portrait": "chessa_angry",
         "message": "Not at tea time, no ma'am! We're here for polite discussion and now I must insist it's your turn."
     },
     {
@@ -72,12 +72,12 @@
             },
             {
                 "speaker": "Chessa",
-                "portrait": "chessa_default",
+                "portrait": "chessa_angry",
                 "message": "Games are for children EMCEE, I don't have time for such juvenile activities. [i]sigh[/i] I certainly do hope my Prince comes to me and sweeps me away."
             },
             {
                 "speaker": "Chessa",
-                "portrait": "chessa_default",
+                "portrait": "chessa_blush",
                 "message": "Darling, talking at the moon is my favorite hobby. My dream is to be found on a [b]clear evening in a meadow reciting my poetry and waiting for my Prince Charming to come and steal me away.[/b]"
             }
         ]
@@ -89,7 +89,7 @@
     },
     {
         "speaker": "Chessa",
-        "portrait": "chessa_default",
+        "portrait": "chessa_angry",
         "message": "Oh and I am sure you have it all figured?"
     },
     {

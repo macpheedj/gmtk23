@@ -25,6 +25,36 @@
         "message": "Wouldn't you know, the poor fool didn't even make a sound as he fell, good lad."
     },
     {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Ah yes, that reminds me. ...I hope this serves you as it did me!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]Gog hands you a spent shell casing. You hold it in your open hand, staring down and hoping it isn't what you know it is.[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Well! Go ahead!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]He jumps excitedly from foot to foot. You... hold it up and smile at him?[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_blush",
+        "message": "Ghak har ha! What a charmer, Goggy boy!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]You huck it into the brush the moment he looks away.[/i]"
+    },
+    {
         "speaker": "transition",
         "transition": true
     },
@@ -41,7 +71,7 @@
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": "Dreaful and crude indeed!"
+        "message": "Dreadful and crude indeed!"
     },
     {
         "speaker": "Prince Gog",

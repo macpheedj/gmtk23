@@ -57,5 +57,49 @@
         "speaker": "Prince Gog",
         "portrait": "gog_blush",
         "message": "Oh mother, how I do miss you, you know I actually took one of my poems and set it to music, shall I sing it for you?"
+    },
+    {
+        "speaker": "transition",
+        "transition": true
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]Gog's eyes widen into perfect circles.[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "I have the best idea! Try this!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]He calls forth a nearby servant lousy with knapsacks and exorcises a small jar deep from one. As he unscrews the cap, you see the faint shadow of it's contents departing this plane. He mimes sticking his finger in.[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Give it a lick!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]Reluctantly, you stick your finger in the jar. Gog's smile is unwavering. His pupils tremor slightly.[/i]"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]You place your finger in your mouth, carefully avoiding your tongue.[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_blush",
+        "message": "Ghuruk gha be my uncle! A kindred spirit for pickled glurp!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]Gog spins around and struts off, giggling. You remove your finger from your mouth.[/i]"
     }
 ]

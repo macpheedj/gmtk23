@@ -1,0 +1,46 @@
+[
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Wh-what is... [i]she...[/i] doing here?"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_angry",
+        "message": "Wait a CROAKING minute. Are you TRYING to bamboozle me? ME!?"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "This means only one thing..."
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_angry",
+        "message": "[b][i]WAR!![/i][/b]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_blush",
+        "message": "...That my father will start. I abhor violence."
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]Gog turns briskly and begins to leave but pauses, glaring back over his shoulder. He gestures slowly down his body.[/i]"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_default",
+        "message": "Take one last look because you'll [i]never[/i] meet a frog like me again."
+    },
+    {
+        "speaker": "transition",
+        "transition": true
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]No kingdom lasts forever and your empire lasted way less than forever. At the behest of his crown prince, King Bufo took up the sword and swept across the plains, leaving both ruin and an uncomfortable slimy coating in his wake.[/i]"
+    }
+]
