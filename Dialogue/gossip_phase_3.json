@@ -1,1 +1,201 @@
-[]
+[
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_default",
+        "message": "EMCEE..."
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_confused",
+        "message": "[i](This can't happen)[/i]"
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_default",
+        "message": "EMCEE...?"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_confused",
+        "message": "[i](How can one person be so supremely unloveable?)[/i]"
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_angry",
+        "message": "EMCEE!"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_default",
+        "message": "Huh, what, sorry... I'm here, I'm here!"
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "Are you alright? You've seen out of it all day you've barely told us about your date."
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_confused",
+        "message": "[i](He said my feet are of such purity that he doesn't mind their lack of webbing...)[/i]"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_default",
+        "message": "Well a Lady must keep some secrets right?"
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "Not at tea time, no ma'am! We're here for polite discussion and now I must insist it's your turn."
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_eyebags",
+        "message": "Well, if I must:",
+        "prompts": [
+            "Have you heard of dressage?",
+            "You don't happen to like feet do you?",
+            "Are you familiar with the concept of Human Chess?",
+            "How do you feel about waxing poetic about the moon?"
+        ],
+        "responses": [
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "Well I do enjoy the arts but I can't say I'm familiar with... dressage? I'm more fond of the ethereal than the corporeal. [i]sigh[/i] I certainly do hope my Prince comes to me and sweeps me away."
+            },
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "I am not sure I follow? I certainly like [i]having[/i] feet I suppose. [i]sigh[/i] I certainly do hope my Prince comes to me and sweeps me away."
+            },
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "Games are for children EMCEE, I don't have time for such juvenile activities. [i]sigh[/i] I certainly do hope my Prince comes to me and sweeps me away."
+            },
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "Darling, talking at the moon is my favorite hobby. My dream is to be found on a [b]clear evening in a meadow reciting my poetry and waiting for my Prince Charming to come and steal me away.[/b]"
+            }
+        ]
+    },
+    {
+        "speaker": "Sienna",
+        "portrait": "sienna_upset",
+        "message": "Goodness, I knew you were a romantic, Chessa, but that naivety borders on sickening."
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "Oh and I am sure you have it all figured?"
+    },
+    {
+        "speaker": "Sienna",
+        "portrait": "sienna_default",
+        "message": "More so than you dear, but this isn't about me. Come now, EMCEE, I'm sure you have more to discuss?"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_eyebags",
+        "message": "I guess...",
+        "prompts": [
+            "Dressage? It's like fancy horse-walking?",
+            "I mean, like, how into feet are you?",
+            "In Human Chess, you can murder a man.",
+            "Do you feel as if you have no agency in this life we lead?"
+        ],
+        "responses": [
+            {
+                "speaker": "Sienna",
+                "portrait": "sienna_default",
+                "message": "EMCEE I can always appreciate a finely tuned craft but honestly I sense nothing in that description that interests me. I personally look forward to meeting my Prince on the Battlefield of love! To think, the day is so close..."
+            },
+            {
+                "speaker": "Sienna",
+                "portrait": "sienna_upset",
+                "message": "As a Mantis I have little in the way of “feet”, so I've not put much thought into it. That's a strange question. I personally look forward to meeting my Prince on the Battlefield of love! To think, the day is so close..."
+            },
+            {
+                "speaker": "Sienna",
+                "portrait": "sienna_blush",
+                "message": "Kill a man, you say? Huzzah! Now that sounds like a game worth playing! I can see it now: [b]the Prince finding me in the castle and together we lock into a battle of might to cement our love.[/b]"
+            },
+            {
+                "speaker": "Sienna",
+                "portrait": "sienna_upset",
+                "message": "I am in control of my own life and no one else. I will take control of my life and meet my Prince on the battlefield of love where we will prove who is the dominant."
+            }
+        ]
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "Is that supposed to be romantic?"
+    },
+    {
+        "speaker": "Sienna",
+        "portrait": "sienna_upset",
+        "message": "Oh that's enough from you, not everyone has to like the same things when it comes to love."
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_default",
+        "message": "Very true… but I want more [i]gossip![/i] What else do you have MC?"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_confused",
+        "message": "[i](Would it just be easier to kill him? Would that really be that bad?)[/i]"
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_angry",
+        "message": "EMCEE! Your mind wanders again!!"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_eyebags",
+        "message": "Ah! My apologies, much to ruminate on of late...",
+        "prompts": [
+            "Did you know there's a horse cotillion??",
+            "This guy's a toe-sucker for sure. You into that?",
+            "He shot his man from 10 paces... is that even something to brag about?",
+            "Do you find yourself staring into the void?"
+        ],
+        "responses": [
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "wilhelmina_default",
+                "message": "Response 1"
+            },
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "wilhelmina_default",
+                "message": "Response 2"
+            },
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "wilhelmina_default",
+                "message": "Response 3"
+            },
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "wilhelmina_default",
+                "message": "Response 4"
+            }
+        ]
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "Snarky thing to say"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "princess_default",
+        "message": "Next time we meet it'll be at one our weddings! [i](Hopefully one of [b]yours.[/b])[/i] I will miss these parties, though. Ta-ta!"
+    }
+]

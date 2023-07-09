@@ -6,7 +6,7 @@
     },
     {
         "speaker": "Wilhelmina",
-        "portrait": "wilhelmina_default",
+        "portrait": "wilhelmina_blush",
         "message": "Better than well, EMCEE. I must say our prince is never bereft of surprises."
     },
     {
@@ -16,12 +16,12 @@
     },
     {
         "speaker": "Sienna",
-        "portrait": "sienna_default",
+        "portrait": "sienna_blush",
         "message": "I am always so impressed that someone of his renown can be so easy to talk to."
     },
     {
         "speaker": "EMCEE",
-        "portrait": "princess_default",
+        "portrait": "princess_eyebags",
         "message": "He certainly has a gift for talking [i]at[/i] you. You're right about that."
     },
     {
@@ -64,7 +64,7 @@
     },
     {
         "speaker": "Wilhelmina",
-        "portrait": "wilhelmina_default",
+        "portrait": "wilhelmina_angry",
         "message": "Okkkaaaayyy Chessa calm yourself. Your enthusiasm is noted, but perhaps a bit much for the tea table."
     },
     {
@@ -105,7 +105,7 @@
             },
             {
                 "speaker": "Wilhelmina",
-                "portrait": "wilhelmina_default",
+                "portrait": "wilhelmina_blush",
                 "message": "Now [i]there[/i] is a man who knows his stuff! It's not every prince who knows the best methods of utilizing Horse Oil for maintenance. [b]Crucially, it takes a diet of oats and apples to keep a healthy coat.[/b]"
             }
         ]
@@ -122,7 +122,7 @@
     },
     {
         "speaker": "Sienna",
-        "portrait": "sienna_default",
+        "portrait": "sienna_upset",
         "message": "Oh, uhm... how rude of me to cut you off EMCEE!"
     },
     {
@@ -148,7 +148,7 @@
             },
             {
                 "speaker": "Sienna",
-                "portrait": "sienna_default",
+                "portrait": "sienna_blush",
                 "message": "Ruthless and efficient. That's how you [i]know[/i] he makes for an amazing ruler. [b]The only thing more attractive than a man who leads his people in battle is one who leaves triumphant![/b]"
             },
             {
@@ -158,7 +158,7 @@
             },
             {
                 "speaker": "Sienna",
-                "portrait": "sienna_default",
+                "portrait": "sienna_upset",
                 "message": "Surely you jest! Why would you think I would care about such inane trivia? Horse feet are kingdoms apart from my passions!!"
             }
         ]
@@ -176,11 +176,16 @@
     {
         "speaker": "Wilhelmina",
         "portrait": "wilhelmina_default",
-        "message": "Sad for you all, maybe. I am already planning the renovations necessary for my move-in."
+        "message": "Sad for you all, maybe."
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_angry",
+        "message": "I'm already planning the renovations necessary for my move-in."
     },
     {
         "speaker": "EMCEE",
-        "portrait": "princess_default",
+        "portrait": "princess_eyebags",
         "message": "I'll keep my fingers crossed for you, Wilhelmina. I would hate to see all the planning go to waste."
     },
     {
