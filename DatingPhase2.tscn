@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://crh030wjqlpyf"]
+
+[ext_resource type="Script" path="res://DatingPhase2.gd" id="1_0kcg4"]
+[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_5gdcv"]
+[ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_kp1mx"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_xgjta"]
+
+[node name="DatingPhase2" type="TextureRect"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = SubResource("ImageTexture_xgjta")
+script = ExtResource("1_0kcg4")
+
+[node name="CastleBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_5gdcv")
+
+[node name="Conversation" parent="." instance=ExtResource("3_kp1mx")]
