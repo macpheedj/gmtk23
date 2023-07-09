@@ -38,9 +38,9 @@ func displayNextMessage(overrideDialogue):
 		$SpeakerR.visible = true
 		$SpeakerR/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
 
-		if $SpeakerPortraitR.position.y != 390:
-			$SpeakerPortraitR.position.y = 390
-			$SpeakerPortraitL.position.y = 430
+		if $SpeakerPortraitR.position.y != 490:
+			$SpeakerPortraitR.position.y = 490
+			$SpeakerPortraitL.position.y = 530
 
 	else:
 		$SpeakerPortraitL.set_texture(portrait)
@@ -49,9 +49,9 @@ func displayNextMessage(overrideDialogue):
 		$SpeakerL.visible = true
 		$SpeakerL/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
 
-		if $SpeakerPortraitL.position.y != 390:
-			$SpeakerPortraitL.position.y = 390
-			$SpeakerPortraitR.position.y = 430
+		if $SpeakerPortraitL.position.y != 490:
+			$SpeakerPortraitL.position.y = 490
+			$SpeakerPortraitR.position.y = 530
 
 
 	if $TypeTimer.is_stopped():
