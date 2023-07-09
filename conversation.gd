@@ -111,6 +111,7 @@ func advanceMessage():
 	else:
 		dialogueIndex += 1
 		displayNextMessage(null)
+		$Boop.play()
 
 
 func _process(_delta):

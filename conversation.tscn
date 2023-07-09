@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6wj8m8jdv7ks"]
+[gd_scene load_steps=3 format=3 uid="uid://b6wj8m8jdv7ks"]
 
 [ext_resource type="Script" path="res://conversation.gd" id="1_mfhgd"]
+[ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="2_ko8ud"]
 
 [node name="Conversation" type="Node2D"]
 script = ExtResource("1_mfhgd")
@@ -123,6 +124,9 @@ offset_right = 1460.0
 offset_bottom = 525.0
 theme_override_font_sizes/font_size = 36
 disabled = true
+
+[node name="Boop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ko8ud")
 
 [connection signal="timeout" from="TypeTimer" to="." method="_on_type_timer_timeout"]
 [connection signal="pressed" from="Prompt1" to="." method="_on_prompt_1_pressed"]
