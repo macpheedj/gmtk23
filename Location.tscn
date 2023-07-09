@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Location.gd" id="1_crnwd"]
 [ext_resource type="Texture2D" uid="uid://begq5evsdyt3d" path="res://Assets/Meadow.png" id="2_x80yp"]
-[ext_resource type="Texture2D" uid="uid://c3wqtl8qrylny" path="res://Assets/castle_background.png" id="5_8yrtu"]
+[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="5_8yrtu"]
 [ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="5_d3tyh"]
 [ext_resource type="Texture2D" uid="uid://d21j44nwn2cs6" path="res://Assets/HORSEY.jpg" id="6_cejmu"]
 [ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="7_mnbfk"]

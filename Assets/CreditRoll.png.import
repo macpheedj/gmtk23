@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8elk34n84s4d"
-path="res://.godot/imported/Credits.png-e96754861ea05a4d93723b5dc4786a65.ctex"
+uid="uid://24nnpa0yqsl5"
+path="res://.godot/imported/CreditRoll.png-93c4c5273347de67ec609ba713479fbd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Credits.png"
-dest_files=["res://.godot/imported/Credits.png-e96754861ea05a4d93723b5dc4786a65.ctex"]
+source_file="res://Assets/CreditRoll.png"
+dest_files=["res://.godot/imported/CreditRoll.png-93c4c5273347de67ec609ba713479fbd.ctex"]
 
 [params]
 

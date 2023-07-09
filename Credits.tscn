@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://oivi5k8tsct3"]
 
 [ext_resource type="Script" path="res://Credits.gd" id="1_00nu6"]
-[ext_resource type="Texture2D" uid="uid://8elk34n84s4d" path="res://Assets/Credits.png" id="1_xj13k"]
+[ext_resource type="Texture2D" uid="uid://24nnpa0yqsl5" path="res://Assets/CreditRoll.png" id="2_04hd5"]
 [ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="2_ld57m"]
 
 [sub_resource type="Gradient" id="Gradient_bgssc"]
@@ -40,9 +40,10 @@ offset_bottom = 1084.0
 texture = SubResource("GradientTexture2D_8f4w8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_top = -9500.0
+offset_top = 1000.0
 offset_right = 1920.0
-texture = ExtResource("1_xj13k")
+offset_bottom = 10500.0
+texture = ExtResource("2_04hd5")
 
 [node name="ScrollAction" type="AnimationPlayer" parent="."]
 libraries = {
