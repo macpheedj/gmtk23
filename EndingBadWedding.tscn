@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://bagcaox8cndym"]
+
+[ext_resource type="Script" path="res://EndingBadWedding.gd" id="1_1k3oe"]
+[ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_5cqas"]
+[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_e1ugt"]
+[ext_resource type="AudioStream" uid="uid://djuy04bas5nvl" path="res://Assets/ending_bad_wedding.mp3" id="4_ry5mr"]
+
+[sub_resource type="Animation" id="Animation_kodv0"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xtoym"]
+_data = {
+"FadeIn": SubResource("Animation_kodv0")
+}
+
+[sub_resource type="Animation" id="Animation_3j6dr"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_170q0"]
+_data = {
+"FadeOut": SubResource("Animation_3j6dr")
+}
+
+[node name="EndingBadWedding" type="Node2D"]
+script = ExtResource("1_1k3oe")
+
+[node name="CastleBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_e1ugt")
+
+[node name="Conversation" parent="." instance=ExtResource("2_5cqas")]
+
+[node name="Fade" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xtoym")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_170q0")
+}
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ry5mr")

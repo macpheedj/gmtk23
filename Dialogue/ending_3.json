@@ -60,6 +60,16 @@
         "message": "Will you... and just to be clear I mean you, Princessa Chessa, marry me?!"
     },
     {
+        "speaker": "Chessa",
+        "portrait": "chessa_blush",
+        "message": "Yes! Yes! A thousand times yes! Come to me, Goggy!"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]They embrace.[/i]"
+    },
+    {
         "speaker": "narrator",
         "portrait": null,
         "message": "[i]A frog spurned. A kingdom saved. An unexpected romance stoked.[/i]"

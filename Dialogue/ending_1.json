@@ -5,9 +5,19 @@
         "message": "Wh-what is... [i]she...[/i] doing here?"
     },
     {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_default",
+        "message": "'Sup?"
+    },
+    {
         "speaker": "Prince Gog",
         "portrait": "gog_angry",
         "message": "Wait a CROAKING minute. Are you TRYING to bamboozle me? ME!?"
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "wilhelmina_angry",
+        "message": "Uh"
     },
     {
         "speaker": "Prince Gog",
