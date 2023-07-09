@@ -1,0 +1,224 @@
+[
+    {
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "Soooo Ladies, do tell, how was your date with the Prince?"
+    },
+    {
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "I thought it went wonderfully - he is a man of many layers and I like that."
+    },
+    {
+        "speaker": "Sienna",
+        "portrait": "gog_blush",
+        "message": "Yes - he has a certain strength to him that I find endearing."
+    },
+    {
+        "speaker": "Wilhelmina",
+        "portrait": "gog_angry",
+        "message": "Indeed, every part of him embodies what it means to be royalty."
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "Goodness, I must say; I wasn't expecting such... [i]enthusiasm.[/i]"
+    },
+    {
+        "speaker": "Sienna",
+        "portrait": "gog_blush",
+        "message": "How could we not be excited? He is a prince you know..."
+    },
+    {
+        "speaker": "Sienna",
+        "portrait": "gog_blush",
+        "message": "...and a mighty powerful one at that!"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "Powerful, huh?"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "[i](Maybe I can use this to my advantage... it's time to play matchmaker)"
+    },
+    {
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "I suppose I get where you are coming from... On our date today he did tell me about:",
+        "prompts": [
+            "The time he ate all of his siblings.",
+            "His obsessive belief in the powers of horse Milk.",
+            "The tomes of poetry he has written through the years."
+        ],
+        "responses": [
+            {
+                "speaker": "Sienna",
+                "portrait": "gog_blush",
+                "message": "Oh ho that rascal he most certainly did not! See, that's what I love about him. I have always thought that every loving relationship should be a power struggle. If you aren't vying to be on top what's the point?"
+            },
+            {
+                "speaker": "Sienna",
+                "portrait": "gog_blush",
+                "message": "Horse milk? No offense MC I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
+            },
+            {
+                "speaker": "Sienna",
+                "portrait": "gog_blush",
+                "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously MC. The Gog I know is a much stronger, fiercer man."
+            }
+        ]
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    },
+    {
+        "speaker": "",
+        "portrait": "",
+        "message": ""
+    }
+]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckxlbtw74cgpa"]
+
+[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="1_ahwxv"]
+
+[node name="GossipPhase1" type="Node2D"]
+
+[node name="CastleBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_ahwxv")
