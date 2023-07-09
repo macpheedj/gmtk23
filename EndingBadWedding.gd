@@ -26,7 +26,7 @@ func _process(_delta):
 		$FadeOut.play("FadeOut")
 		await get_tree().create_timer(1).timeout
 		$Music.stop()
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://Credits.tscn")
 
 
 func _on_conversation_fadeout():
