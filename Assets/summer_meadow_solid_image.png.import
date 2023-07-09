@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ml5vcpw4mr7m"
-path="res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"
+uid="uid://cmkhqr1h41nci"
+path="res://.godot/imported/summer_meadow_solid_image.png-bd879b81e37c35b1be7c2fcd0f10f0f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/castle_background.png"
-dest_files=["res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"]
+source_file="res://Assets/summer_meadow_solid_image.png"
+dest_files=["res://.godot/imported/summer_meadow_solid_image.png-bd879b81e37c35b1be7c2fcd0f10f0f2.ctex"]
 
 [params]
 

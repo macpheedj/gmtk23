@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://oivi5k8tsct3"]
+
+[ext_resource type="Script" path="res://Credits.gd" id="1_00nu6"]
+[ext_resource type="Texture2D" uid="uid://8elk34n84s4d" path="res://Assets/Credits.png" id="1_xj13k"]
+[ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="2_ld57m"]
+
+[sub_resource type="Gradient" id="Gradient_bgssc"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8f4w8"]
+gradient = SubResource("Gradient_bgssc")
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_8yeh0"]
+resource_name = "Text_Scroll"
+length = 75.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4, 6, 19.3, 22, 68.6, 71.5, 75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 1000), Vector2(0, 300), Vector2(0, 300), Vector2(0, -1580), Vector2(0, -1580), Vector2(0, -8525), Vector2(0, -8525), Vector2(0, -9500)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f4f7f"]
+_data = {
+"Text_Scroll": SubResource("Animation_8yeh0")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_00nu6")
+
+[node name="BlackBG" type="TextureRect" parent="."]
+offset_right = 1918.0
+offset_bottom = 1084.0
+texture = SubResource("GradientTexture2D_8f4w8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -9500.0
+offset_right = 1920.0
+texture = ExtResource("1_xj13k")
+
+[node name="ScrollAction" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_f4f7f")
+}
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ld57m")

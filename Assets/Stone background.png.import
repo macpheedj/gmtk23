@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ml5vcpw4mr7m"
-path="res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"
+uid="uid://dvxywvimk2odr"
+path="res://.godot/imported/Stone background.png-66e8dfc6e221a31ec4b37035165e517f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/castle_background.png"
-dest_files=["res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"]
+source_file="res://Assets/Stone background.png"
+dest_files=["res://.godot/imported/Stone background.png-66e8dfc6e221a31ec4b37035165e517f.ctex"]
 
 [params]
 
