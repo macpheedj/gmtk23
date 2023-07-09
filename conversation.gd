@@ -44,7 +44,7 @@ func narrate(message):
 	$Speech/BG/Text.text = message
 
 
-func setSpeaker(swap, dialogue, portrait):
+func setSpeaker(swap, dialogue):
 	var speakerPortrait = null
 	var speaker = null
 	var speakerName = null
@@ -68,6 +68,9 @@ func setSpeaker(swap, dialogue, portrait):
 			$SpeakerPortraitL.position.y = 490
 			$SpeakerPortraitR.position.y = 530
 	
+	var image = Image.new()
+	image.load("res://assets/" + dialogue.portrait + ".png")
+	var portrait = ImageTexture.create_from_image(image)
 	speakerPortrait.set_texture(portrait)
 	$Speech/BG/Text.visible_characters = 0
 	$Speech/BG/Text.text = dialogue.message
@@ -91,16 +94,14 @@ func displayNextMessage(overrideDialogue):
 		narrate(dialogue.message)
 		return
 
-	var portrait = load("res://assets/" + dialogue.portrait + ".png")
-
 	if previousSpeaker == null:
 		previousSpeaker = dialogue.speaker
 		previousSpeakerSide = "RIGHT"
 
 	if dialogue.speaker == previousSpeaker:
-		setSpeaker(false, dialogue, portrait)
+		setSpeaker(false, dialogue)
 	else:
-		setSpeaker(true, dialogue, portrait)
+		setSpeaker(true, dialogue)
 
 	previousSpeaker = dialogue.speaker
 

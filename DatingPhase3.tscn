@@ -53,7 +53,6 @@ script = ExtResource("1_4duwg")
 [node name="Conversation" parent="." instance=ExtResource("2_f4bor")]
 
 [node name="Fade" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
