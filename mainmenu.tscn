@@ -149,6 +149,7 @@ autoplay = true
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Fade" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0

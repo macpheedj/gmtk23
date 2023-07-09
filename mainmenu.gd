@@ -3,12 +3,13 @@ extends Control
 func _ready():
 	$FadeIn.play("Fade_In")
 	$TitleFloat.play("Title_Float")
+	
 
 func _on_play_pressed():
 	$SelectUIAudio.play()
-	$FadeOut.play("Fade_Out")
-	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://game.tscn")
+	#$FadeOut.play("Fade_Out")
+	#await get_tree().create_timer(2).timeout
+	#get_tree().change_scene_to_file("res://Location.tscn")
 	
 	
 func _on_exit_pressed():
