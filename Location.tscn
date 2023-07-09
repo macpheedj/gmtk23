@@ -1,16 +1,17 @@
-[gd_scene load_steps=14 format=3 uid="uid://ffsr87kc4uqg"]
+[gd_scene load_steps=19 format=3 uid="uid://ffsr87kc4uqg"]
 
 [ext_resource type="Script" path="res://Location.gd" id="1_crnwd"]
 [ext_resource type="Texture2D" uid="uid://begq5evsdyt3d" path="res://Assets/Meadow.png" id="2_x80yp"]
 [ext_resource type="Texture2D" uid="uid://c3wqtl8qrylny" path="res://Assets/castle_background.png" id="5_8yrtu"]
 [ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="5_d3tyh"]
-[ext_resource type="Texture2D" uid="uid://d21j44nwn2cs6" path="res://Assets/HORSEY.jpg" id="6_cejmu"]
+[ext_resource type="Texture2D" uid="uid://baalf0r2d5sd2" path="res://Assets/stable_background.png" id="6_5xak0"]
 [ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="7_mnbfk"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="8_7065l"]
 [ext_resource type="Texture2D" uid="uid://cmkhqr1h41nci" path="res://Assets/summer_meadow_solid_image.png" id="8_v0uek"]
 [ext_resource type="Texture2D" uid="uid://bdossjbsnu20m" path="res://Assets/StableText.png" id="10_783p7"]
 [ext_resource type="Texture2D" uid="uid://bh6g2rhqn16r3" path="res://Assets/CastleText.png" id="10_qcnpk"]
 [ext_resource type="Texture2D" uid="uid://b8xs480gqhi35" path="res://Assets/LocationPrompt.png" id="11_ptq6y"]
+[ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="12_yea1u"]
 
 [sub_resource type="Animation" id="Animation_5bilk"]
 resource_name = "BG_Movement"
@@ -31,6 +32,71 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0lk8f"]
 _data = {
 "BG_Movement": SubResource("Animation_5bilk")
+}
+
+[sub_resource type="Animation" id="Animation_mariy"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3cvk8"]
+_data = {
+"FadeIn": SubResource("Animation_mariy")
+}
+
+[sub_resource type="Animation" id="Animation_cgg2u"]
+resource_name = "Fade_Out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.992157)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fade:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h030f"]
+_data = {
+"Fade_Out": SubResource("Animation_cgg2u")
 }
 
 [node name="Node2D" type="Node2D"]
@@ -68,7 +134,7 @@ offset_left = 1244.0
 offset_top = 314.0
 offset_right = 1674.0
 offset_bottom = 558.0
-icon = ExtResource("6_cejmu")
+icon = ExtResource("6_5xak0")
 icon_alignment = 1
 expand_icon = true
 
@@ -112,7 +178,30 @@ offset_bottom = 1035.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("11_ptq6y")
 
+[node name="HoverUIAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_yea1u")
+
+[node name="SelectionUIAudio" type="AudioStreamPlayer" parent="."]
+
+[node name="Fade" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3cvk8")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h030f")
+}
+
 [connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
-[connection signal="pressed" from="BattlefieldButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="StableButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="MeadowButton" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="BattlefieldButton" to="." method="_on_battlefield_button_mouse_entered"]
+[connection signal="pressed" from="BattlefieldButton" to="." method="_on_battlefield_button_pressed"]
+[connection signal="mouse_entered" from="StableButton" to="." method="_on_stable_button_mouse_entered"]
+[connection signal="pressed" from="StableButton" to="." method="_on_stable_button_pressed"]
+[connection signal="mouse_entered" from="MeadowButton" to="." method="_on_meadow_button_mouse_entered"]
+[connection signal="pressed" from="MeadowButton" to="." method="_on_meadow_button_pressed"]

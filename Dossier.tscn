@@ -1,0 +1,225 @@
+[gd_scene load_steps=19 format=3 uid="uid://ddmae0xvbhevp"]
+
+[ext_resource type="Script" path="res://Dossier.gd" id="1_0ufdm"]
+[ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="2_giws4"]
+[ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="3_vb0og"]
+[ext_resource type="Texture2D" uid="uid://f2s2lrw5qpf6" path="res://Assets/Horse_Normal.png" id="4_16s1s"]
+[ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="4_hatof"]
+[ext_resource type="Texture2D" uid="uid://kpbrhchm4xbc" path="res://Assets/Mantis_Standard_Large.png" id="5_c1c0w"]
+[ext_resource type="Texture2D" uid="uid://buyl6t72lc3aj" path="res://Assets/chessa_default.png" id="6_1s7s3"]
+[ext_resource type="Texture2D" uid="uid://cde5aemhxrkyt" path="res://Assets/gog_default.png" id="8_45e46"]
+[ext_resource type="Texture2D" uid="uid://c5yg8bdvoy6ey" path="res://Assets/RatText.png" id="8_gtsjm"]
+[ext_resource type="Texture2D" uid="uid://bjmne30q3v66e" path="res://Assets/MantisText.png" id="9_wwqak"]
+[ext_resource type="Texture2D" uid="uid://c28w4x7f36oep" path="res://Assets/HorseText.png" id="10_uqajx"]
+[ext_resource type="Texture2D" uid="uid://dgxp1k60vq351" path="res://Assets/FrogText.png" id="11_q5r8q"]
+
+[sub_resource type="Animation" id="Animation_5bilk"]
+resource_name = "BG_Movement"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BG:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-5750, -3250), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0lk8f"]
+_data = {
+"BG_Movement": SubResource("Animation_5bilk")
+}
+
+[sub_resource type="Animation" id="Animation_6svmx"]
+resource_name = "Fade_In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tetms"]
+_data = {
+"Fade_In": SubResource("Animation_6svmx")
+}
+
+[sub_resource type="Animation" id="Animation_vbdt5"]
+resource_name = "Fade_Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i5i0h"]
+_data = {
+"Fade_Out": SubResource("Animation_vbdt5")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0ufdm")
+
+[node name="BG" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_right = 7680.0
+offset_bottom = 4320.0
+texture = ExtResource("2_giws4")
+
+[node name="BGAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0lk8f")
+}
+
+[node name="RatProfile" type="Button" parent="."]
+offset_right = 480.0
+offset_bottom = 400.0
+icon = ExtResource("6_1s7s3")
+icon_alignment = 1
+expand_icon = true
+
+[node name="HorseProfile" type="Button" parent="."]
+offset_left = 954.0
+offset_top = 3.0
+offset_right = 1434.0
+offset_bottom = 403.0
+icon = ExtResource("4_16s1s")
+icon_alignment = 1
+expand_icon = true
+
+[node name="MantisProfile" type="Button" parent="."]
+offset_left = 466.0
+offset_right = 946.0
+offset_bottom = 400.0
+icon = ExtResource("5_c1c0w")
+icon_alignment = 1
+expand_icon = true
+
+[node name="FrogProfile" type="Button" parent="."]
+offset_left = 1435.0
+offset_top = 5.0
+offset_right = 1915.0
+offset_bottom = 405.0
+icon = ExtResource("8_45e46")
+icon_alignment = 1
+expand_icon = true
+
+[node name="RatTitle" type="TextureRect" parent="."]
+offset_left = 104.0
+offset_top = 392.0
+offset_right = 604.0
+offset_bottom = 542.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_gtsjm")
+
+[node name="HorseTitle" type="TextureRect" parent="."]
+offset_left = 580.0
+offset_top = 391.0
+offset_right = 1080.0
+offset_bottom = 541.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_wwqak")
+
+[node name="MantisTitle" type="TextureRect" parent="."]
+offset_left = 1020.0
+offset_top = 391.0
+offset_right = 1820.0
+offset_bottom = 541.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_uqajx")
+
+[node name="FrogTitle" type="TextureRect" parent="."]
+offset_left = 1590.0
+offset_top = 393.0
+offset_right = 2090.0
+offset_bottom = 543.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_q5r8q")
+
+[node name="BackButton" type="Button" parent="."]
+offset_left = 874.0
+offset_top = 976.0
+offset_right = 1048.0
+offset_bottom = 1053.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[node name="RatNotes" type="TextEdit" parent="."]
+offset_left = 41.0
+offset_top = 504.0
+offset_right = 468.0
+offset_bottom = 954.0
+text = "Enter notes for Chessa here."
+
+[node name="MantisNotes" type="TextEdit" parent="."]
+offset_left = 514.0
+offset_top = 504.0
+offset_right = 941.0
+offset_bottom = 954.0
+text = "Enter notes for Sienna here."
+
+[node name="HorseNotes" type="TextEdit" parent="."]
+offset_left = 995.0
+offset_top = 500.0
+offset_right = 1422.0
+offset_bottom = 950.0
+text = "Enter notes for Wilhelmina here."
+
+[node name="FrogNotes" type="TextEdit" parent="."]
+offset_left = 1483.0
+offset_top = 495.0
+offset_right = 1910.0
+offset_bottom = 945.0
+text = "Enter notes for Gog here."
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tetms")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i5i0h")
+}
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="SelectUISound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_vb0og")
+volume_db = 20.0
+
+[node name="BackUISound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hatof")
+volume_db = 20.0
+
+[connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
+[connection signal="mouse_entered" from="RatProfile" to="." method="_on_rat_profile_mouse_entered"]
+[connection signal="pressed" from="RatProfile" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="HorseProfile" to="." method="_on_horse_profile_mouse_entered"]
+[connection signal="pressed" from="HorseProfile" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="MantisProfile" to="." method="_on_mantis_profile_mouse_entered"]
+[connection signal="pressed" from="MantisProfile" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="FrogProfile" to="." method="_on_frog_profile_mouse_entered"]
+[connection signal="pressed" from="FrogProfile" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

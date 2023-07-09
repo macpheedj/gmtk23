@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://es8pkrchloml"
-path="res://.godot/imported/PC Location.png-6cf5b102c8aa343dd7af7486c8be5f53.ctex"
+uid="uid://kpbrhchm4xbc"
+path="res://.godot/imported/Mantis_Standard_Large.png-ac737155f2acf269252b7249b18fd4c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/PC Location.png"
-dest_files=["res://.godot/imported/PC Location.png-6cf5b102c8aa343dd7af7486c8be5f53.ctex"]
+source_file="res://Assets/Mantis_Standard_Large.png"
+dest_files=["res://.godot/imported/Mantis_Standard_Large.png-ac737155f2acf269252b7249b18fd4c0.ctex"]
 
 [params]
 

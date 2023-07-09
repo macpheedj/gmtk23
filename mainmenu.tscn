@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2xq2jebor1dg"]
+[gd_scene load_steps=12 format=3 uid="uid://dy2805chf0en1"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_rwybm"]
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_56mxv"]
@@ -149,6 +149,7 @@ autoplay = true
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Fade" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
