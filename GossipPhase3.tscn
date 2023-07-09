@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4ce5jbi31a7d"]
+
+[ext_resource type="Script" path="res://GossipPhase3.gd" id="1_ni80m"]
+[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_2yghc"]
+[ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_invje"]
+
+[node name="GossipPhase3" type="Node2D"]
+script = ExtResource("1_ni80m")
+
+[node name="CastleBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_2yghc")
+
+[node name="Conversation" parent="." instance=ExtResource("3_invje")]
