@@ -96,6 +96,7 @@ wait_time = 0.02
 
 [node name="Prompt1" type="Button" parent="."]
 visible = false
+light_mask = 3
 offset_left = 460.0
 offset_top = 150.0
 offset_right = 1460.0
@@ -105,6 +106,7 @@ disabled = true
 
 [node name="Prompt2" type="Button" parent="."]
 visible = false
+light_mask = 3
 offset_left = 460.0
 offset_top = 300.0
 offset_right = 1460.0
@@ -114,6 +116,7 @@ disabled = true
 
 [node name="Prompt3" type="Button" parent="."]
 visible = false
+light_mask = 3
 offset_left = 460.0
 offset_top = 450.0
 offset_right = 1460.0
