@@ -3,6 +3,7 @@ class_name Conversation
 
 
 signal fadeout
+signal end
 
 
 var animating = false
@@ -105,7 +106,8 @@ func displayPrompt(prompts):
 
 func advanceMessage():
 	if dialogueIndex == dialogues.size() - 1:
-		print("bzzt wrongo")
+		print("ending convo")
+		end.emit()
 	else:
 		dialogueIndex += 1
 		displayNextMessage(null)

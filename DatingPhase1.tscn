@@ -1,10 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://ba2c1i38tcoq3"]
+[gd_scene load_steps=9 format=3 uid="uid://ba2c1i38tcoq3"]
 
 [ext_resource type="Script" path="res://DatingPhase1.gd" id="1_ouv6t"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="1_u7iyo"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_h83vx"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_ldwxs"]
+
+[sub_resource type="Animation" id="Animation_8sc7f"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qls7c"]
+_data = {
+"FadeIn": SubResource("Animation_8sc7f")
+}
+
+[sub_resource type="Animation" id="Animation_eh0qx"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g4a3b"]
+_data = {
+"FadeOut": SubResource("Animation_eh0qx")
+}
 
 [node name="DatingPhase" type="TextureRect"]
 texture = SubResource("ImageTexture_ldwxs")
@@ -15,3 +55,19 @@ position = Vector2(960, 540)
 texture = ExtResource("1_u7iyo")
 
 [node name="Conversation" parent="." instance=ExtResource("2_h83vx")]
+
+[node name="Fade" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qls7c")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_g4a3b")
+}
