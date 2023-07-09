@@ -2,6 +2,10 @@ extends Node2D
 class_name Conversation
 
 
+signal fadeout
+
+
+var animating = false
 var awaitingPrompt = false
 var speakers = []
 var shownPrompts = []
@@ -15,6 +19,10 @@ func setup(json):
 	displayNextMessage(null)
 
 
+func setAnimating(boolean):
+	animating = boolean
+
+
 func countSpeakers():
 	dialogues.map(func(item): if speakers.find(item.speaker) == -1: speakers.push_back(item.speaker))
 	return speakers.size()
@@ -26,10 +34,12 @@ func isFinishedTyping() -> bool:
 
 func displayNextMessage(overrideDialogue):
 	var dialogue = overrideDialogue if overrideDialogue else dialogues[dialogueIndex]
-	var portrait = load("res://assets/" + dialogue.portrait + ".png")
 
-	# print("speaker name: " + dialogue.speaker)
-	# print("index: " + str(speakers.find(dialogue.speaker)))
+	if dialogue.has("transition"):
+		fadeout.emit()
+		return
+
+	var portrait = load("res://assets/" + dialogue.portrait + ".png")
 
 	if speakers.find(dialogue.speaker) % 2 == 0:
 		$SpeakerPortraitR.set_texture(portrait)
@@ -80,6 +90,9 @@ func advanceMessage():
 
 
 func _process(_delta):
+	if animating:
+		return
+
 	if not awaitingPrompt and Input.is_action_just_pressed("text_advance"):
 		if isFinishedTyping():
 			advanceMessage()
