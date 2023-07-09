@@ -1,0 +1,72 @@
+[gd_scene load_steps=8 format=3 uid="uid://2aq7oix77y0d"]
+
+[ext_resource type="Script" path="res://DatingPhase3.gd" id="1_4duwg"]
+[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="1_iyuvj"]
+[ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_f4bor"]
+
+[sub_resource type="Animation" id="Animation_s6apf"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xggvu"]
+_data = {
+"FadeIn": SubResource("Animation_s6apf")
+}
+
+[sub_resource type="Animation" id="Animation_47pyn"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4sgyy"]
+_data = {
+"FadeOut": SubResource("Animation_47pyn")
+}
+
+[node name="DatingPhase3" type="TextureRect"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_4duwg")
+
+[node name="CastleBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_iyuvj")
+
+[node name="Conversation" parent="." instance=ExtResource("2_f4bor")]
+
+[node name="Fade" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xggvu")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4sgyy")
+}

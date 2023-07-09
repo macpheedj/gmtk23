@@ -37,6 +37,7 @@ func displayNextMessage(overrideDialogue):
 
 	if dialogue.has("transition"):
 		fadeout.emit()
+		dialogueIndex += 1
 		return
 
 	var portrait = load("res://assets/" + dialogue.portrait + ".png")
