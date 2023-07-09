@@ -6,54 +6,11 @@ var awaitingPrompt = false
 var speakers = []
 var shownPrompts = []
 var dialogueIndex = 0
-# TODO: read this from a json file or something
-var dialogues = [
-	{
-		"speaker": "Prince Gog",
-		"portrait": "gog_default",
-		"message": "Blather blather blather"
-	},
-	{
-		"speaker": "Chessa",
-		"portrait": "chessa_default",
-		"message": "I am here"
-	},
-	{
-		"speaker": "Prince Gog",
-		"portrait": "gog_angry",
-		"message": "blah blah blah",
-		"prompts": [
-			"Hello there",
-			"I didn't see you there",
-			"You are here, it seems"
-		],
-		"responses": [
-			{
-				"speaker": "Chessa",
-				"portrait": "chessa_default",
-				"message": "Why I never!",
-			},
-			{
-				"speaker": "Chessa",
-				"portrait": "chessa_default",
-				"message": "I like that",
-			},
-			{
-				"speaker": "Chessa",
-				"portrait": "chessa_default",
-				"message": "Fart butt fart butt",
-			},
-		]
-	},
-	{
-		"speaker": "Chessa",
-		"portrait": "chessa_default",
-		"message": "lol"
-	},
-]
+var dialogues = null
 
 
-func _ready():
+func setup(json):
+	dialogues = json
 	countSpeakers()
 	displayNextMessage(null)
 
@@ -81,9 +38,9 @@ func displayNextMessage(overrideDialogue):
 		$SpeakerR.visible = true
 		$SpeakerR/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
 
-		if $SpeakerPortraitR.position.y != 390:
-			$SpeakerPortraitR.position.y = 390
-			$SpeakerPortraitL.position.y = 430
+		if $SpeakerPortraitR.position.y != 490:
+			$SpeakerPortraitR.position.y = 490
+			$SpeakerPortraitL.position.y = 530
 
 	else:
 		$SpeakerPortraitL.set_texture(portrait)
@@ -92,9 +49,9 @@ func displayNextMessage(overrideDialogue):
 		$SpeakerL.visible = true
 		$SpeakerL/BG/Name.text = "[center]" + dialogue.speaker + "[/center]"
 
-		if $SpeakerPortraitL.position.y != 390:
-			$SpeakerPortraitL.position.y = 390
-			$SpeakerPortraitR.position.y = 430
+		if $SpeakerPortraitL.position.y != 490:
+			$SpeakerPortraitL.position.y = 490
+			$SpeakerPortraitR.position.y = 530
 
 
 	if $TypeTimer.is_stopped():
