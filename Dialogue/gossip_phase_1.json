@@ -50,7 +50,7 @@
         "message": "I suppose I get where you are coming from... On our date today he did tell me about:",
         "prompts": [
             "The time he ate all of his siblings.",
-            "His obsessive belief in the powers of horse Milk.",
+            "His obsessive belief in the powers of Horse Milk.",
             "The tomes of poetry he has written through the years."
         ],
         "responses": [
@@ -62,163 +62,102 @@
             {
                 "speaker": "Sienna",
                 "portrait": "gog_blush",
-                "message": "Horse milk? No offense MC I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
+                "message": "Horse milk? No offense EMCEE I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
             },
             {
                 "speaker": "Sienna",
                 "portrait": "gog_blush",
-                "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously MC. The Gog I know is a much stronger, fiercer man."
+                "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously EMCEE. The Gog I know is a much stronger, fiercer man."
             }
         ]
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "Chessa",
+        "portrait": "chessa_default",
+        "message": "My, my Sienna how very... expected of you. Domineering as ever. I fear your missing so much of our dear Gog though. He has a mystifying depth when you actually bother to look."
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "[i](Depth? She can't be serious... the man is shallower than the pool he spawned from!)[/i]"
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "Oh, Chessa love, how right you are. You'd love to hear about:",
+        "prompts": [
+            "All the in-depth details of his fratricidal vorescapades. I know all the names... and textures...",
+            "The never-ending list of health benefits offered by consuming Pounds of Horse Milk",
+            "The fact that I haven't even begun to exhaust the poetry he recited for me."
+        ],
+        "responses": [
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "I can think of nothing I wish to hear of less. Though I suppose that belies his choosing that for you. Trying to chase you away, it would seem. The man I met was deeper than the vastest of oceans."
+            },
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "I suppose I can understand the worth in such information, but really EMCEE? Horse Milk? Where is the romance in [i]that?[/i] The man I met was deeper than the vastest of oceans."
+            },
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "Now you are speaking my language... the language of love! The first time I read INSERT_POEM_JOKE_HERE, I immediately understood what it meant to [i]truly [b]feel[/b][/i]. The depth to the piece was so immense that I felt as if I could drown."
+            }
+        ]
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "Wilhelmina",
+        "portrait": "gog_angry",
+        "message": "Hah Chessa dear, do you not think that a bit melodramatic? Nothing wrong with a man of intellect, of course, but really when it comes to finding a suitor there is nothing more important than [i]pedigree.[/i]"
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "How right you are Wilhelmina. And nothing says pedigree like:",
+        "prompts": [
+            "Jerome getting stuck in his throat due to an \"Unwieldy Tail Bone\"",
+            "The fact that Horse Milk is far more viscous than other milks.",
+            "Starting most of his poems with \"there once was a man from Mucktucket...\""
+        ],
+        "responses": [
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "gog_angry",
+                "message": "Love... you sound famished, maybe have a biscuit with some of that tea, and take a lap. I'm more interested in his upbringing and making sure his background meets my needs."
+            },
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "gog_angry",
+                "message": "Yes see! This is what I love. A man with a strong upbringing. It takes a strong family to know the importance of a horse centric childhood, his mother clearly raised him well. I too was raised in such a way and in my schooling days I was the pride of the chariot team."
+            },
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "gog_angry",
+                "message": "EMCEE I finished schooling and never looked back, no need for poetry and philosophy. I'm more interested in his upbringing and making sure his background meets my needs."
+            }
+        ]
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "Sienna",
+        "portrait": "gog_blush",
+        "message": "That's a fancy way of saying she's in it for money and clout."
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "Wilhelmina",
+        "portrait": "gog_angry",
+        "message": "..."
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "Well ladies this has been truly enlightening. Sounds as though our next round of dates is this weekend."
     },
     {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
-    },
-    {
-        "speaker": "",
-        "portrait": "",
-        "message": ""
+        "speaker": "EMCEE",
+        "portrait": "gog_default",
+        "message": "Same time next week for tea?"
     }
 ]
