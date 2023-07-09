@@ -51,7 +51,8 @@
         "prompts": [
             "The time he ate all of his siblings.",
             "His obsessive belief in the powers of Horse Milk.",
-            "The tomes of poetry he has written through the years."
+            "The tomes of poetry he has written through the years.",
+            "His attendant, Crumbit."
         ],
         "responses": [
             {
@@ -68,6 +69,11 @@
                 "speaker": "Sienna",
                 "portrait": "sienna_upset",
                 "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously EMCEE. The Gog I know is a much stronger, fiercer man."
+            },
+            {
+                "speaker": "Sienna",
+                "portrait": "sienna_default",
+                "message": "He talked to you about his attendant? Hahaha look out EMCEE I fear our prince might be trying to set you up! He probably can tell you lack the strength and cut throat nature to run a country."
             }
         ]
     },
@@ -88,7 +94,8 @@
         "prompts": [
             "All the in-depth details of his fratricidal vorescapades. I know all the names... and textures...",
             "The never-ending list of health benefits offered by consuming Pounds of Horse Milk",
-            "The fact that I haven't even begun to exhaust the poetry he recited for me."
+            "The fact that I haven't even begun to exhaust the poetry he recited for me.",
+            "How Crumbit sleeps in a foot locker by the princes bed in case he is needed at night."
         ],
         "responses": [
             {
@@ -104,7 +111,12 @@
             {
                 "speaker": "Chessa",
                 "portrait": "chessa_blush",
-                "message": "Now you are speaking my language... the language of love! The first time I read INSERT_POEM_JOKE_HERE, I immediately understood what it meant to [i]truly [b]feel[/b][/i]. The depth to the piece was so immense that I felt as if I could drown."
+                "message": "Now you are speaking my language... the poetic language of love! The first time I read Mouser's \"The Ratebury Tales,\" I immediately understood what it meant to [i]truly [b]feel[/b][/i]. The depth to the piece was so immense that I felt as if I could drown."
+            },
+            {
+                "speaker": "Chessa",
+                "portrait": "chessa_default",
+                "message": "He told you a shocking amount about his butler... I feel sorry for you EMCEE. In our date, he told me tales that made me fall for him immediately. My Gog was deeper than the vastest ocean."
             }
         ]
     },
@@ -120,7 +132,8 @@
         "prompts": [
             "Jerome getting stuck in his throat due to an \"Unwieldy Tail Bone\"",
             "The fact that Horse Milk is far more viscous than other milks.",
-            "Starting most of his poems with \"there once was a man from Mucktucket...\""
+            "Starting most of his poems with \"there once was a man from Mucktucket...\"",
+            "I swear he would call him “Crumpet” sometimes..."
         ],
         "responses": [
             {
@@ -136,7 +149,12 @@
             {
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_angry",
-                "message": "EMCEE I finished schooling and never looked back, no need for poetry and philosophy. I'm more interested in his upbringing and making sure his background meets my needs."
+                "message": "EMCEE, I finished schooling and never looked back, no need for poetry and philosophy. I'm more interested in his upbringing and making sure his background meets my needs."
+            },
+            {
+                "speaker": "Wilhelmina",
+                "portrait": "wilhelmina_default",
+                "message": "EMCEE, having an attendant is important for [i]any[/i] member of the royalty, little though I care for... Crambot? I want to know more about the prince's upbringing, and making sure his background meets my needs."
             }
         ]
     },

@@ -105,7 +105,7 @@ func displayNextMessage(overrideDialogue):
 	previousSpeaker = dialogue.speaker
 
 func togglePrompts():
-	for prompt in [$Prompt1, $Prompt2, $Prompt3]:
+	for prompt in [$Prompt1, $Prompt2, $Prompt3, $Prompt4]:
 		prompt.visible = not prompt.visible
 		prompt.disabled = not prompt.disabled
 
@@ -115,6 +115,7 @@ func displayPrompt(prompts):
 	$Prompt1.text = prompts[0]
 	$Prompt2.text = prompts[1]
 	$Prompt3.text = prompts[2]
+	$Prompt4.text = prompts[3]
 	togglePrompts()
 
 
@@ -166,3 +167,9 @@ func _on_prompt_3_pressed():
 	awaitingPrompt = false
 	togglePrompts()
 	displayNextMessage(dialogues[dialogueIndex].responses[2])
+
+
+func _on_prompt_4_pressed():
+	awaitingPrompt = false
+	togglePrompts()
+	displayNextMessage(dialogues[dialogueIndex].responses[3])
