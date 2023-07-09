@@ -1,11 +1,67 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4ce5jbi31a7d"]
+[gd_scene load_steps=8 format=3 uid="uid://c5go8l8nqecd7"]
 
 [ext_resource type="Script" path="res://GossipPhase3.gd" id="1_ni80m"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_2yghc"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_invje"]
 
+[sub_resource type="Animation" id="Animation_mqhtw"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qoovu"]
+_data = {
+"FadeIn": SubResource("Animation_mqhtw")
+}
+
+[sub_resource type="Animation" id="Animation_n34am"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mjbtv"]
+_data = {
+"FadeOut": SubResource("Animation_n34am")
+}
+
 [node name="GossipPhase3" type="Node2D"]
 script = ExtResource("1_ni80m")
+
+[node name="Fade" type="ColorRect" parent="."]
+z_index = 100
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qoovu")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_mjbtv")
+}
 
 [node name="CastleBackground" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
