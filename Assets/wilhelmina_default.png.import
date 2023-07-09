@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ml5vcpw4mr7m"
-path="res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"
+uid="uid://buxhnx6exy1fm"
+path="res://.godot/imported/wilhelmina_default.png-10762a0e6e9330b684487c102065a436.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/castle_background.png"
-dest_files=["res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"]
+source_file="res://Assets/wilhelmina_default.png"
+dest_files=["res://.godot/imported/wilhelmina_default.png-10762a0e6e9330b684487c102065a436.ctex"]
 
 [params]
 

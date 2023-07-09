@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ml5vcpw4mr7m"
-path="res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"
+uid="uid://b4nhify07ac5w"
+path="res://.godot/imported/princess_eyebags.png-bf3f6f8f90c29fe298cb64ab22e5598e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/castle_background.png"
-dest_files=["res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"]
+source_file="res://Assets/princess_eyebags.png"
+dest_files=["res://.godot/imported/princess_eyebags.png-bf3f6f8f90c29fe298cb64ab22e5598e.ctex"]
 
 [params]
 

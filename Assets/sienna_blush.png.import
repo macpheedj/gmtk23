@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ml5vcpw4mr7m"
-path="res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"
+uid="uid://bn1x6syp6eg44"
+path="res://.godot/imported/sienna_blush.png-cf90200c6c4048755f7a8291bb8e4ddb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/castle_background.png"
-dest_files=["res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"]
+source_file="res://Assets/sienna_blush.png"
+dest_files=["res://.godot/imported/sienna_blush.png-cf90200c6c4048755f7a8291bb8e4ddb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ml5vcpw4mr7m"
-path="res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"
+uid="uid://b16l26k78un8i"
+path="res://.godot/imported/princess_confused.png-9dc85790ceda2507f9b3c458674af768.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/castle_background.png"
-dest_files=["res://.godot/imported/castle_background.png-b0f4aebe6e11d9b526cb2a9ae8484ce9.ctex"]
+source_file="res://Assets/princess_confused.png"
+dest_files=["res://.godot/imported/princess_confused.png-9dc85790ceda2507f9b3c458674af768.ctex"]
 
 [params]
 
