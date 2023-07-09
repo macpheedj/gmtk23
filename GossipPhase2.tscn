@@ -1,24 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://t31sf0e7k81a"]
 
+[ext_resource type="Script" path="res://GossipPhase2.gd" id="1_jtltn"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_fqjxx"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_kolvh"]
 
-[sub_resource type="GDScript" id="GDScript_xwh8o"]
-script/source = "extends Node2D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-"
-
 [node name="GossipPhase2" type="Node2D"]
-script = SubResource("GDScript_xwh8o")
+script = ExtResource("1_jtltn")
 
 [node name="CastleBackground" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
