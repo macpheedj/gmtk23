@@ -2,51 +2,78 @@
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "Hahaha [i]RIBBIT[/i] yes, of course, frog chess! We dressed up some of our finest fools and less reputable common rabble in chess pieces and matched wits!"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_angry",
+        "message": "I had to put down a bishop, you know."
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "I believe in the spirit of gamesmanship, and Count Von Scrompt had just taken one of my bishops, so of course we had to balance things out. Crumpit brought me my hunting rifle, and as you well know I am a crack shot."
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_blush",
+        "message": "I brought down that provincial hayseed's bishop at 10 paces."
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "Wouldn't you know, the poor fool didn't even make a sound as he fell, good lad."
+    },
+    {
+        "speaker": "transition",
+        "transition": true
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "Well you know how much I loathe horse sports my dear?"
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_angry",
+        "message": "[i]CROOOOOAK.[/i]"
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "Dreaful and crude indeed!"
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "Dressage, though... The ancient beautiful art of horse dancing. You know that's how Mother and Father met? Oh my, yes, the Equine Cotillion Dressage and Ball. Mother always told the story, Father as the striking bullfrog, performing the levade, the capriole, the humpty, and sweeping her off her hooves."
+    },
+    {
+        "speaker": "transition",
+        "transition": true
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "And sometimes I go out and stare at the stars and find myself utterly overwhelmed by the ephemeral nature of mortal life."
+    },
+    {
+        "speaker": "Prince Gog",
+        "portrait": "gog_blush",
+        "message": "There's never enough time you see, time to fully feel as though life is being lived as opposed to just going through the motions ribbit."
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
+        "message": "I am the son of the feared Bufo after all, it feels sometimes as though my life has been decided for me, and I am merely a passenger..."
+    },
+    {
+        "speaker": "transition",
+        "transition": true
     },
     {
         "speaker": "Prince Gog",
         "portrait": "gog_default",
-        "message": ""
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_default",
-        "message": ""
+        "message": "Now I understand that your people's feet are not webbed especially, but I can't help but note that your croak feet are of such purity that the lack of webbing and sticky pads can be forgiven, especially given their size."
     }
 ]

@@ -20,6 +20,7 @@ func _on_conversation_fadeout():
 	$Conversation.setAnimating(true)
 	$FadeOut.play("FadeOut")
 	await get_tree().create_timer(1).timeout
+	$Conversation.displayNextMessage(null)
 	$FadeIn.play("FadeIn")
 	await get_tree().create_timer(1).timeout
 	$Conversation.setAnimating(false)
