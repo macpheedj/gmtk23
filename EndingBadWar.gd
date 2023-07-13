@@ -28,6 +28,8 @@ func _process(_delta):
 		$Music.stop()
 		get_tree().change_scene_to_file("res://Credits.tscn")
 
+	if Input.is_action_just_pressed("exit"): get_tree().quit()
+
 
 func _on_conversation_fadeout():
 	$Conversation.setAnimating(true)
