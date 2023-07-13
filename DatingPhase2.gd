@@ -18,6 +18,9 @@ func _ready():
 		$FadeIn.play("FadeIn")
 		await get_tree().create_timer(1).timeout
 
+func _process(delta):
+	if Input.is_action_just_pressed("exit"): get_tree().quit()
+
 
 func _on_conversation_fadeout():
 	$Conversation.setAnimating(true)
