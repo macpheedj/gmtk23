@@ -9,6 +9,9 @@ func _ready():
 	var file = FileAccess.open("res://Dialogue/gossip_phase_3.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var error = json.parse(content)
+	var sceneset = FileAccess.open("user://activescene.txt", FileAccess.WRITE)   
+	var scenesettext = "res://GossipPhase3.tscn"
+	sceneset.store_string(scenesettext)
 
 	if error == OK:
 		dialogues = json.data
@@ -16,7 +19,7 @@ func _ready():
 		$Conversation.fadeout.connect(_on_conversation_fadeout)
 		$Conversation.setup(dialogues)
 		$FadeIn.play("FadeIn")
-		await get_tree().create_timer(1).timeout   
+		await get_tree().create_timer(1).timeout
 		
 func _process(delta):
 	if Input.is_action_just_pressed("exit") && $PauseMenu.visible == false : 

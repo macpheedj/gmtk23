@@ -8,7 +8,10 @@ func _ready():
 	var json = JSON.new()
 	var file = FileAccess.open("res://Dialogue/dating_phase_3.json", FileAccess.READ)
 	var content = file.get_as_text()
-	var error = json.parse(content)    
+	var error = json.parse(content)
+	var sceneset = FileAccess.open("user://activescene.txt", FileAccess.WRITE)
+	var scenesettext = "res://DatingPhase3.tscn"
+	sceneset.store_string(scenesettext)   
 
 	if error == OK:
 		dialogues = json.data
