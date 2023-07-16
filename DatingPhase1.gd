@@ -21,7 +21,7 @@ func _ready():
 		$FadeIn.play("FadeIn")
 		await get_tree().create_timer(1).timeout
 		
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("exit") && $PauseMenu.visible == false : 
 		$PauseMenu.visible = true
 		get_tree().paused = true
