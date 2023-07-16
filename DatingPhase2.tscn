@@ -73,6 +73,7 @@ libraries = {
 [node name="PauseMenu" type="TextureRect" parent="."]
 process_mode = 2
 visible = false
+layout_mode = 0
 offset_left = 480.0
 offset_top = 270.0
 offset_right = 1440.0
@@ -80,6 +81,7 @@ offset_bottom = 750.0
 texture = ExtResource("4_akdge")
 
 [node name="Dossier" type="Button" parent="PauseMenu"]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 265.0
 offset_right = 330.0
@@ -88,6 +90,7 @@ theme_override_font_sizes/font_size = 64
 text = "Dossier"
 
 [node name="Back" type="Button" parent="PauseMenu"]
+layout_mode = 0
 offset_left = 364.0
 offset_top = 265.0
 offset_right = 619.0

@@ -5,6 +5,10 @@ func _ready():
 	$TitleFloat.play("Title_Float")
 
 func _on_play_pressed():
+	var sceneset = FileAccess.open("user://activescene.txt", FileAccess.WRITE)
+	var scenesettext = "res://DatingPhase1.tscn"
+	sceneset.store_string(scenesettext)
+	
 	var ratset = FileAccess.open("user://ratdossier.txt", FileAccess.WRITE)
 	var ratsettext = "Enter notes about Chessa here."
 	ratset.store_string(ratsettext)
