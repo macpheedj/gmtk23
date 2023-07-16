@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckxlbtw74cgpa"]
+[gd_scene load_steps=9 format=3 uid="uid://ckxlbtw74cgpa"]
 
 [ext_resource type="Script" path="res://GossipPhase1.gd" id="1_61i4f"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="1_ahwxv"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_hh5tx"]
+[ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="4_wo4si"]
 
 [sub_resource type="Animation" id="Animation_5ke5m"]
 resource_name = "FadeIn"
@@ -45,6 +46,7 @@ _data = {
 }
 
 [node name="GossipPhase1" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_61i4f")
 
 [node name="Fade" type="ColorRect" parent="."]
@@ -68,3 +70,41 @@ position = Vector2(960, 540)
 texture = ExtResource("1_ahwxv")
 
 [node name="Conversation" parent="." instance=ExtResource("3_hh5tx")]
+
+[node name="PauseMenu" type="TextureRect" parent="."]
+process_mode = 2
+visible = false
+offset_left = 480.0
+offset_top = 270.0
+offset_right = 1440.0
+offset_bottom = 750.0
+texture = ExtResource("4_wo4si")
+
+[node name="Dossier" type="Button" parent="PauseMenu"]
+offset_left = 75.0
+offset_top = 265.0
+offset_right = 330.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 64
+text = "Dossier"
+
+[node name="Back" type="Button" parent="PauseMenu"]
+offset_left = 364.0
+offset_top = 265.0
+offset_right = 619.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 64
+text = "Back"
+
+[node name="Quit" type="Button" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 654.0
+offset_top = 265.0
+offset_right = 909.0
+offset_bottom = 365.0
+theme_override_font_sizes/font_size = 64
+text = "Quit"
+
+[connection signal="pressed" from="PauseMenu/Dossier" to="." method="_on_dossier_pressed"]
+[connection signal="pressed" from="PauseMenu/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit_pressed"]
