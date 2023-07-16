@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b2xq2jebor1dg"]
+[gd_scene load_steps=13 format=3 uid="uid://b2xq2jebor1dg"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1_rwybm"]
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_56mxv"]
 [ext_resource type="Texture2D" uid="uid://bmdegv2rjq7j2" path="res://Assets/TitleText.png" id="3_4eo46"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="4_xrb50"]
 [ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="5_l162h"]
+[ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="5_r8ykm"]
 
 [sub_resource type="Animation" id="Animation_yml0d"]
 resource_name = "Fade_In"
@@ -114,12 +115,20 @@ texture = ExtResource("2_56mxv")
 
 [node name="Play" type="Button" parent="BG"]
 layout_mode = 0
-offset_left = 850.0
-offset_top = 800.0
-offset_right = 1050.0
-offset_bottom = 875.0
+offset_left = 852.0
+offset_top = 723.0
+offset_right = 1052.0
+offset_bottom = 798.0
 theme_override_font_sizes/font_size = 40
 text = "Play"
+
+[node name="Credits" type="Button" parent="BG"]
+offset_left = 851.0
+offset_top = 812.0
+offset_right = 1051.0
+offset_bottom = 887.0
+theme_override_font_sizes/font_size = 40
+text = "Credits"
 
 [node name="Exit" type="Button" parent="BG"]
 layout_mode = 0
@@ -142,6 +151,9 @@ texture = ExtResource("3_4eo46")
 stream = ExtResource("4_xrb50")
 volume_db = 20.0
 
+[node name="MouseHoverAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_r8ykm")
+
 [node name="Main Theme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_l162h")
 autoplay = true
@@ -149,6 +161,7 @@ autoplay = true
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Fade" type="ColorRect" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -170,7 +183,11 @@ libraries = {
 "": SubResource("AnimationLibrary_k11sc")
 }
 
+[connection signal="mouse_entered" from="BG/Play" to="." method="_on_play_mouse_entered"]
 [connection signal="pressed" from="BG/Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="BG/Credits" to="." method="_on_credits_mouse_entered"]
+[connection signal="pressed" from="BG/Credits" to="." method="_on_credits_pressed"]
+[connection signal="mouse_entered" from="BG/Exit" to="." method="_on_exit_mouse_entered"]
 [connection signal="pressed" from="BG/Exit" to="." method="_on_exit_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="animation_finished" from="TitleFloat" to="." method="_on_title_float_animation_finished"]
