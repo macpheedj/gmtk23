@@ -3,9 +3,24 @@ extends Control
 func _ready():
 	$FadeIn.play("Fade_In")
 	$TitleFloat.play("Title_Float")
-	
 
 func _on_play_pressed():
+	var ratset = FileAccess.open("user://ratdossier.txt", FileAccess.WRITE)
+	var ratsettext = "Enter notes about Chessa here."
+	ratset.store_string(ratsettext)
+	
+	var mantisset = FileAccess.open("user://mantisdossier.txt", FileAccess.WRITE)
+	var mantissettext = "Enter notes about Sienna here."
+	mantisset.store_string(mantissettext)
+	
+	var horseset = FileAccess.open("user://horsedossier.txt", FileAccess.WRITE)
+	var horsesettext = "Enter notes about Wilhelmina here."
+	horseset.store_string(horsesettext)
+	
+	var frogset = FileAccess.open("user://frogdossier.txt", FileAccess.WRITE)
+	var frogsettext = "Enter notes about Gog here."
+	frogset.store_string(frogsettext)
+	
 	$SelectUIAudio.play()
 	$FadeOut.play("Fade_Out")
 	await get_tree().create_timer(2).timeout

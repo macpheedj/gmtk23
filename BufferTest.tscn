@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy0qtsnarlp03"]
+
+[ext_resource type="Script" path="res://BufferTest.gd" id="1_vkr8q"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_vkr8q")
+
+[node name="Continue" type="Button" parent="."]
+offset_left = 915.0
+offset_top = 474.0
+offset_right = 1165.0
+offset_bottom = 549.0
+text = "Continue?"
+
+[connection signal="pressed" from="Continue" to="." method="_on_continue_pressed"]
