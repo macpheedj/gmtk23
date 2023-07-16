@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://2aq7oix77y0d"]
+[gd_scene load_steps=10 format=3 uid="uid://2aq7oix77y0d"]
 
 [ext_resource type="Script" path="res://DatingPhase3.gd" id="1_4duwg"]
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="1_8rpmv"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_f4bor"]
+[ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="4_3nev0"]
 [ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="4_abnkx"]
 
 [sub_resource type="Animation" id="Animation_s6apf"]
@@ -54,8 +55,15 @@ script = ExtResource("1_4duwg")
 
 [node name="Conversation" parent="." instance=ExtResource("2_f4bor")]
 
+[node name="Pause Prompt" type="TextureRect" parent="Conversation"]
+modulate = Color(1, 1, 1, 0.588235)
+offset_left = 1686.0
+offset_top = 11.0
+offset_right = 1906.0
+offset_bottom = 91.0
+texture = ExtResource("4_3nev0")
+
 [node name="Fade" type="ColorRect" parent="."]
-visible = false
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0

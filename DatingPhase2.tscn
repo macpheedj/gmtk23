@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://crh030wjqlpyf"]
+[gd_scene load_steps=10 format=3 uid="uid://crh030wjqlpyf"]
 
 [ext_resource type="Script" path="res://DatingPhase2.gd" id="1_0kcg4"]
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_46lm5"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_kp1mx"]
 [ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="4_akdge"]
+[ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="5_2nlwq"]
 
 [sub_resource type="Animation" id="Animation_47eq2"]
 resource_name = "FadeIn"
@@ -53,6 +54,14 @@ texture = ExtResource("2_46lm5")
 script = ExtResource("1_0kcg4")
 
 [node name="Conversation" parent="." instance=ExtResource("3_kp1mx")]
+
+[node name="Pause Prompt" type="TextureRect" parent="Conversation"]
+modulate = Color(1, 1, 1, 0.588235)
+offset_left = 1686.0
+offset_top = 11.0
+offset_right = 1906.0
+offset_bottom = 91.0
+texture = ExtResource("5_2nlwq")
 
 [node name="Fade" type="ColorRect" parent="."]
 layout_mode = 0

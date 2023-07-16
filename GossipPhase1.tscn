@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://ckxlbtw74cgpa"]
+[gd_scene load_steps=10 format=3 uid="uid://ckxlbtw74cgpa"]
 
 [ext_resource type="Script" path="res://GossipPhase1.gd" id="1_61i4f"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="1_ahwxv"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_hh5tx"]
+[ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="4_0exl8"]
 [ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="4_wo4si"]
 
 [sub_resource type="Animation" id="Animation_5ke5m"]
@@ -70,6 +71,14 @@ position = Vector2(960, 540)
 texture = ExtResource("1_ahwxv")
 
 [node name="Conversation" parent="." instance=ExtResource("3_hh5tx")]
+
+[node name="Pause Prompt" type="TextureRect" parent="Conversation"]
+modulate = Color(1, 1, 1, 0.588235)
+offset_left = 1686.0
+offset_top = 11.0
+offset_right = 1906.0
+offset_bottom = 91.0
+texture = ExtResource("4_0exl8")
 
 [node name="PauseMenu" type="TextureRect" parent="."]
 process_mode = 2
