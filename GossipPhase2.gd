@@ -19,7 +19,21 @@ func _ready():
 		await get_tree().create_timer(1).timeout
 		
 func _process(delta):
-	if Input.is_action_just_pressed("exit"): get_tree().quit()
+	if Input.is_action_just_pressed("exit") && $PauseMenu.visible == false : 
+		$PauseMenu.visible = true
+		get_tree().paused = true
+		
+	
+func _on_dossier_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Dossier.tscn")
+	
+func _on_back_pressed():
+	get_tree().paused = false
+	$PauseMenu.visible = false      
+
+func _on_quit_pressed():
+	get_tree().quit()     	       
 
 
 func _on_conversation_fadeout():
