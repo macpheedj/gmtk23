@@ -19,9 +19,11 @@ func _ready():
 		
 func _process(_delta):
 	if Input.is_action_just_pressed("exit") && $PauseMenu.visible == false : 
-		$PauseMenu.visible = true     
+		$PauseMenu.visible = true
+		$PauseMenuOpening.play("pause_expand")
+		await get_tree().create_timer(0.2).timeout
 		get_tree().paused = true
-		await get_tree().create_timer(0.5).timeout
+		$PauseMenuOpening.play_backwards("pause_expand")
 		
 	
 func _on_dossier_pressed():         
@@ -29,6 +31,8 @@ func _on_dossier_pressed():
 	
 func _on_back_pressed():
 	get_tree().paused = false
+	$PauseMenuClosing.play("pause_contract")
+	await get_tree().create_timer(0.2).timeout      
 	$PauseMenu.visible = false
 
 func _on_quit_pressed():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c5go8l8nqecd7"]
+[gd_scene load_steps=15 format=3 uid="uid://c5go8l8nqecd7"]
 
 [ext_resource type="Script" path="res://GossipPhase3.gd" id="1_ni80m"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_2yghc"]
@@ -47,6 +47,48 @@ _data = {
 "FadeOut": SubResource("Animation_n34am")
 }
 
+[sub_resource type="Animation" id="Animation_vwuuv"]
+resource_name = "pause_expand"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PauseMenu:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gptlg"]
+_data = {
+"pause_expand": SubResource("Animation_vwuuv")
+}
+
+[sub_resource type="Animation" id="Animation_oxsy1"]
+resource_name = "pause_contract"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PauseMenu:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x6kyq"]
+_data = {
+"pause_contract": SubResource("Animation_oxsy1")
+}
+
 [node name="GossipPhase3" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_ni80m")
@@ -88,6 +130,8 @@ offset_left = 480.0
 offset_top = 270.0
 offset_right = 1440.0
 offset_bottom = 750.0
+scale = Vector2(1e-05, 1e-05)
+pivot_offset = Vector2(480, 240)
 texture = ExtResource("4_5hcm5")
 
 [node name="Dossier" type="Button" parent="PauseMenu"]
@@ -127,6 +171,16 @@ offset_right = 1055.0
 offset_bottom = 1055.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
+
+[node name="PauseMenuOpening" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gptlg")
+}
+
+[node name="PauseMenuClosing" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x6kyq")
+}
 
 [connection signal="pressed" from="PauseMenu/Dossier" to="." method="_on_dossier_pressed"]
 [connection signal="pressed" from="PauseMenu/Back" to="." method="_on_back_pressed"]
