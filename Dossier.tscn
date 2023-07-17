@@ -74,7 +74,8 @@ _data = {
 "Fade_Out": SubResource("Animation_vbdt5")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="DossierMenu" type="Node2D"]
+process_mode = 2
 script = ExtResource("1_0ufdm")
 
 [node name="BG" type="TextureRect" parent="."]
@@ -153,7 +154,8 @@ offset_bottom = 543.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("11_q5r8q")
 
-[node name="BackButton" type="Button" parent="."]
+[node name="Back" type="Button" parent="."]
+visible = false
 offset_left = 874.0
 offset_top = 976.0
 offset_right = 1048.0
@@ -211,7 +213,7 @@ volume_db = 20.0
 
 [node name="BackUISound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_hatof")
-volume_db = 20.0
+volume_db = 10.0
 
 [connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
 [connection signal="mouse_entered" from="RatProfile" to="." method="_on_rat_profile_mouse_entered"]
@@ -222,4 +224,4 @@ volume_db = 20.0
 [connection signal="pressed" from="MantisProfile" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="FrogProfile" to="." method="_on_frog_profile_mouse_entered"]
 [connection signal="pressed" from="FrogProfile" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_button_pressed"]
