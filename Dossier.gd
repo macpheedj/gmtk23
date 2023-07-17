@@ -26,14 +26,10 @@ func _on_mantis_profile_mouse_entered():
 	$SelectUISound.play()
 
 
-func _on_frog_profile_mouse_entered():
+func _on_frog_profile_mouse_entered():   
 	$SelectUISound.play()
 
-
-func _on_back_button_pressed():
-	var previousscene = FileAccess.open("user://activescene.txt",FileAccess.READ)
-	var storepath = previousscene.get_as_text()
-	
+func _on_dossier_back_pressed():
 	var ratfile = FileAccess.open("user://ratdossier.txt", FileAccess.WRITE)
 	ratfile.store_string($RatNotes.text)
 	
@@ -47,7 +43,3 @@ func _on_back_button_pressed():
 	frogfile.store_string($FrogNotes.text)
 	
 	$BackUISound.play()
-	get_tree().change_scene_to_file(storepath)
-
-
-

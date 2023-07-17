@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5go8l8nqecd7"]
+[gd_scene load_steps=11 format=3 uid="uid://c5go8l8nqecd7"]
 
 [ext_resource type="Script" path="res://GossipPhase3.gd" id="1_ni80m"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_2yghc"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_invje"]
 [ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="4_5hcm5"]
 [ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="4_fwgr8"]
+[ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="6_48kkp"]
 
 [sub_resource type="Animation" id="Animation_mqhtw"]
 resource_name = "FadeIn"
@@ -116,6 +117,19 @@ offset_bottom = 365.0
 theme_override_font_sizes/font_size = 64
 text = "Quit"
 
+[node name="Dossier" parent="." instance=ExtResource("6_48kkp")]
+visible = false
+
+[node name="Dossier Back" type="Button" parent="Dossier"]
+offset_left = 881.0
+offset_top = 978.0
+offset_right = 1055.0
+offset_bottom = 1055.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
 [connection signal="pressed" from="PauseMenu/Dossier" to="." method="_on_dossier_pressed"]
 [connection signal="pressed" from="PauseMenu/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Dossier/Dossier Back" to="." method="_on_dossier_back_pressed"]
+[connection signal="pressed" from="Dossier/Dossier Back" to="Dossier" method="_on_dossier_back_pressed"]

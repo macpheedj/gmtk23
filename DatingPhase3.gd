@@ -8,10 +8,7 @@ func _ready():
 	var json = JSON.new()
 	var file = FileAccess.open("res://Dialogue/dating_phase_3.json", FileAccess.READ)
 	var content = file.get_as_text()
-	var error = json.parse(content)
-	var sceneset = FileAccess.open("user://activescene.txt", FileAccess.WRITE)
-	var scenesettext = "res://DatingPhase3.tscn"
-	sceneset.store_string(scenesettext)   
+	var error = json.parse(content)  
 
 	if error == OK:
 		dialogues = json.data
@@ -29,15 +26,17 @@ func _process(_delta):
 		
 	
 func _on_dossier_pressed():
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Dossier.tscn")
+	$Dossier.visible = true
 	
 func _on_back_pressed():
 	get_tree().paused = false
 	$PauseMenu.visible = false      
 
 func _on_quit_pressed():
-	get_tree().quit()     	       
+	get_tree().quit()
+	
+func _on_dossier_back_pressed():
+	$Dossier.visible = false  
 
 
 func _on_conversation_fadeout():
