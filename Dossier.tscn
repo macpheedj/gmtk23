@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://ddmae0xvbhevp"]
+[gd_scene load_steps=36 format=3 uid="uid://ddmae0xvbhevp"]
 
 [ext_resource type="Script" path="res://Dossier.gd" id="1_0ufdm"]
 [ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="2_giws4"]
@@ -11,7 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://c5yg8bdvoy6ey" path="res://Assets/RatText.png" id="8_gtsjm"]
 [ext_resource type="Texture2D" uid="uid://bjmne30q3v66e" path="res://Assets/MantisText.png" id="9_wwqak"]
 [ext_resource type="Texture2D" uid="uid://c28w4x7f36oep" path="res://Assets/HorseText.png" id="10_uqajx"]
+[ext_resource type="Texture2D" uid="uid://behon3lauy0ho" path="res://Assets/ChessaNotepad.png" id="11_05utn"]
 [ext_resource type="Texture2D" uid="uid://dgxp1k60vq351" path="res://Assets/FrogText.png" id="11_q5r8q"]
+[ext_resource type="FontFile" uid="uid://1exs2rgknji1" path="res://Assets/CompHand.ttf" id="12_71yyi"]
+[ext_resource type="Texture2D" uid="uid://hfi10vt6gt5p" path="res://Assets/siennanotepad.png" id="13_kbtg8"]
+[ext_resource type="Texture2D" uid="uid://d3ok485tvfbvh" path="res://Assets/wilhelminanotepad.png" id="14_uxqmc"]
+[ext_resource type="Texture2D" uid="uid://ybaaymsunm11" path="res://Assets/gognotepad.png" id="15_bwgbw"]
 
 [sub_resource type="Animation" id="Animation_5bilk"]
 resource_name = "BG_Movement"
@@ -33,6 +38,30 @@ tracks/0/keys = {
 _data = {
 "BG_Movement": SubResource("Animation_5bilk")
 }
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypmn1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uya35"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ex6yf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dfg5n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e64rv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xc6ig"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51ts7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfve7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kljku"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f8qq1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_atv70"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gqf2q"]
 
 [sub_resource type="Animation" id="Animation_6svmx"]
 resource_name = "Fade_In"
@@ -90,8 +119,9 @@ libraries = {
 }
 
 [node name="RatProfile" type="Button" parent="."]
+offset_top = 4.0
 offset_right = 480.0
-offset_bottom = 400.0
+offset_bottom = 404.0
 icon = ExtResource("6_1s7s3")
 icon_alignment = 1
 expand_icon = true
@@ -106,9 +136,10 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="MantisProfile" type="Button" parent="."]
-offset_left = 466.0
-offset_right = 946.0
-offset_bottom = 400.0
+offset_left = 479.0
+offset_top = 1.0
+offset_right = 959.0
+offset_bottom = 401.0
 icon = ExtResource("5_c1c0w")
 icon_alignment = 1
 expand_icon = true
@@ -123,6 +154,7 @@ icon_alignment = 1
 expand_icon = true
 
 [node name="RatTitle" type="TextureRect" parent="."]
+visible = false
 offset_left = 104.0
 offset_top = 392.0
 offset_right = 604.0
@@ -131,6 +163,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("8_gtsjm")
 
 [node name="HorseTitle" type="TextureRect" parent="."]
+visible = false
 offset_left = 580.0
 offset_top = 391.0
 offset_right = 1080.0
@@ -139,6 +172,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("9_wwqak")
 
 [node name="MantisTitle" type="TextureRect" parent="."]
+visible = false
 offset_left = 1020.0
 offset_top = 391.0
 offset_right = 1820.0
@@ -147,6 +181,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_uqajx")
 
 [node name="FrogTitle" type="TextureRect" parent="."]
+visible = false
 offset_left = 1590.0
 offset_top = 393.0
 offset_right = 2090.0
@@ -163,33 +198,98 @@ offset_bottom = 1053.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
+[node name="RatNotepad" type="TextureRect" parent="."]
+offset_left = 23.0
+offset_top = 429.0
+offset_right = 473.0
+offset_bottom = 1069.0
+texture = ExtResource("11_05utn")
+
 [node name="RatNotes" type="TextEdit" parent="."]
-offset_left = 41.0
-offset_top = 504.0
-offset_right = 468.0
-offset_bottom = 954.0
+offset_left = 54.0
+offset_top = 574.0
+offset_right = 463.0
+offset_bottom = 1027.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 17
+theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ypmn1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uya35")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_ex6yf")
 text = "Enter notes for Chessa here."
+wrap_mode = 1
+scroll_smooth = true
+
+[node name="MantisNotepad" type="TextureRect" parent="."]
+offset_left = 509.0
+offset_top = 429.0
+offset_right = 959.0
+offset_bottom = 1069.0
+texture = ExtResource("13_kbtg8")
 
 [node name="MantisNotes" type="TextEdit" parent="."]
-offset_left = 514.0
-offset_top = 504.0
-offset_right = 941.0
-offset_bottom = 954.0
+offset_left = 540.0
+offset_top = 572.0
+offset_right = 949.0
+offset_bottom = 1025.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 17
+theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dfg5n")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e64rv")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_xc6ig")
 text = "Enter notes for Sienna here."
+wrap_mode = 1
+
+[node name="HorseNotepad" type="TextureRect" parent="."]
+offset_left = 983.0
+offset_top = 429.0
+offset_right = 1433.0
+offset_bottom = 1069.0
+texture = ExtResource("14_uxqmc")
 
 [node name="HorseNotes" type="TextEdit" parent="."]
-offset_left = 995.0
-offset_top = 500.0
-offset_right = 1422.0
-offset_bottom = 950.0
+offset_left = 1011.0
+offset_top = 572.0
+offset_right = 1420.0
+offset_bottom = 1025.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 17
+theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_51ts7")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfve7")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_kljku")
 text = "Enter notes for Wilhelmina here."
+wrap_mode = 1
+
+[node name="FrogNotepad" type="TextureRect" parent="."]
+offset_left = 1454.0
+offset_top = 430.0
+offset_right = 1904.0
+offset_bottom = 1070.0
+texture = ExtResource("15_bwgbw")
 
 [node name="FrogNotes" type="TextEdit" parent="."]
-offset_left = 1483.0
-offset_top = 495.0
-offset_right = 1910.0
-offset_bottom = 945.0
+offset_left = 1486.0
+offset_top = 572.0
+offset_right = 1895.0
+offset_bottom = 1025.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 17
+theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f8qq1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_atv70")
+theme_override_styles/read_only = SubResource("StyleBoxEmpty_gqf2q")
 text = "Enter notes for Gog here."
+wrap_mode = 1
 
 [node name="FadeIn" type="AnimationPlayer" parent="."]
 libraries = {
