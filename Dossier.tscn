@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c28w4x7f36oep" path="res://Assets/HorseText.png" id="10_uqajx"]
 [ext_resource type="Texture2D" uid="uid://behon3lauy0ho" path="res://Assets/ChessaNotepad.png" id="11_05utn"]
 [ext_resource type="Texture2D" uid="uid://dgxp1k60vq351" path="res://Assets/FrogText.png" id="11_q5r8q"]
-[ext_resource type="FontFile" uid="uid://1exs2rgknji1" path="res://Assets/CompHand.ttf" id="12_71yyi"]
+[ext_resource type="FontFile" uid="uid://bpj4wyqn6f5r2" path="res://Assets/CompHand.pfb" id="12_urles"]
 [ext_resource type="Texture2D" uid="uid://hfi10vt6gt5p" path="res://Assets/siennanotepad.png" id="13_kbtg8"]
 [ext_resource type="Texture2D" uid="uid://d3ok485tvfbvh" path="res://Assets/wilhelminanotepad.png" id="14_uxqmc"]
 [ext_resource type="Texture2D" uid="uid://ybaaymsunm11" path="res://Assets/gognotepad.png" id="15_bwgbw"]
@@ -206,19 +206,19 @@ offset_bottom = 1069.0
 texture = ExtResource("11_05utn")
 
 [node name="RatNotes" type="TextEdit" parent="."]
-offset_left = 54.0
-offset_top = 574.0
-offset_right = 463.0
-offset_bottom = 1027.0
+offset_left = 58.0
+offset_top = 573.0
+offset_right = 467.0
+offset_bottom = 1026.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 17
-theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_constants/line_spacing = 12
+theme_override_fonts/font = ExtResource("12_urles")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_ypmn1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_uya35")
 theme_override_styles/read_only = SubResource("StyleBoxEmpty_ex6yf")
-text = "Enter notes for Chessa here."
+text = "Enter the notes!"
 wrap_mode = 1
 scroll_smooth = true
 
@@ -230,14 +230,14 @@ offset_bottom = 1069.0
 texture = ExtResource("13_kbtg8")
 
 [node name="MantisNotes" type="TextEdit" parent="."]
-offset_left = 540.0
-offset_top = 572.0
-offset_right = 949.0
-offset_bottom = 1025.0
+offset_left = 543.0
+offset_top = 573.0
+offset_right = 952.0
+offset_bottom = 1026.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 17
-theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_constants/line_spacing = 12
+theme_override_fonts/font = ExtResource("12_urles")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_dfg5n")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_e64rv")
@@ -253,14 +253,14 @@ offset_bottom = 1069.0
 texture = ExtResource("14_uxqmc")
 
 [node name="HorseNotes" type="TextEdit" parent="."]
-offset_left = 1011.0
-offset_top = 572.0
-offset_right = 1420.0
-offset_bottom = 1025.0
+offset_left = 1017.0
+offset_top = 573.0
+offset_right = 1426.0
+offset_bottom = 1026.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 17
-theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_constants/line_spacing = 12
+theme_override_fonts/font = ExtResource("12_urles")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_51ts7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yfve7")
@@ -276,14 +276,14 @@ offset_bottom = 1070.0
 texture = ExtResource("15_bwgbw")
 
 [node name="FrogNotes" type="TextEdit" parent="."]
-offset_left = 1486.0
-offset_top = 572.0
-offset_right = 1895.0
-offset_bottom = 1025.0
+offset_left = 1488.0
+offset_top = 574.0
+offset_right = 1897.0
+offset_bottom = 1027.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 17
-theme_override_fonts/font = ExtResource("12_71yyi")
+theme_override_constants/line_spacing = 12
+theme_override_fonts/font = ExtResource("12_urles")
 theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxEmpty_f8qq1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_atv70")

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://1exs2rgknji1"
-path="res://.godot/imported/CompHand.ttf-aa463251f448260c393d62625a2fbc84.fontdata"
+uid="uid://bpj4wyqn6f5r2"
+path="res://.godot/imported/CompHand.pfb-c403d7e7bf76239c7e16e47f456e8cc8.fontdata"
 
 [deps]
 
-source_file="res://Assets/CompHand.ttf"
-dest_files=["res://.godot/imported/CompHand.ttf-aa463251f448260c393d62625a2fbc84.fontdata"]
+source_file="res://Assets/CompHand.pfb"
+dest_files=["res://.godot/imported/CompHand.pfb-c403d7e7bf76239c7e16e47f456e8cc8.fontdata"]
 
 [params]
 

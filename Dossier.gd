@@ -13,22 +13,6 @@ func _ready():
 	var frogfile = FileAccess.open("user://frogdossier.txt", FileAccess.READ)
 	$FrogNotes.text = frogfile.get_as_text()
 
-
-func _on_rat_profile_mouse_entered():
-	$SelectUISound.play()
-
-
-func _on_horse_profile_mouse_entered():
-	$SelectUISound.play()
-
-
-func _on_mantis_profile_mouse_entered():
-	$SelectUISound.play()
-
-
-func _on_frog_profile_mouse_entered():   
-	$SelectUISound.play()
-
 func _on_dossier_back_pressed():
 	var ratfile = FileAccess.open("user://ratdossier.txt", FileAccess.WRITE)
 	ratfile.store_string($RatNotes.text)
