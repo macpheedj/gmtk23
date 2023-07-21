@@ -165,10 +165,10 @@ text = "Quit"
 visible = false
 
 [node name="Dossier Back" type="Button" parent="Dossier"]
-offset_left = 881.0
-offset_top = 978.0
-offset_right = 1055.0
-offset_bottom = 1055.0
+offset_left = 865.0
+offset_top = 88.0
+offset_right = 1039.0
+offset_bottom = 165.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
