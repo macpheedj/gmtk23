@@ -2,8 +2,9 @@ extends Node2D
 
 func _ready():
 	$FadeIn.play("FadeIn")
+	$BGAnimation.play("BG_Movement")
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("exit"): get_tree().quit()
 
 func _on_battlefield_button_pressed():
@@ -37,3 +38,12 @@ func _on_stable_button_mouse_entered():
 
 func _on_meadow_button_mouse_entered():
 	$HoverUIAudio.play()
+
+func _on_dossier_button_pressed():
+	get_tree().paused = true
+	$DossierMenu.visible = true
+
+
+func _on_back_button_pressed():
+	get_tree().paused = false
+	$DossierMenu.visible = false

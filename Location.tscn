@@ -1,9 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://ffsr87kc4uqg"]
+[gd_scene load_steps=22 format=3 uid="uid://ffsr87kc4uqg"]
 
 [ext_resource type="Script" path="res://Location.gd" id="1_crnwd"]
+[ext_resource type="Texture2D" uid="uid://xpppda64m0me" path="res://Assets/Gog_tiled_BG.png" id="2_i7bmp"]
 [ext_resource type="Texture2D" uid="uid://begq5evsdyt3d" path="res://Assets/Meadow.png" id="2_x80yp"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="5_8yrtu"]
-[ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="5_d3tyh"]
 [ext_resource type="Texture2D" uid="uid://baalf0r2d5sd2" path="res://Assets/stable_background.png" id="6_5xak0"]
 [ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="7_mnbfk"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="8_7065l"]
@@ -12,10 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://bh6g2rhqn16r3" path="res://Assets/CastleText.png" id="10_qcnpk"]
 [ext_resource type="Texture2D" uid="uid://b8xs480gqhi35" path="res://Assets/LocationPrompt.png" id="11_ptq6y"]
 [ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="12_yea1u"]
+[ext_resource type="Texture2D" uid="uid://cyrn3ed6axd3x" path="res://Assets/TextBox.png" id="13_m5boe"]
+[ext_resource type="FontFile" uid="uid://b1jqa6td5gjao" path="res://Assets/PressStart2P-Regular.ttf" id="13_y11yo"]
+[ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="15_g44ma"]
 
 [sub_resource type="Animation" id="Animation_5bilk"]
 resource_name = "BG_Movement"
-length = 20.0
+length = 40.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -23,7 +26,7 @@ tracks/0/path = NodePath("BG:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 10, 20),
+"times": PackedFloat32Array(0, 20, 40),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-5750, -3250), Vector2(0, 0)]
@@ -104,9 +107,11 @@ script = ExtResource("1_crnwd")
 
 [node name="BG" type="TextureRect" parent="."]
 show_behind_parent = true
-offset_right = 7680.0
-offset_bottom = 4320.0
-texture = ExtResource("5_d3tyh")
+offset_left = -747.5
+offset_top = -422.5
+offset_right = 6932.5
+offset_bottom = 3897.5
+texture = ExtResource("2_i7bmp")
 
 [node name="BGAnimation" type="AnimationPlayer" parent="."]
 libraries = {
@@ -171,6 +176,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_qcnpk")
 
 [node name="PrompText" type="TextureRect" parent="."]
+visible = false
 offset_left = 397.0
 offset_top = 728.0
 offset_right = 2319.0
@@ -184,9 +190,10 @@ stream = ExtResource("12_yea1u")
 [node name="SelectionUIAudio" type="AudioStreamPlayer" parent="."]
 
 [node name="Fade" type="ColorRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0.644902)
 
 [node name="FadeIn" type="AnimationPlayer" parent="."]
 libraries = {
@@ -198,6 +205,41 @@ libraries = {
 "": SubResource("AnimationLibrary_h030f")
 }
 
+[node name="TextBox" type="TextureRect" parent="."]
+offset_left = 341.0
+offset_top = 711.0
+offset_right = 1491.0
+offset_bottom = 961.0
+texture = ExtResource("13_m5boe")
+
+[node name="TextPrompt" type="RichTextLabel" parent="."]
+offset_left = 452.0
+offset_top = 777.0
+offset_right = 1415.0
+offset_bottom = 894.0
+theme_override_fonts/normal_font = ExtResource("13_y11yo")
+theme_override_font_sizes/normal_font_size = 48
+text = "Where shall we take our stroll princess?"
+
+[node name="DossierButton" type="Button" parent="."]
+offset_left = 797.0
+offset_top = 121.0
+offset_right = 1051.0
+offset_bottom = 221.0
+theme_override_font_sizes/font_size = 36
+text = "Check Dossier"
+
+[node name="DossierMenu" parent="." instance=ExtResource("15_g44ma")]
+visible = false
+
+[node name="BackButton" type="Button" parent="DossierMenu"]
+offset_left = 881.0
+offset_top = 110.0
+offset_right = 1055.0
+offset_bottom = 187.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
 [connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
 [connection signal="mouse_entered" from="BattlefieldButton" to="." method="_on_battlefield_button_mouse_entered"]
 [connection signal="pressed" from="BattlefieldButton" to="." method="_on_battlefield_button_pressed"]
@@ -205,3 +247,5 @@ libraries = {
 [connection signal="pressed" from="StableButton" to="." method="_on_stable_button_pressed"]
 [connection signal="mouse_entered" from="MeadowButton" to="." method="_on_meadow_button_mouse_entered"]
 [connection signal="pressed" from="MeadowButton" to="." method="_on_meadow_button_pressed"]
+[connection signal="pressed" from="DossierButton" to="." method="_on_dossier_button_pressed"]
+[connection signal="pressed" from="DossierMenu/BackButton" to="." method="_on_back_button_pressed"]
