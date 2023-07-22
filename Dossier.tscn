@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://ddmae0xvbhevp"]
+[gd_scene load_steps=56 format=3 uid="uid://ddmae0xvbhevp"]
 
 [ext_resource type="Script" path="res://Dossier.gd" id="1_0ufdm"]
 [ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="2_giws4"]
@@ -38,6 +38,46 @@ tracks/0/keys = {
 _data = {
 "BG_Movement": SubResource("Animation_5bilk")
 }
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jria"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvnhb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ay3f1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_we5xn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfsye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35fah"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3vd5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_im0r7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5s7h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihiyq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45uwk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yd1bk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tn3ou"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a3gbt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfnfs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idb1d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47e38"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_up4t1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gn8at"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edegx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypmn1"]
 
@@ -122,6 +162,11 @@ libraries = {
 offset_top = 4.0
 offset_right = 480.0
 offset_bottom = 404.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7jria")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mvnhb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ay3f1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_we5xn")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfsye")
 icon = ExtResource("6_1s7s3")
 icon_alignment = 1
 expand_icon = true
@@ -131,6 +176,11 @@ offset_left = 954.0
 offset_top = 3.0
 offset_right = 1434.0
 offset_bottom = 403.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_35fah")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y3vd5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_im0r7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5s7h")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ihiyq")
 icon = ExtResource("4_16s1s")
 icon_alignment = 1
 expand_icon = true
@@ -140,6 +190,11 @@ offset_left = 479.0
 offset_top = 1.0
 offset_right = 959.0
 offset_bottom = 401.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_45uwk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yd1bk")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tn3ou")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_a3gbt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vfnfs")
 icon = ExtResource("5_c1c0w")
 icon_alignment = 1
 expand_icon = true
@@ -149,6 +204,11 @@ offset_left = 1435.0
 offset_top = 5.0
 offset_right = 1915.0
 offset_bottom = 405.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_idb1d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_47e38")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_up4t1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_gn8at")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_edegx")
 icon = ExtResource("8_45e46")
 icon_alignment = 1
 expand_icon = true
@@ -211,6 +271,8 @@ offset_top = 573.0
 offset_right = 467.0
 offset_bottom = 1026.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.678431, 0.34902, 0.105882, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 12
 theme_override_fonts/font = ExtResource("12_urles")
@@ -235,6 +297,8 @@ offset_top = 573.0
 offset_right = 952.0
 offset_bottom = 1026.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.678431, 0.34902, 0.105882, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 12
 theme_override_fonts/font = ExtResource("12_urles")
@@ -258,6 +322,8 @@ offset_top = 573.0
 offset_right = 1426.0
 offset_bottom = 1026.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.678431, 0.34902, 0.105882, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 12
 theme_override_fonts/font = ExtResource("12_urles")
@@ -281,6 +347,8 @@ offset_top = 574.0
 offset_right = 1897.0
 offset_bottom = 1027.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0.678431, 0.34902, 0.105882, 1)
 theme_override_colors/caret_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 12
 theme_override_fonts/font = ExtResource("12_urles")
