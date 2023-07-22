@@ -27,3 +27,7 @@ func _on_dossier_back_pressed():
 	frogfile.store_string($FrogNotes.text)
 	
 	$BackUISound.play()
+
+
+#func _on_rat_profile_mouse_entered():
+	#$HorseProfile.icon.load("res://Assets/chessa_blush.png")
