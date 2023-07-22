@@ -31,14 +31,20 @@ func _on_play_pressed():
 	get_tree().change_scene_to_file("res://DatingPhase1.tscn")
 	
 func _on_play_mouse_entered():
+	$BG/Play.icon = load("res://Assets/Play Button Highlighted.png")
 	$MouseHoverAudio.play()
 	
+func _on_play_mouse_exited():
+	$BG/Play.icon = load("res://Assets/Play Button.png")
 	
 func _on_credits_pressed():
 	get_tree().change_scene_to_file("res://Credits.tscn")
 	
 func _on_credits_mouse_entered():
-	$MouseHoverAudio.play()
+	$BG/Credits.icon = load("res://Assets/Credits Button Highlighted.png")
+	
+func _on_credits_mouse_exited():
+	$BG/Credits.icon = load("res://Assets/Credits Button.png")
 	
 	
 func _on_exit_pressed():
@@ -48,20 +54,13 @@ func _on_exit_pressed():
 	get_tree().quit()
 	
 func _on_exit_mouse_entered():
-	$MouseHoverAudio.play()
+	$BG/Exit.icon = load("res://Assets/Exit Button Highlighted.png")
+	
+func _on_exit_mouse_exited():
+	$BG/Exit.icon = load("res://Assets/Exit Button.png")
+	
+	
 
 
 func _on_title_float_animation_finished(_anim_name):
 	$TitleFloat.play("Title_Float")
-
-
-
-
-
-
-
-
-
-
-
-
