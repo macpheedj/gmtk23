@@ -1,18 +1,14 @@
-[gd_scene load_steps=56 format=3 uid="uid://ddmae0xvbhevp"]
+[gd_scene load_steps=32 format=3 uid="uid://ddmae0xvbhevp"]
 
 [ext_resource type="Script" path="res://Dossier.gd" id="1_0ufdm"]
-[ext_resource type="Texture2D" uid="uid://dvxywvimk2odr" path="res://Assets/Stone background.png" id="2_giws4"]
+[ext_resource type="Texture2D" uid="uid://xpppda64m0me" path="res://Assets/Gog_tiled_BG.png" id="2_gklqy"]
 [ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="3_vb0og"]
 [ext_resource type="Texture2D" uid="uid://f2s2lrw5qpf6" path="res://Assets/Horse_Normal.png" id="4_16s1s"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="4_hatof"]
 [ext_resource type="Texture2D" uid="uid://kpbrhchm4xbc" path="res://Assets/Mantis_Standard_Large.png" id="5_c1c0w"]
 [ext_resource type="Texture2D" uid="uid://buyl6t72lc3aj" path="res://Assets/chessa_default.png" id="6_1s7s3"]
 [ext_resource type="Texture2D" uid="uid://cde5aemhxrkyt" path="res://Assets/gog_default.png" id="8_45e46"]
-[ext_resource type="Texture2D" uid="uid://c5yg8bdvoy6ey" path="res://Assets/RatText.png" id="8_gtsjm"]
-[ext_resource type="Texture2D" uid="uid://bjmne30q3v66e" path="res://Assets/MantisText.png" id="9_wwqak"]
-[ext_resource type="Texture2D" uid="uid://c28w4x7f36oep" path="res://Assets/HorseText.png" id="10_uqajx"]
 [ext_resource type="Texture2D" uid="uid://behon3lauy0ho" path="res://Assets/ChessaNotepad.png" id="11_05utn"]
-[ext_resource type="Texture2D" uid="uid://dgxp1k60vq351" path="res://Assets/FrogText.png" id="11_q5r8q"]
 [ext_resource type="FontFile" uid="uid://bpj4wyqn6f5r2" path="res://Assets/CompHand.pfb" id="12_urles"]
 [ext_resource type="Texture2D" uid="uid://hfi10vt6gt5p" path="res://Assets/siennanotepad.png" id="13_kbtg8"]
 [ext_resource type="Texture2D" uid="uid://d3ok485tvfbvh" path="res://Assets/wilhelminanotepad.png" id="14_uxqmc"]
@@ -20,7 +16,7 @@
 
 [sub_resource type="Animation" id="Animation_5bilk"]
 resource_name = "BG_Movement"
-length = 20.0
+length = 40.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -28,7 +24,7 @@ tracks/0/path = NodePath("BG:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 10, 20),
+"times": PackedFloat32Array(0, 20, 40),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0, 0), Vector2(-5750, -3250), Vector2(0, 0)]
@@ -38,46 +34,6 @@ tracks/0/keys = {
 _data = {
 "BG_Movement": SubResource("Animation_5bilk")
 }
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jria"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mvnhb"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ay3f1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_we5xn"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfsye"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_35fah"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3vd5"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_im0r7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g5s7h"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ihiyq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45uwk"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yd1bk"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tn3ou"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a3gbt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vfnfs"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_idb1d"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47e38"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_up4t1"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gn8at"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edegx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ypmn1"]
 
@@ -149,105 +105,16 @@ script = ExtResource("1_0ufdm")
 
 [node name="BG" type="TextureRect" parent="."]
 show_behind_parent = true
-offset_right = 7680.0
-offset_bottom = 4320.0
-texture = ExtResource("2_giws4")
+offset_left = -747.5
+offset_top = -422.5
+offset_right = 6932.5
+offset_bottom = 3897.5
+texture = ExtResource("2_gklqy")
 
 [node name="BGAnimation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0lk8f")
 }
-
-[node name="RatProfile" type="Button" parent="."]
-offset_top = 4.0
-offset_right = 480.0
-offset_bottom = 404.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_7jria")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_mvnhb")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_ay3f1")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_we5xn")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yfsye")
-icon = ExtResource("6_1s7s3")
-icon_alignment = 1
-expand_icon = true
-
-[node name="HorseProfile" type="Button" parent="."]
-offset_left = 954.0
-offset_top = 3.0
-offset_right = 1434.0
-offset_bottom = 403.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_35fah")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_y3vd5")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_im0r7")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_g5s7h")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_ihiyq")
-icon = ExtResource("4_16s1s")
-icon_alignment = 1
-expand_icon = true
-
-[node name="MantisProfile" type="Button" parent="."]
-offset_left = 479.0
-offset_top = 1.0
-offset_right = 959.0
-offset_bottom = 401.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_45uwk")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_yd1bk")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_tn3ou")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_a3gbt")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_vfnfs")
-icon = ExtResource("5_c1c0w")
-icon_alignment = 1
-expand_icon = true
-
-[node name="FrogProfile" type="Button" parent="."]
-offset_left = 1435.0
-offset_top = 5.0
-offset_right = 1915.0
-offset_bottom = 405.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_idb1d")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_47e38")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_up4t1")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_gn8at")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_edegx")
-icon = ExtResource("8_45e46")
-icon_alignment = 1
-expand_icon = true
-
-[node name="RatTitle" type="TextureRect" parent="."]
-visible = false
-offset_left = 104.0
-offset_top = 392.0
-offset_right = 604.0
-offset_bottom = 542.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("8_gtsjm")
-
-[node name="HorseTitle" type="TextureRect" parent="."]
-visible = false
-offset_left = 580.0
-offset_top = 391.0
-offset_right = 1080.0
-offset_bottom = 541.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("9_wwqak")
-
-[node name="MantisTitle" type="TextureRect" parent="."]
-visible = false
-offset_left = 1020.0
-offset_top = 391.0
-offset_right = 1820.0
-offset_bottom = 541.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("10_uqajx")
-
-[node name="FrogTitle" type="TextureRect" parent="."]
-visible = false
-offset_left = 1590.0
-offset_top = 393.0
-offset_right = 2090.0
-offset_bottom = 543.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("11_q5r8q")
 
 [node name="Back" type="Button" parent="."]
 visible = false
@@ -257,6 +124,36 @@ offset_right = 1048.0
 offset_bottom = 1053.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
+
+[node name="RatProfile" type="TextureRect" parent="."]
+offset_left = 6.0
+offset_top = 14.0
+offset_right = 518.0
+offset_bottom = 526.0
+texture = ExtResource("6_1s7s3")
+
+[node name="MantisProfile" type="TextureRect" parent="."]
+offset_left = 499.0
+offset_top = 41.0
+offset_right = 1011.0
+offset_bottom = 553.0
+texture = ExtResource("5_c1c0w")
+
+[node name="HorseProfile" type="TextureRect" parent="."]
+offset_left = 976.0
+offset_top = -3.0
+offset_right = 1429.0
+offset_bottom = 447.0
+texture = ExtResource("4_16s1s")
+expand_mode = 1
+
+[node name="FrogProfile" type="TextureRect" parent="."]
+offset_left = 1442.0
+offset_top = 8.0
+offset_right = 1954.0
+offset_bottom = 520.0
+texture = ExtResource("8_45e46")
+expand_mode = 1
 
 [node name="RatNotepad" type="TextureRect" parent="."]
 offset_left = 23.0
@@ -384,12 +281,12 @@ stream = ExtResource("4_hatof")
 volume_db = 10.0
 
 [connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
-[connection signal="mouse_entered" from="RatProfile" to="." method="_on_rat_profile_mouse_entered"]
-[connection signal="pressed" from="RatProfile" to="." method="_on_button_pressed"]
-[connection signal="mouse_entered" from="HorseProfile" to="." method="_on_horse_profile_mouse_entered"]
-[connection signal="pressed" from="HorseProfile" to="." method="_on_button_pressed"]
-[connection signal="mouse_entered" from="MantisProfile" to="." method="_on_mantis_profile_mouse_entered"]
-[connection signal="pressed" from="MantisProfile" to="." method="_on_button_pressed"]
-[connection signal="mouse_entered" from="FrogProfile" to="." method="_on_frog_profile_mouse_entered"]
-[connection signal="pressed" from="FrogProfile" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="RatProfile" to="." method="_on_rat_profile_mouse_entered"]
+[connection signal="mouse_exited" from="RatProfile" to="." method="_on_rat_profile_mouse_exited"]
+[connection signal="mouse_entered" from="MantisProfile" to="." method="_on_mantis_profile_mouse_entered"]
+[connection signal="mouse_exited" from="MantisProfile" to="." method="_on_mantis_profile_mouse_exited"]
+[connection signal="mouse_entered" from="HorseProfile" to="." method="_on_horse_profile_mouse_entered"]
+[connection signal="mouse_exited" from="HorseProfile" to="." method="_on_horse_profile_mouse_exited"]
+[connection signal="mouse_entered" from="FrogProfile" to="." method="_on_frog_profile_mouse_entered"]
+[connection signal="mouse_exited" from="FrogProfile" to="." method="_on_frog_profile_mouse_exited"]

@@ -6,7 +6,7 @@ var dialogues = null
 
 func _ready():
 	var json = JSON.new()
-	var file = FileAccess.open("res://Dialogue/dating_phase_1.json", FileAccess.READ)
+	var file = FileAccess.open("res://Dialogue/dating_phase_1.json", FileAccess.READ)        
 	var content = file.get_as_text()
 	var error = json.parse(content)
 
@@ -17,7 +17,7 @@ func _ready():
 		$FadeIn.play("FadeIn")
 		await get_tree().create_timer(1).timeout
 		
-func _process(_delta):
+func _process(_delta): 
 	if Input.is_action_just_pressed("exit") && $PauseMenu.visible == false : 
 		$PauseMenu.visible = true
 		$PauseMenuOpening.play("pause_expand")
