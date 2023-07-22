@@ -54,7 +54,5 @@ func _on_frog_profile_mouse_entered():
 func _on_frog_profile_mouse_exited():
 	$FrogProfile.texture = load("res://Assets/gog_default.png")
 
-
-
-func _on_bg_animation_animation_finished(anim_name):
+func _on_bg_animation_animation_finished(_anim_name):
 	$BGAnimation.play("BG_Movement")
