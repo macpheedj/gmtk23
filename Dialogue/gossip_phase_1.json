@@ -77,7 +77,10 @@
             }
         ],
         "updates": [
-            { "princess": "Sienna", "category": "Trivia" },
+            {
+                "princess": "Sienna",
+                "category": "Trivia"
+            },
             null,
             null,
             null
@@ -124,6 +127,15 @@
                 "portrait": "chessa_default",
                 "message": "He told you a shocking amount about his butler... I feel sorry for you Rhae. In our date, he told me tales that made me fall for him immediately. My Gog was deeper than the vastest ocean."
             }
+        ],
+        "updates": [
+            null,
+            null,
+            {
+                "princess": "Chessa",
+                "category": "Trivia"
+            },
+            null
         ]
     },
     {
@@ -162,6 +174,15 @@
                 "portrait": "wilhelmina_default",
                 "message": "Rhae, having an attendant is important for [i]any[/i] member of the royalty, little though I care for... Crambot? I want to know more about the prince's upbringing, and making sure his background meets my needs."
             }
+        ],
+        "updates": [
+            null,
+            {
+                "princess": "Wilhelmina",
+                "category": "Trivia"
+            },
+            null,
+            null
         ]
     },
     {

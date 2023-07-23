@@ -80,6 +80,15 @@
                 "portrait": "chessa_blush",
                 "message": "Darling, talking at the moon is my favorite hobby. My dream is to be found on a [b]clear evening in a meadow reciting my poetry and waiting for my Prince Charming to come and steal me away.[/b]"
             }
+        ],
+        "updates": [
+            null,
+            null,
+            null,
+            {
+                "princess": "Chessa",
+                "category": "Location"
+            }
         ]
     },
     {
@@ -128,6 +137,15 @@
                 "portrait": "sienna_upset",
                 "message": "I am in control of my own life and no one else. I will take control of my life and meet my Prince on the battlefield of love where we will prove who is the dominant."
             }
+        ],
+        "updates": [
+            null,
+            null,
+            {
+                "princess": "Sienna",
+                "category": "Location"
+            },
+            null
         ]
     },
     {
@@ -186,6 +204,15 @@
                 "portrait": "wilhelmina_default",
                 "message": "Oh sweetie, you really are exhausted huh? Maybe it's time to call it a day? In the meantime I am going to continue practicing for my big moment where my love is realized."
             }
+        ],
+        "updates": [
+            {
+                "princess": "Wilhelmina",
+                "category": "Location"
+            },
+            null,
+            null,
+            null
         ]
     },
     {

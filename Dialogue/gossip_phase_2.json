@@ -60,6 +60,15 @@
                 "portrait": "chessa_default",
                 "message": "Oh ho ho you poor thing it sounds like he's preparing you for work in the stables instead of handling the kingdom's affairs. It's a shame he isn't sharing his more sentimental side with you, it's really a thing to behold."
             }
+        ],
+        "updates": [
+            null,
+            null,
+            {
+                "princess": "Chessa",
+                "category": "Trivia"
+            },
+            null
         ]
     },
     {
@@ -107,6 +116,15 @@
                 "speaker": "Wilhelmina",
                 "portrait": "wilhelmina_blush",
                 "message": "Now [i]there[/i] is a man who knows his stuff! It's not every prince who knows the best methods of utilizing Horse Oil for maintenance. [b]Crucially, it takes a diet of oats and apples to keep a healthy coat.[/b]"
+            }
+        ],
+        "updates": [
+            null,
+            null,
+            null,
+            {
+                "princess": "Wilhelmina",
+                "category": "Trivia"
             }
         ]
     },
@@ -161,6 +179,15 @@
                 "portrait": "sienna_upset",
                 "message": "Surely you jest! Why would you think I would care about such inane trivia? Horse feet are kingdoms apart from my passions!!"
             }
+        ],
+        "updates": [
+            null,
+            {
+                "princess": "Sienna",
+                "category": "Trivia"
+            },
+            null,
+            null
         ]
     },
     {
