@@ -37,3 +37,8 @@ func set_state(princess: Princess, category: Category):
 
 	# nothing is ever gonna go from known -> unknown, so this can be a constant
 	princess_states[princess][category] = Knowledge.Known
+
+func get_win_condition(princess: Princess):
+	var trivia = princess_states[princess][Category.Trivia]
+	var location = princess_states[princess][Category.Location]
+	return trivia == Knowledge.Known and location == Knowledge.Known 

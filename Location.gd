@@ -11,21 +11,30 @@ func _on_battlefield_button_pressed():
 	$SelectionUIAudio.play()
 	$FadeOut.play("Fade_Out")
 	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://EndingBadWedding.tscn")
+	if State.get_win_condition(State.Princess.Sienna):
+		get_tree().change_scene_to_file("res://EndingBadWar.tscn")
+	else:
+		get_tree().change_scene_to_file("res://EndingBadWedding.tscn")
 
 
 func _on_stable_button_pressed():
 	$SelectionUIAudio.play()
 	$FadeOut.play("Fade_Out")
 	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://EndingBadWar.tscn")
+	if State.get_win_condition(State.Princess.Wilhelmina):
+		get_tree().change_scene_to_file("res://EndingBadWar.tscn")
+	else:
+		get_tree().change_scene_to_file("res://EndingBadWedding.tscn")
 
 
 func _on_meadow_button_pressed():
 	$SelectionUIAudio.play()
 	$FadeOut.play("Fade_Out")
 	await get_tree().create_timer(2).timeout
-	get_tree().change_scene_to_file("res://EndingGood.tscn")
+	if State.get_win_condition(State.Princess.Chessa):
+		get_tree().change_scene_to_file("res://EndingGood.tscn")
+	else:
+		get_tree().change_scene_to_file("res://EndingBadWedding.tscn")
 
 
 func _on_battlefield_button_mouse_entered():
