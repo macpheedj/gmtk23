@@ -60,9 +60,14 @@ func _on_quit_mouse_exited():
 func _on_dossier_back_pressed():
 	$Dossier.visible = false
 
-func _on_conversation_end():
+func _on_conversation_end(): 
 	$FadeOut.play("FadeOut")
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://GossipPhase1.tscn")
 
+func _on_dossier_back_mouse_entered():
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button Highlighted.png") 
+	$"Dossier/Dossier Back/HoverAudio".play()
 
+func _on_dossier_back_mouse_exited():   
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button.png")

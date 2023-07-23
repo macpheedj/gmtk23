@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ckxlbtw74cgpa"]
+[gd_scene load_steps=19 format=3 uid="uid://ckxlbtw74cgpa"]
 
 [ext_resource type="Script" path="res://GossipPhase1.gd" id="1_61i4f"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="1_ahwxv"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="6_hq6ln"]
 [ext_resource type="Texture2D" uid="uid://dlnbxwutmaej4" path="res://Assets/Back Button.png" id="7_d8foi"]
 [ext_resource type="Texture2D" uid="uid://bel7q2uettxmu" path="res://Assets/Quit Button.png" id="8_lejvm"]
+[ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="10_520ft"]
 
 [sub_resource type="Animation" id="Animation_5ke5m"]
 resource_name = "FadeIn"
@@ -180,11 +181,18 @@ visible = false
 
 [node name="Dossier Back" type="Button" parent="Dossier"]
 offset_left = 864.0
-offset_top = 70.0
+offset_top = 73.0
 offset_right = 1038.0
-offset_bottom = 147.0
+offset_bottom = 150.0
 theme_override_font_sizes/font_size = 50
-text = "Back"
+icon = ExtResource("7_d8foi")
+flat = true
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="Dossier/Dossier Back"]
+stream = ExtResource("10_520ft")
 
 [node name="PauseMenuOpening" type="AnimationPlayer" parent="."]
 libraries = {
@@ -205,5 +213,7 @@ libraries = {
 [connection signal="mouse_entered" from="PauseMenu/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenu/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_entered"]
+[connection signal="mouse_exited" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_exited"]
 [connection signal="pressed" from="Dossier/Dossier Back" to="." method="_on_dossier_back_pressed"]
 [connection signal="pressed" from="Dossier/Dossier Back" to="Dossier" method="_on_dossier_back_pressed"]

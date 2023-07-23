@@ -42,6 +42,7 @@ func _on_credits_pressed():
 	
 func _on_credits_mouse_entered():
 	$BG/Credits.icon = load("res://Assets/Credits Button Highlighted.png")
+	$MouseHoverAudio.play()
 	
 func _on_credits_mouse_exited():
 	$BG/Credits.icon = load("res://Assets/Credits Button.png")
@@ -55,12 +56,10 @@ func _on_exit_pressed():
 	
 func _on_exit_mouse_entered():
 	$BG/Exit.icon = load("res://Assets/Exit Button Highlighted.png")
+	$MouseHoverAudio.play()
 	
 func _on_exit_mouse_exited():
 	$BG/Exit.icon = load("res://Assets/Exit Button.png")
-	
-	
-
 
 func _on_title_float_animation_finished(_anim_name):
 	$TitleFloat.play("Title_Float")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ffsr87kc4uqg"]
+[gd_scene load_steps=24 format=3 uid="uid://ffsr87kc4uqg"]
 
 [ext_resource type="Script" path="res://Location.gd" id="1_crnwd"]
 [ext_resource type="Texture2D" uid="uid://xpppda64m0me" path="res://Assets/Gog_tiled_BG.png" id="2_i7bmp"]
@@ -14,7 +14,9 @@
 [ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="12_yea1u"]
 [ext_resource type="Texture2D" uid="uid://cyrn3ed6axd3x" path="res://Assets/TextBox.png" id="13_m5boe"]
 [ext_resource type="FontFile" uid="uid://b1jqa6td5gjao" path="res://Assets/PressStart2P-Regular.ttf" id="13_y11yo"]
+[ext_resource type="Texture2D" uid="uid://dfnla232atf2f" path="res://Assets/Check Dossier Button.png" id="15_6nbek"]
 [ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="15_g44ma"]
+[ext_resource type="Texture2D" uid="uid://dlnbxwutmaej4" path="res://Assets/Back Button.png" id="17_urux0"]
 
 [sub_resource type="Animation" id="Animation_5bilk"]
 resource_name = "BG_Movement"
@@ -189,22 +191,6 @@ stream = ExtResource("12_yea1u")
 
 [node name="SelectionUIAudio" type="AudioStreamPlayer" parent="."]
 
-[node name="Fade" type="ColorRect" parent="."]
-visible = false
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 0.644902)
-
-[node name="FadeIn" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_3cvk8")
-}
-
-[node name="FadeOut" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_h030f")
-}
-
 [node name="TextBox" type="TextureRect" parent="."]
 offset_left = 341.0
 offset_top = 711.0
@@ -227,18 +213,45 @@ offset_top = 121.0
 offset_right = 1051.0
 offset_bottom = 221.0
 theme_override_font_sizes/font_size = 36
-text = "Check Dossier"
+icon = ExtResource("15_6nbek")
+flat = true
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 0)
+
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3cvk8")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h030f")
+}
 
 [node name="DossierMenu" parent="." instance=ExtResource("15_g44ma")]
 visible = false
 
-[node name="BackButton" type="Button" parent="DossierMenu"]
-offset_left = 881.0
-offset_top = 110.0
-offset_right = 1055.0
-offset_bottom = 187.0
+[node name="Dossier Back" type="Button" parent="DossierMenu"]
+offset_left = 864.0
+offset_top = 73.0
+offset_right = 1038.0
+offset_bottom = 150.0
 theme_override_font_sizes/font_size = 50
-text = "Back"
+icon = ExtResource("17_urux0")
+flat = true
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="DossierMenu/Dossier Back"]
+stream = ExtResource("12_yea1u")
 
 [connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
 [connection signal="mouse_entered" from="BattlefieldButton" to="." method="_on_battlefield_button_mouse_entered"]
@@ -247,5 +260,9 @@ text = "Back"
 [connection signal="pressed" from="StableButton" to="." method="_on_stable_button_pressed"]
 [connection signal="mouse_entered" from="MeadowButton" to="." method="_on_meadow_button_mouse_entered"]
 [connection signal="pressed" from="MeadowButton" to="." method="_on_meadow_button_pressed"]
+[connection signal="mouse_entered" from="DossierButton" to="." method="_on_dossier_button_mouse_entered"]
+[connection signal="mouse_exited" from="DossierButton" to="." method="_on_dossier_button_mouse_exited"]
 [connection signal="pressed" from="DossierButton" to="." method="_on_dossier_button_pressed"]
-[connection signal="pressed" from="DossierMenu/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="mouse_entered" from="DossierMenu/Dossier Back" to="." method="_on_dossier_back_mouse_entered"]
+[connection signal="mouse_exited" from="DossierMenu/Dossier Back" to="." method="_on_dossier_back_mouse_exited"]
+[connection signal="pressed" from="DossierMenu/Dossier Back" to="." method="_on_dossier_back_pressed"]
