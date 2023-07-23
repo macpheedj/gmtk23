@@ -17,6 +17,10 @@ config/icon="res://icon.svg"
 config/macos_native_icon="res://icon.svg"
 config/windows_native_icon="res://icon.svg"
 
+[autoload]
+
+State="*res://state.gd"
+
 [display]
 
 window/size/viewport_width=1920
