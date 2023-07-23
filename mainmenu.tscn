@@ -150,7 +150,7 @@ layout_mode = 0
 offset_left = 340.0
 offset_top = 154.0
 offset_right = 1640.0
-offset_bottom = 402.0
+offset_bottom = 354.0
 texture = ExtResource("3_4eo46")
 
 [node name="SelectUIAudio" type="AudioStreamPlayer2D" parent="."]
