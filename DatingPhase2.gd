@@ -39,7 +39,14 @@ func _on_quit_pressed():
 	get_tree().quit()
 	
 func _on_dossier_back_pressed():
-	$Dossier.visible = false      
+	$Dossier.visible = false
+	
+func _on_dossier_back_mouse_entered():
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button Highlighted.png") 
+	$"Dossier/Dossier Back/HoverAudio".play()
+
+func _on_dossier_back_mouse_exited():   
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button.png")
 
 
 func _on_conversation_fadeout():

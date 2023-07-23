@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://ba2c1i38tcoq3"]
+[gd_scene load_steps=19 format=3 uid="uid://ba2c1i38tcoq3"]
 
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="1_fj3db"]
 [ext_resource type="Script" path="res://DatingPhase1.gd" id="1_ouv6t"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dcuerkgaa2c75" path="res://Assets/Dossier Button.png" id="6_ww0eo"]
 [ext_resource type="Texture2D" uid="uid://dlnbxwutmaej4" path="res://Assets/Back Button.png" id="7_b564q"]
 [ext_resource type="Texture2D" uid="uid://bel7q2uettxmu" path="res://Assets/Quit Button.png" id="8_1bls4"]
+[ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="10_arqap"]
 
 [sub_resource type="Animation" id="Animation_8sc7f"]
 resource_name = "FadeIn"
@@ -184,7 +185,14 @@ offset_top = 73.0
 offset_right = 1038.0
 offset_bottom = 150.0
 theme_override_font_sizes/font_size = 50
-text = "Back"
+icon = ExtResource("7_b564q")
+flat = true
+clip_text = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="HoverAudio" type="AudioStreamPlayer" parent="Dossier/Dossier Back"]
+stream = ExtResource("10_arqap")
 
 [node name="PauseMenuOpening" type="AnimationPlayer" parent="."]
 libraries = {
@@ -205,5 +213,7 @@ libraries = {
 [connection signal="mouse_entered" from="PauseMenu/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenu/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit_pressed"]
+[connection signal="mouse_entered" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_entered"]
+[connection signal="mouse_exited" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_exited"]
 [connection signal="pressed" from="Dossier/Dossier Back" to="." method="_on_dossier_back_pressed"]
 [connection signal="pressed" from="Dossier/Dossier Back" to="Dossier" method="_on_dossier_back_pressed"]

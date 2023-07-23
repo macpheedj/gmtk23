@@ -42,8 +42,28 @@ func _on_meadow_button_mouse_entered():
 func _on_dossier_button_pressed():
 	get_tree().paused = true
 	$DossierMenu.visible = true
+	
+func _on_dossier_button_mouse_entered():
+	$DossierButton.icon = load("res://Assets/Check Dossier Button Highlighted.png")
+	$HoverUIAudio.play()
+
+func _on_dossier_button_mouse_exited():
+	$DossierButton.icon = load("res://Assets/Check Dossier Button.png")
 
 
 func _on_back_button_pressed():
 	get_tree().paused = false
 	$DossierMenu.visible = false
+
+
+func _on_dossier_back_pressed():
+	$DossierMenu.visible = false
+	get_tree().paused = false
+
+
+func _on_dossier_back_mouse_entered():
+	$"DossierMenu/Dossier Back".icon = load("res://Assets/Back Button Highlighted.png") 
+	$"DossierMenu/Dossier Back/HoverAudio".play()
+
+func _on_dossier_back_mouse_exited():   
+	$"DossierMenu/Dossier Back".icon = load("res://Assets/Back Button.png")
