@@ -27,16 +27,35 @@ func _process(_delta):
 		
 	
 func _on_dossier_pressed():         
-	$Dossier.visible = true       
+	$Dossier.visible = true
+	
+func _on_dossier_mouse_entered():
+	$PauseMenu/Dossier.icon = load("res://Assets/Dossier Button Highlighted.png")
+
+
+func _on_dossier_mouse_exited():
+	$PauseMenu/Dossier.icon = load("res://Assets/Dossier Button.png")    
 	
 func _on_back_pressed():
 	get_tree().paused = false
 	$PauseMenuClosing.play("pause_contract")
 	await get_tree().create_timer(0.2).timeout      
 	$PauseMenu.visible = false
+	
+func _on_back_mouse_entered():
+	$PauseMenu/Back.icon = load("res://Assets/Back Button Highlighted.png")
+
+func _on_back_mouse_exited():
+	$PauseMenu/Back.icon = load("res://Assets/Back Button.png")
 
 func _on_quit_pressed():
-	get_tree().quit()    
+	get_tree().quit()  
+	
+func _on_quit_mouse_entered():
+	$PauseMenu/Quit.icon = load("res://Assets/Quit Button Highlighted.png")
+
+func _on_quit_mouse_exited():
+	$PauseMenu/Quit.icon = load("res://Assets/Quit Button.png")
 
 func _on_dossier_back_pressed():
 	$Dossier.visible = false
@@ -45,6 +64,5 @@ func _on_conversation_end():
 	$FadeOut.play("FadeOut")
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://GossipPhase1.tscn")
-
 
 

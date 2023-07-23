@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://crh030wjqlpyf"]
+[gd_scene load_steps=18 format=3 uid="uid://crh030wjqlpyf"]
 
 [ext_resource type="Script" path="res://DatingPhase2.gd" id="1_0kcg4"]
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="2_46lm5"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="4_akdge"]
 [ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="5_2nlwq"]
 [ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="6_jr856"]
+[ext_resource type="Texture2D" uid="uid://dcuerkgaa2c75" path="res://Assets/Dossier Button.png" id="6_lgn7u"]
+[ext_resource type="Texture2D" uid="uid://dlnbxwutmaej4" path="res://Assets/Back Button.png" id="7_twpel"]
+[ext_resource type="Texture2D" uid="uid://bel7q2uettxmu" path="res://Assets/Quit Button.png" id="8_sfw0k"]
 
 [sub_resource type="Animation" id="Animation_47eq2"]
 resource_name = "FadeIn"
@@ -141,7 +144,10 @@ offset_top = 265.0
 offset_right = 330.0
 offset_bottom = 365.0
 theme_override_font_sizes/font_size = 64
-text = "Dossier"
+icon = ExtResource("6_lgn7u")
+flat = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Back" type="Button" parent="PauseMenu"]
 layout_mode = 0
@@ -150,7 +156,11 @@ offset_top = 265.0
 offset_right = 619.0
 offset_bottom = 365.0
 theme_override_font_sizes/font_size = 64
-text = "Back"
+icon = ExtResource("7_twpel")
+flat = true
+clip_text = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Quit" type="Button" parent="PauseMenu"]
 layout_mode = 0
@@ -159,7 +169,11 @@ offset_top = 265.0
 offset_right = 909.0
 offset_bottom = 365.0
 theme_override_font_sizes/font_size = 64
-text = "Quit"
+icon = ExtResource("8_sfw0k")
+flat = true
+clip_text = true
+icon_alignment = 1
+expand_icon = true
 
 [node name="Dossier" parent="." instance=ExtResource("6_jr856")]
 visible = false
@@ -182,8 +196,14 @@ libraries = {
 "": SubResource("AnimationLibrary_x6kyq")
 }
 
+[connection signal="mouse_entered" from="PauseMenu/Dossier" to="." method="_on_dossier_mouse_entered"]
+[connection signal="mouse_exited" from="PauseMenu/Dossier" to="." method="_on_dossier_mouse_exited"]
 [connection signal="pressed" from="PauseMenu/Dossier" to="." method="_on_dossier_pressed"]
+[connection signal="mouse_entered" from="PauseMenu/Back" to="." method="_on_back_mouse_entered"]
+[connection signal="mouse_exited" from="PauseMenu/Back" to="." method="_on_back_mouse_exited"]
 [connection signal="pressed" from="PauseMenu/Back" to="." method="_on_back_pressed"]
+[connection signal="mouse_entered" from="PauseMenu/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="PauseMenu/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Dossier/Dossier Back" to="." method="_on_dossier_back_pressed"]
 [connection signal="pressed" from="Dossier/Dossier Back" to="Dossier" method="_on_dossier_back_pressed"]
