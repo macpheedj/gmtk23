@@ -56,3 +56,21 @@ func _on_conversation_end():
 	$FadeOut.play("FadeOut")
 	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://DatingPhase2.tscn")
+	
+func _on_dossier_mouse_entered():
+	$PauseMenu/Dossier.icon = load("res://Assets/Dossier Button Highlighted.png")
+
+func _on_dossier_mouse_exited():
+	$PauseMenu/Dossier.icon = load("res://Assets/Dossier Button.png")    	
+	
+func _on_back_mouse_entered():
+	$PauseMenu/Back.icon = load("res://Assets/Back Button Highlighted.png")
+
+func _on_back_mouse_exited():
+	$PauseMenu/Back.icon = load("res://Assets/Back Button.png")
+	
+func _on_quit_mouse_entered():
+	$PauseMenu/Quit.icon = load("res://Assets/Quit Button Highlighted.png")
+
+func _on_quit_mouse_exited():
+	$PauseMenu/Quit.icon = load("res://Assets/Quit Button.png")
