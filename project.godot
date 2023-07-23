@@ -15,7 +15,7 @@ run/main_scene="res://mainmenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 config/macos_native_icon="res://icon.svg"
-config/windows_native_icon="res://icon.svg"
+config/windows_native_icon="res://Assets/Icon.ico"
 
 [display]
 
