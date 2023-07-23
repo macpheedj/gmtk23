@@ -1,4 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
 
-#$FadeOut.play("Fade_Out") /assets
+# OSX bs
+.DS_Store

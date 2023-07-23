@@ -68,6 +68,7 @@ func setSpeaker(swap, dialogue, portrait):
 			$SpeakerPortraitL.position.y = 490
 			$SpeakerPortraitR.position.y = 530
 	
+	var portrait = load("res://Assets/" + dialogue.portrait + ".png")
 	speakerPortrait.set_texture(portrait)
 	$Speech/BG/Text.visible_characters = 0
 	$Speech/BG/Text.text = dialogue.message
