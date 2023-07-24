@@ -1,15 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://2aq7oix77y0d"]
+[gd_scene load_steps=10 format=3 uid="uid://2aq7oix77y0d"]
 
 [ext_resource type="Script" path="res://DatingPhase3.gd" id="1_4duwg"]
 [ext_resource type="Texture2D" uid="uid://dgqgmxhmq3heh" path="res://Assets/Background-3.png" id="1_8rpmv"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_f4bor"]
 [ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="4_3nev0"]
-[ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="4_abnkx"]
-[ext_resource type="Texture2D" uid="uid://dcuerkgaa2c75" path="res://Assets/Dossier Button.png" id="6_s3frf"]
-[ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="6_utpa4"]
-[ext_resource type="Texture2D" uid="uid://dlnbxwutmaej4" path="res://Assets/Back Button.png" id="7_4avu4"]
-[ext_resource type="Texture2D" uid="uid://bel7q2uettxmu" path="res://Assets/Quit Button.png" id="8_8u5o2"]
-[ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="10_41rdb"]
+[ext_resource type="PackedScene" uid="uid://7njven2nclbo" path="res://PauseMenu.tscn" id="5_oj7x5"]
 
 [sub_resource type="Animation" id="Animation_s6apf"]
 resource_name = "FadeIn"
@@ -51,48 +46,6 @@ _data = {
 "FadeOut": SubResource("Animation_47pyn")
 }
 
-[sub_resource type="Animation" id="Animation_vwuuv"]
-resource_name = "pause_expand"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PauseMenu:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_gptlg"]
-_data = {
-"pause_expand": SubResource("Animation_vwuuv")
-}
-
-[sub_resource type="Animation" id="Animation_oxsy1"]
-resource_name = "pause_contract"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("PauseMenu:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(1e-05, 1e-05)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_x6kyq"]
-_data = {
-"pause_contract": SubResource("Animation_oxsy1")
-}
-
 [node name="DatingPhase3" type="TextureRect"]
 process_mode = 1
 offset_right = 1920.0
@@ -116,6 +69,9 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
 
+[node name="PauseMenu" parent="." instance=ExtResource("5_oj7x5")]
+layout_mode = 1
+
 [node name="FadeIn" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_xggvu")
@@ -125,94 +81,3 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_4sgyy")
 }
-
-[node name="PauseMenu" type="TextureRect" parent="."]
-process_mode = 2
-visible = false
-layout_mode = 0
-offset_left = 480.0
-offset_top = 270.0
-offset_right = 1440.0
-offset_bottom = 750.0
-pivot_offset = Vector2(480, 240)
-texture = ExtResource("4_abnkx")
-
-[node name="Dossier" type="Button" parent="PauseMenu"]
-layout_mode = 0
-offset_left = 75.0
-offset_top = 265.0
-offset_right = 330.0
-offset_bottom = 365.0
-theme_override_font_sizes/font_size = 64
-icon = ExtResource("6_s3frf")
-flat = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Back" type="Button" parent="PauseMenu"]
-layout_mode = 0
-offset_left = 364.0
-offset_top = 265.0
-offset_right = 619.0
-offset_bottom = 365.0
-theme_override_font_sizes/font_size = 64
-icon = ExtResource("7_4avu4")
-flat = true
-clip_text = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Quit" type="Button" parent="PauseMenu"]
-layout_mode = 0
-offset_left = 654.0
-offset_top = 265.0
-offset_right = 909.0
-offset_bottom = 365.0
-theme_override_font_sizes/font_size = 64
-icon = ExtResource("8_8u5o2")
-flat = true
-clip_text = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="Dossier" parent="." instance=ExtResource("6_utpa4")]
-visible = false
-
-[node name="Dossier Back" type="Button" parent="Dossier"]
-offset_left = 864.0
-offset_top = 73.0
-offset_right = 1038.0
-offset_bottom = 150.0
-theme_override_font_sizes/font_size = 50
-icon = ExtResource("7_4avu4")
-flat = true
-clip_text = true
-icon_alignment = 1
-expand_icon = true
-
-[node name="HoverAudio" type="AudioStreamPlayer" parent="Dossier/Dossier Back"]
-stream = ExtResource("10_41rdb")
-
-[node name="PauseMenuOpening" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_gptlg")
-}
-
-[node name="PauseMenuClosing" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_x6kyq")
-}
-
-[connection signal="mouse_entered" from="PauseMenu/Dossier" to="." method="_on_dossier_mouse_entered"]
-[connection signal="mouse_exited" from="PauseMenu/Dossier" to="." method="_on_dossier_mouse_exited"]
-[connection signal="pressed" from="PauseMenu/Dossier" to="." method="_on_dossier_pressed"]
-[connection signal="mouse_entered" from="PauseMenu/Back" to="." method="_on_back_mouse_entered"]
-[connection signal="mouse_exited" from="PauseMenu/Back" to="." method="_on_back_mouse_exited"]
-[connection signal="pressed" from="PauseMenu/Back" to="." method="_on_back_pressed"]
-[connection signal="mouse_entered" from="PauseMenu/Quit" to="." method="_on_quit_mouse_entered"]
-[connection signal="mouse_exited" from="PauseMenu/Quit" to="." method="_on_quit_mouse_exited"]
-[connection signal="pressed" from="PauseMenu/Quit" to="." method="_on_quit_pressed"]
-[connection signal="mouse_entered" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_entered"]
-[connection signal="mouse_exited" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_exited"]
-[connection signal="pressed" from="Dossier/Dossier Back" to="." method="_on_dossier_back_pressed"]
-[connection signal="pressed" from="Dossier/Dossier Back" to="Dossier" method="_on_dossier_back_pressed"]
