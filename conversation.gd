@@ -128,6 +128,10 @@ func advanceMessage():
 		displayNextMessage(null)
 		$Boop.play()
 
+func updateState(update: Dictionary):
+	var princess = State.Princess[update.princess]
+	var category = State.Category[update.category]
+	State.set_state(princess, category)
 
 func _process(_delta):
 	if animating:
@@ -154,22 +158,30 @@ func _on_type_timer_timeout():
 func _on_prompt_1_pressed():
 	awaitingPrompt = false
 	togglePrompts()
+	if not dialogues[dialogueIndex].updates[0] == null:
+		updateState(dialogues[dialogueIndex].updates[0])
 	displayNextMessage(dialogues[dialogueIndex].responses[0])
 
 
 func _on_prompt_2_pressed():
 	awaitingPrompt = false
 	togglePrompts()
+	if not dialogues[dialogueIndex].updates[1] == null:
+		updateState(dialogues[dialogueIndex].updates[1])
 	displayNextMessage(dialogues[dialogueIndex].responses[1])
 
 
 func _on_prompt_3_pressed():
 	awaitingPrompt = false
 	togglePrompts()
+	if not dialogues[dialogueIndex].updates[2] == null:
+		updateState(dialogues[dialogueIndex].updates[2])
 	displayNextMessage(dialogues[dialogueIndex].responses[2])
 
 
 func _on_prompt_4_pressed():
 	awaitingPrompt = false
 	togglePrompts()
+	if not dialogues[dialogueIndex].updates[3] == null:
+		updateState(dialogues[dialogueIndex].updates[3])
 	displayNextMessage(dialogues[dialogueIndex].responses[3])

@@ -5,8 +5,8 @@
         "message": "Wh-what is... [i]she...[/i] doing here?"
     },
     {
-        "speaker": "Wilhelmina",
-        "portrait": "wilhelmina_default",
+        "speaker": "TARGET_PRINCESS_NAME",
+        "portrait": "TARGET_PRINCESS_EXPRESSION_default",
         "message": "'Sup?"
     },
     {
@@ -15,8 +15,8 @@
         "message": "Wait a CROAKING minute. Are you TRYING to bamboozle me? ME!?"
     },
     {
-        "speaker": "Wilhelmina",
-        "portrait": "wilhelmina_angry",
+        "speaker": "TARGET_PRINCESS_NAME",
+        "portrait": "TARGET_PRINCESS_EXPRESSION_angry",
         "message": "Uh"
     },
     {

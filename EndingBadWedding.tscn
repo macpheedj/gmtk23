@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bagcaox8cndym"]
+[gd_scene load_steps=8 format=3 uid="uid://bagcaox8cndym"]
 
 [ext_resource type="Script" path="res://EndingBadWedding.gd" id="1_1k3oe"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_5cqas"]
-[ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_e1ugt"]
 [ext_resource type="AudioStream" uid="uid://djuy04bas5nvl" path="res://Assets/ending_bad_wedding.mp3" id="4_ry5mr"]
 
 [sub_resource type="Animation" id="Animation_kodv0"]
@@ -48,9 +47,8 @@ _data = {
 [node name="EndingBadWedding" type="Node2D"]
 script = ExtResource("1_1k3oe")
 
-[node name="CastleBackground" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-texture = ExtResource("2_e1ugt")
 
 [node name="Conversation" parent="." instance=ExtResource("2_5cqas")]
 

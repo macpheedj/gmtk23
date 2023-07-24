@@ -62,12 +62,12 @@
             },
             {
                 "speaker": "Sienna",
-                "portrait": "sienna_upset",
+                "portrait": "sienna_angry",
                 "message": "Horse milk? No offense Rhae I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
             },
             {
                 "speaker": "Sienna",
-                "portrait": "sienna_upset",
+                "portrait": "sienna_angry",
                 "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously Rhae. The Gog I know is a much stronger, fiercer man."
             },
             {
@@ -75,6 +75,15 @@
                 "portrait": "sienna_default",
                 "message": "He talked to you about his attendant? Hahaha look out Rhae I fear our prince might be trying to set you up! He probably can tell you lack the strength and cut throat nature to run a country."
             }
+        ],
+        "updates": [
+            {
+                "princess": "Sienna",
+                "category": "Trivia"
+            },
+            null,
+            null,
+            null
         ]
     },
     {
@@ -118,6 +127,15 @@
                 "portrait": "chessa_default",
                 "message": "He told you a shocking amount about his butler... I feel sorry for you Rhae. In our date, he told me tales that made me fall for him immediately. My Gog was deeper than the vastest ocean."
             }
+        ],
+        "updates": [
+            null,
+            null,
+            {
+                "princess": "Chessa",
+                "category": "Trivia"
+            },
+            null
         ]
     },
     {
@@ -156,6 +174,15 @@
                 "portrait": "wilhelmina_default",
                 "message": "Rhae, having an attendant is important for [i]any[/i] member of the royalty, little though I care for... Crambot? I want to know more about the prince's upbringing, and making sure his background meets my needs."
             }
+        ],
+        "updates": [
+            null,
+            {
+                "princess": "Wilhelmina",
+                "category": "Trivia"
+            },
+            null,
+            null
         ]
     },
     {

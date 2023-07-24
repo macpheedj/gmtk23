@@ -2,7 +2,12 @@
     {
         "speaker": "narrator",
         "portrait": null,
-        "message": "[i]Your hand rests on the door knob, nervous sweat interfering with your grip. Your machinations brought you to this moment. You glance over. Gog licks his hand and distributes the slime across what may or may not be hair on his head. Who awaits on the other side to save you from this horrible man? You turn the knob and open the door to see...[/i]"
+        "message": "[i]Your hand rests on the door knob, nervous sweat interfering with your grip. Your machinations brought you to this moment. You glance over. Gog licks his hand and distributes the slime across what may or may not be hair on his head. Who awaits on the other side to save you from this horrible man?[/i]"
+    },
+    {
+        "speaker": "narrator",
+        "portrait": null,
+        "message": "[i]You turn the knob and open the door to see...[/i]"
     },
     {
         "speaker": "narrator",

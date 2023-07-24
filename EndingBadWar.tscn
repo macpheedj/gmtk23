@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cetnfg5em3u6u"]
+[gd_scene load_steps=8 format=3 uid="uid://cetnfg5em3u6u"]
 
 [ext_resource type="Script" path="res://EndingBadWar.gd" id="1_mklhc"]
-[ext_resource type="Texture2D" uid="uid://baalf0r2d5sd2" path="res://Assets/stable_background.png" id="2_kw5lh"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_tp2g6"]
 [ext_resource type="AudioStream" uid="uid://cjl3kyhwj24sn" path="res://Assets/ending_bad_war.mp3" id="4_wjv4v"]
 
@@ -48,10 +47,8 @@ _data = {
 [node name="EndingBadWar" type="Node2D"]
 script = ExtResource("1_mklhc")
 
-[node name="StableBackground" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-scale = Vector2(4, 4)
-texture = ExtResource("2_kw5lh")
 
 [node name="Conversation" parent="." instance=ExtResource("2_tp2g6")]
 
