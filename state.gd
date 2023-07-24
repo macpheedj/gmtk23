@@ -14,12 +14,12 @@ var princess_states: Dictionary = {
 		Category.Location: Knowledge.Unknown,
 	},
 	Princess.Sienna: {
-		Category.Trivia: Knowledge.Known,
+		Category.Trivia: Knowledge.Unknown,
 		Category.Location: Knowledge.Unknown,
 	},
 	Princess.Wilhelmina: {
 		Category.Trivia: Knowledge.Unknown,
-		Category.Location: Knowledge.Known,
+		Category.Location: Knowledge.Unknown,
 	},
 }
 
