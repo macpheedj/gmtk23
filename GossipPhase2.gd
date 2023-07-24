@@ -9,6 +9,7 @@ func _ready():
 	var file = FileAccess.open("res://Dialogue/gossip_phase_2.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var error = json.parse(content)
+	$PauseMenu/PauseMenuBG.visible = false
 
 	if error == OK:
 		dialogues = json.data
@@ -19,9 +20,9 @@ func _ready():
 		await get_tree().create_timer(1).timeout
 		
 func _process(_delta):
-	if Input.is_action_just_pressed("exit") && $PauseMenu.visible == false : 
-		$PauseMenu.visible = true
-		$PauseMenuOpening.play("pause_expand")
+	if Input.is_action_just_pressed("exit") && $PauseMenu/PauseMenuBG.visible == false :      
+		$PauseMenu/PauseMenuBG.visible = true
+		$PauseMenu/PauseMenuOpening.play("pause_expand")
 		await get_tree().create_timer(0.2).timeout
 		get_tree().paused = true
 	
