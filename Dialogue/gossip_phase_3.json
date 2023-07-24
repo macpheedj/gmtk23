@@ -93,7 +93,7 @@
     },
     {
         "speaker": "Sienna",
-        "portrait": "sienna_upset",
+        "portrait": "sienna_angry",
         "message": "Goodness, I knew you were a romantic, Chessa, but that naivety borders on sickening."
     },
     {
@@ -124,7 +124,7 @@
             },
             {
                 "speaker": "Sienna",
-                "portrait": "sienna_upset",
+                "portrait": "sienna_angry",
                 "message": "As a Mantis I have little in the way of “feet”, so I've not put much thought into it. That's a strange question. I personally look forward to meeting my Prince on the Battlefield of love! To think, the day is so close..."
             },
             {
@@ -134,7 +134,7 @@
             },
             {
                 "speaker": "Sienna",
-                "portrait": "sienna_upset",
+                "portrait": "sienna_angry",
                 "message": "I am in control of my own life and no one else. I will take control of my life and meet my Prince on the battlefield of love where we will prove who is the dominant."
             }
         ],
@@ -155,7 +155,7 @@
     },
     {
         "speaker": "Sienna",
-        "portrait": "sienna_upset",
+        "portrait": "sienna_angry",
         "message": "Oh that's enough from you, not everyone has to like the same things when it comes to love."
     },
     {

@@ -199,13 +199,13 @@ offset_bottom = 961.0
 texture = ExtResource("13_m5boe")
 
 [node name="TextPrompt" type="RichTextLabel" parent="."]
-offset_left = 452.0
+offset_left = 411.0
 offset_top = 777.0
-offset_right = 1415.0
+offset_right = 1421.0
 offset_bottom = 894.0
 theme_override_fonts/normal_font = ExtResource("13_y11yo")
 theme_override_font_sizes/normal_font_size = 48
-text = "Where shall we take our stroll princess?"
+text = "Where shall we take our stroll, princess?"
 
 [node name="DossierButton" type="Button" parent="."]
 offset_left = 797.0
