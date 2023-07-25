@@ -51,16 +51,19 @@ _data = {
 }
 
 [node name="PauseMenu" type="Control"]
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_mode = 2
 script = ExtResource("1_e6qkl")
 
 [node name="PauseMenuBG" type="TextureRect" parent="."]
 process_mode = 2
+layout_mode = 0
 offset_left = 480.0
 offset_top = 240.0
 offset_right = 1440.0
@@ -75,6 +78,12 @@ offset_left = 75.0
 offset_top = 265.0
 offset_right = 330.0
 offset_bottom = 365.0
+focus_neighbor_left = NodePath("../Quit")
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_right = NodePath("../Back")
+focus_neighbor_bottom = NodePath("../Back")
+focus_next = NodePath("../Back")
+focus_previous = NodePath("../Quit")
 theme_override_font_sizes/font_size = 64
 icon = ExtResource("2_4wcra")
 flat = true
@@ -87,6 +96,12 @@ offset_left = 364.0
 offset_top = 265.0
 offset_right = 619.0
 offset_bottom = 365.0
+focus_neighbor_left = NodePath("../Dossier")
+focus_neighbor_top = NodePath("../Dossier")
+focus_neighbor_right = NodePath("../Quit")
+focus_neighbor_bottom = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Dossier")
 theme_override_font_sizes/font_size = 64
 icon = ExtResource("3_2v15p")
 flat = true
@@ -100,6 +115,12 @@ offset_left = 654.0
 offset_top = 265.0
 offset_right = 909.0
 offset_bottom = 365.0
+focus_neighbor_left = NodePath("../Back")
+focus_neighbor_top = NodePath("../Back")
+focus_neighbor_right = NodePath("../Dossier")
+focus_neighbor_bottom = NodePath("../Dossier")
+focus_next = NodePath("../Dossier")
+focus_previous = NodePath("../Back")
 theme_override_font_sizes/font_size = 64
 icon = ExtResource("4_txuq3")
 flat = true
@@ -135,12 +156,18 @@ libraries = {
 "": SubResource("AnimationLibrary_cdpeu")
 }
 
+[connection signal="focus_entered" from="PauseMenuBG/Dossier" to="." method="_on_dossier_focus_entered"]
+[connection signal="focus_exited" from="PauseMenuBG/Dossier" to="." method="_on_dossier_focus_exited"]
 [connection signal="mouse_entered" from="PauseMenuBG/Dossier" to="." method="_on_dossier_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenuBG/Dossier" to="." method="_on_dossier_mouse_exited"]
 [connection signal="pressed" from="PauseMenuBG/Dossier" to="." method="_on_dossier_pressed"]
+[connection signal="focus_entered" from="PauseMenuBG/Back" to="." method="_on_back_focus_entered"]
+[connection signal="focus_exited" from="PauseMenuBG/Back" to="." method="_on_back_focus_exited"]
 [connection signal="mouse_entered" from="PauseMenuBG/Back" to="." method="_on_back_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenuBG/Back" to="." method="_on_back_mouse_exited"]
 [connection signal="pressed" from="PauseMenuBG/Back" to="." method="_on_back_pressed"]
+[connection signal="focus_entered" from="PauseMenuBG/Quit" to="." method="_on_quit_focus_entered"]
+[connection signal="focus_exited" from="PauseMenuBG/Quit" to="." method="_on_quit_focus_exited"]
 [connection signal="mouse_entered" from="PauseMenuBG/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenuBG/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="PauseMenuBG/Quit" to="." method="_on_quit_pressed"]

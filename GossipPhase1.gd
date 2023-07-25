@@ -16,11 +16,11 @@ func _ready():
 		$Conversation.end.connect(_on_conversation_end)
 		$Conversation.fadeout.connect(_on_conversation_fadeout)
 		$Conversation.setup(dialogues)
-		$FadeIn.play("FadeIn")
-		await get_tree().create_timer(1).timeout
+		$FadeIn.play("FadeIn")     
+		await get_tree().create_timer(1).timeout 
 		
 func _process(_delta):
-	if Input.is_action_just_pressed("exit") && $PauseMenu/PauseMenuBG.visible == false :      
+	if Input.is_action_just_pressed("pause") && $PauseMenu/PauseMenuBG.visible == false :      
 		$PauseMenu/PauseMenuBG.visible = true
 		$PauseMenu/PauseMenuOpening.play("pause_expand")
 		await get_tree().create_timer(0.2).timeout
