@@ -1,15 +1,23 @@
-extends Node2D
+extends Control
+
+var usecontroller = false
 
 func _ready():
-	$FadeIn.play("FadeIn")
+	$FadeIn.play("fade_in")
 	$BGAnimation.play("BG_Movement")
 	
 func _process(_delta):
-	if Input.is_action_just_pressed("exit"): get_tree().quit()
+	if Input.is_action_just_pressed("menu_focus") && usecontroller == false && $Dossier.visible == false :
+		usecontroller = true
+		$DossierButton.grab_focus()
+		
+	if Input.is_action_just_pressed("menu_focus") && usecontroller == false && $Dossier.visible == true :
+		usecontroller = true
+		$"Dossier/Dossier Back".grab_focus()
 
 func _on_battlefield_button_pressed():
 	$SelectionUIAudio.play()
-	$FadeOut.play("Fade_Out")
+	$FadeOut.play("fade_out")
 	await get_tree().create_timer(2).timeout
 
 	State.set_target_princess(State.Princess.Sienna)
@@ -21,7 +29,7 @@ func _on_battlefield_button_pressed():
 
 func _on_stable_button_pressed():
 	$SelectionUIAudio.play()
-	$FadeOut.play("Fade_Out")
+	$FadeOut.play("fade_out")
 	await get_tree().create_timer(2).timeout
 
 	State.set_target_princess(State.Princess.Wilhelmina)
@@ -33,7 +41,7 @@ func _on_stable_button_pressed():
 
 func _on_meadow_button_pressed():
 	$SelectionUIAudio.play()
-	$FadeOut.play("Fade_Out")
+	$FadeOut.play("fade_out")
 	await get_tree().create_timer(2).timeout
 
 	State.set_target_princess(State.Princess.Chessa)
@@ -41,44 +49,73 @@ func _on_meadow_button_pressed():
 		get_tree().change_scene_to_file("res://EndingGood.tscn")
 	else:
 		get_tree().change_scene_to_file("res://EndingBadWedding.tscn")
+		
+		
+
 
 
 func _on_battlefield_button_mouse_entered():
 	$HoverUIAudio.play()
+	usecontroller = false
 
 
 func _on_stable_button_mouse_entered():
 	$HoverUIAudio.play()
+	usecontroller = false
 
 
 func _on_meadow_button_mouse_entered():
 	$HoverUIAudio.play()
+	usecontroller = false
+	
+	
+	
 
 func _on_dossier_button_pressed():
 	get_tree().paused = true
-	$DossierMenu.visible = true
+	$Dossier.visible = true
+	$"Dossier/Dossier Back".grab_focus()
+	usecontroller = false
 	
 func _on_dossier_button_mouse_entered():
 	$DossierButton.icon = load("res://Assets/Check Dossier Button Highlighted.png")
 	$HoverUIAudio.play()
+	usecontroller = false
 
 func _on_dossier_button_mouse_exited():
 	$DossierButton.icon = load("res://Assets/Check Dossier Button.png")
+	usecontroller = false
+	
+func _on_dossier_button_focus_entered():
+	$DossierButton.icon = load("res://Assets/Check Dossier Button Highlighted.png")
+	$HoverUIAudio.play()
 
 
-func _on_back_button_pressed():
-	get_tree().paused = false
-	$DossierMenu.visible = false
+func _on_dossier_button_focus_exited():
+	$DossierButton.icon = load("res://Assets/Check Dossier Button.png")
+	
 
 
 func _on_dossier_back_pressed():
-	$DossierMenu.visible = false
+	$Dossier.visible = false
 	get_tree().paused = false
+	usecontroller = false
 
 
 func _on_dossier_back_mouse_entered():
-	$"DossierMenu/Dossier Back".icon = load("res://Assets/Back Button Highlighted.png") 
-	$"DossierMenu/Dossier Back/HoverAudio".play()
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button Highlighted.png")
+	$"HoverUIAudio".play()
+	usecontroller = false
 
 func _on_dossier_back_mouse_exited():   
-	$"DossierMenu/Dossier Back".icon = load("res://Assets/Back Button.png")
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button.png")
+	usecontroller = false
+
+func _on_dossier_back_focus_entered():
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button Highlighted.png") 
+	$"HoverUIAudio".play()
+
+
+func _on_dossier_back_focus_exited():
+	$"Dossier/Dossier Back".icon = load("res://Assets/Back Button.png")
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://7njven2nclbo"]
+[gd_scene load_steps=14 format=3 uid="uid://7njven2nclbo"]
 
 [ext_resource type="Script" path="res://PauseMenu.gd" id="1_e6qkl"]
 [ext_resource type="Texture2D" uid="uid://c3vkdmw1qaplb" path="res://Assets/PauseMenu.png" id="1_ekq52"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bel7q2uettxmu" path="res://Assets/Quit Button.png" id="4_txuq3"]
 [ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="6_bi8vw"]
 [ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="7_uioiw"]
+[ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="8_scgtf"]
+[ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="9_kxsmy"]
 
 [sub_resource type="Animation" id="Animation_ouhwv"]
 resource_name = "pause_expand"
@@ -143,9 +145,6 @@ clip_text = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="HoverAudio" type="AudioStreamPlayer" parent="Dossier/Dossier Back"]
-stream = ExtResource("7_uioiw")
-
 [node name="PauseMenuOpening" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_gwh22")
@@ -155,6 +154,15 @@ libraries = {
 libraries = {
 "": SubResource("AnimationLibrary_cdpeu")
 }
+
+[node name="HoverUIAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_uioiw")
+
+[node name="SelectUIAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_scgtf")
+
+[node name="MainThemetest" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_kxsmy")
 
 [connection signal="focus_entered" from="PauseMenuBG/Dossier" to="." method="_on_dossier_focus_entered"]
 [connection signal="focus_exited" from="PauseMenuBG/Dossier" to="." method="_on_dossier_focus_exited"]
@@ -171,6 +179,8 @@ libraries = {
 [connection signal="mouse_entered" from="PauseMenuBG/Quit" to="." method="_on_quit_mouse_entered"]
 [connection signal="mouse_exited" from="PauseMenuBG/Quit" to="." method="_on_quit_mouse_exited"]
 [connection signal="pressed" from="PauseMenuBG/Quit" to="." method="_on_quit_pressed"]
+[connection signal="focus_entered" from="Dossier/Dossier Back" to="." method="_on_dossier_back_focus_entered"]
+[connection signal="focus_exited" from="Dossier/Dossier Back" to="." method="_on_dossier_back_focus_exited"]
 [connection signal="mouse_entered" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_entered"]
 [connection signal="mouse_exited" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_exited"]
 [connection signal="pressed" from="Dossier/Dossier Back" to="." method="_on_dossier_back_pressed"]

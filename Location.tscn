@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://ffsr87kc4uqg"]
+[gd_scene load_steps=23 format=3 uid="uid://dml52gdhjibqx"]
 
 [ext_resource type="Script" path="res://Location.gd" id="1_crnwd"]
 [ext_resource type="Texture2D" uid="uid://xpppda64m0me" path="res://Assets/Gog_tiled_BG.png" id="2_i7bmp"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://cmkhqr1h41nci" path="res://Assets/summer_meadow_solid_image.png" id="8_v0uek"]
 [ext_resource type="Texture2D" uid="uid://bdossjbsnu20m" path="res://Assets/StableText.png" id="10_783p7"]
 [ext_resource type="Texture2D" uid="uid://bh6g2rhqn16r3" path="res://Assets/CastleText.png" id="10_qcnpk"]
-[ext_resource type="Texture2D" uid="uid://b8xs480gqhi35" path="res://Assets/LocationPrompt.png" id="11_ptq6y"]
 [ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="12_yea1u"]
 [ext_resource type="Texture2D" uid="uid://cyrn3ed6axd3x" path="res://Assets/TextBox.png" id="13_m5boe"]
 [ext_resource type="FontFile" uid="uid://b1jqa6td5gjao" path="res://Assets/PressStart2P-Regular.ttf" id="13_y11yo"]
@@ -39,8 +38,8 @@ _data = {
 "BG_Movement": SubResource("Animation_5bilk")
 }
 
-[sub_resource type="Animation" id="Animation_mariy"]
-resource_name = "FadeIn"
+[sub_resource type="Animation" id="Animation_7hab2"]
+resource_name = "fade_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -66,14 +65,13 @@ tracks/1/keys = {
 "values": [true, false]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3cvk8"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4ekk1"]
 _data = {
-"FadeIn": SubResource("Animation_mariy")
+"fade_in": SubResource("Animation_7hab2")
 }
 
-[sub_resource type="Animation" id="Animation_cgg2u"]
-resource_name = "Fade_Out"
-length = 2.0
+[sub_resource type="Animation" id="Animation_cjpya"]
+resource_name = "fade_out"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -81,10 +79,10 @@ tracks/0/path = NodePath("Fade:color")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.992157)]
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -93,26 +91,34 @@ tracks/1/path = NodePath("Fade:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, true]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_h030f"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iahlh"]
 _data = {
-"Fade_Out": SubResource("Animation_cgg2u")
+"fade_out": SubResource("Animation_cjpya")
 }
 
-[node name="Node2D" type="Node2D"]
+[node name="Control" type="Control"]
+process_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_crnwd")
 
 [node name="BG" type="TextureRect" parent="."]
 show_behind_parent = true
-offset_left = -747.5
-offset_top = -422.5
-offset_right = 6932.5
-offset_bottom = 3897.5
+layout_mode = 0
+offset_left = -287.5
+offset_top = -162.5
+offset_right = 7392.5
+offset_bottom = 4157.5
 texture = ExtResource("2_i7bmp")
 
 [node name="BGAnimation" type="AnimationPlayer" parent="."]
@@ -124,36 +130,51 @@ libraries = {
 stream = ExtResource("7_mnbfk")
 autoplay = true
 
-[node name="SelectUIAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_7065l")
-volume_db = 20.0
-
 [node name="BattlefieldButton" type="Button" parent="."]
+process_mode = 1
+layout_mode = 0
 offset_left = 177.0
 offset_top = 305.0
 offset_right = 607.0
 offset_bottom = 549.0
+focus_neighbor_top = NodePath("../DossierButton")
+focus_neighbor_right = NodePath("../MeadowButton")
+focus_next = NodePath("../MeadowButton")
+focus_previous = NodePath("../DossierButton")
 icon = ExtResource("5_8yrtu")
 expand_icon = true
 
-[node name="StableButton" type="Button" parent="."]
-offset_left = 1244.0
-offset_top = 314.0
-offset_right = 1674.0
-offset_bottom = 558.0
-icon = ExtResource("6_5xak0")
-icon_alignment = 1
-expand_icon = true
-
 [node name="MeadowButton" type="Button" parent="."]
+process_mode = 1
+layout_mode = 0
 offset_left = 704.0
 offset_top = 309.0
 offset_right = 1134.0
 offset_bottom = 553.0
+focus_neighbor_left = NodePath("../BattlefieldButton")
+focus_neighbor_top = NodePath("../DossierButton")
+focus_neighbor_right = NodePath("../StableButton")
+focus_next = NodePath("../StableButton")
+focus_previous = NodePath("../BattlefieldButton")
 icon = ExtResource("8_v0uek")
 expand_icon = true
 
+[node name="StableButton" type="Button" parent="."]
+process_mode = 1
+layout_mode = 0
+offset_left = 1244.0
+offset_top = 314.0
+offset_right = 1674.0
+offset_bottom = 558.0
+focus_neighbor_left = NodePath("../MeadowButton")
+focus_neighbor_top = NodePath("../DossierButton")
+focus_previous = NodePath("../MeadowButton")
+icon = ExtResource("6_5xak0")
+icon_alignment = 1
+expand_icon = true
+
 [node name="MeadowText" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 776.0
 offset_top = 545.0
 offset_right = 1276.0
@@ -162,6 +183,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_x80yp")
 
 [node name="StableText" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 1308.0
 offset_top = 552.0
 offset_right = 1808.0
@@ -170,6 +192,7 @@ scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_783p7")
 
 [node name="CastleText" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 259.0
 offset_top = 545.0
 offset_right = 759.0
@@ -177,21 +200,14 @@ offset_bottom = 695.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("10_qcnpk")
 
-[node name="PrompText" type="TextureRect" parent="."]
-visible = false
-offset_left = 397.0
-offset_top = 728.0
-offset_right = 2319.0
-offset_bottom = 1035.0
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("11_ptq6y")
-
 [node name="HoverUIAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_yea1u")
 
 [node name="SelectionUIAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_7065l")
 
 [node name="TextBox" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 341.0
 offset_top = 711.0
 offset_right = 1491.0
@@ -199,6 +215,7 @@ offset_bottom = 961.0
 texture = ExtResource("13_m5boe")
 
 [node name="TextPrompt" type="RichTextLabel" parent="."]
+layout_mode = 0
 offset_left = 411.0
 offset_top = 777.0
 offset_right = 1421.0
@@ -208,10 +225,16 @@ theme_override_font_sizes/normal_font_size = 48
 text = "Where shall we take our stroll, princess?"
 
 [node name="DossierButton" type="Button" parent="."]
+process_mode = 1
+layout_mode = 0
 offset_left = 797.0
 offset_top = 121.0
 offset_right = 1051.0
 offset_bottom = 221.0
+focus_neighbor_left = NodePath("../BattlefieldButton")
+focus_neighbor_right = NodePath("../StableButton")
+focus_neighbor_bottom = NodePath("../MeadowButton")
+focus_next = NodePath("../BattlefieldButton")
 theme_override_font_sizes/font_size = 36
 icon = ExtResource("15_6nbek")
 flat = true
@@ -219,26 +242,10 @@ clip_text = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Fade" type="ColorRect" parent="."]
-visible = false
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0, 0, 0, 0)
-
-[node name="FadeIn" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_3cvk8")
-}
-
-[node name="FadeOut" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_h030f")
-}
-
-[node name="DossierMenu" parent="." instance=ExtResource("15_g44ma")]
+[node name="Dossier" parent="." instance=ExtResource("15_g44ma")]
 visible = false
 
-[node name="Dossier Back" type="Button" parent="DossierMenu"]
+[node name="Dossier Back" type="Button" parent="Dossier"]
 offset_left = 864.0
 offset_top = 73.0
 offset_right = 1038.0
@@ -250,19 +257,37 @@ clip_text = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="HoverAudio" type="AudioStreamPlayer" parent="DossierMenu/Dossier Back"]
-stream = ExtResource("12_yea1u")
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
 
-[connection signal="animation_finished" from="BGAnimation" to="." method="_on_bg_animation_animation_finished"]
+[node name="FadeIn" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4ekk1")
+}
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_iahlh")
+}
+
 [connection signal="mouse_entered" from="BattlefieldButton" to="." method="_on_battlefield_button_mouse_entered"]
 [connection signal="pressed" from="BattlefieldButton" to="." method="_on_battlefield_button_pressed"]
-[connection signal="mouse_entered" from="StableButton" to="." method="_on_stable_button_mouse_entered"]
-[connection signal="pressed" from="StableButton" to="." method="_on_stable_button_pressed"]
 [connection signal="mouse_entered" from="MeadowButton" to="." method="_on_meadow_button_mouse_entered"]
 [connection signal="pressed" from="MeadowButton" to="." method="_on_meadow_button_pressed"]
+[connection signal="mouse_entered" from="StableButton" to="." method="_on_stable_button_mouse_entered"]
+[connection signal="pressed" from="StableButton" to="." method="_on_stable_button_pressed"]
+[connection signal="focus_entered" from="DossierButton" to="." method="_on_dossier_button_focus_entered"]
+[connection signal="focus_exited" from="DossierButton" to="." method="_on_dossier_button_focus_exited"]
 [connection signal="mouse_entered" from="DossierButton" to="." method="_on_dossier_button_mouse_entered"]
 [connection signal="mouse_exited" from="DossierButton" to="." method="_on_dossier_button_mouse_exited"]
 [connection signal="pressed" from="DossierButton" to="." method="_on_dossier_button_pressed"]
-[connection signal="mouse_entered" from="DossierMenu/Dossier Back" to="." method="_on_dossier_back_mouse_entered"]
-[connection signal="mouse_exited" from="DossierMenu/Dossier Back" to="." method="_on_dossier_back_mouse_exited"]
-[connection signal="pressed" from="DossierMenu/Dossier Back" to="." method="_on_dossier_back_pressed"]
+[connection signal="focus_entered" from="Dossier/Dossier Back" to="." method="_on_dossier_back_focus_entered"]
+[connection signal="focus_exited" from="Dossier/Dossier Back" to="." method="_on_dossier_back_focus_exited"]
+[connection signal="mouse_entered" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_entered"]
+[connection signal="mouse_exited" from="Dossier/Dossier Back" to="." method="_on_dossier_back_mouse_exited"]
+[connection signal="pressed" from="Dossier/Dossier Back" to="." method="_on_dossier_back_pressed"]
+[connection signal="pressed" from="Dossier/Dossier Back" to="Dossier" method="_on_dossier_back_pressed"]
