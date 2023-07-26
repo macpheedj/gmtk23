@@ -9,7 +9,7 @@ func _ready():
 	var file = FileAccess.open("res://Dialogue/gossip_phase_1.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var error = json.parse(content)
-	$PauseMenu/PauseMenuBG.visible = false
+	$PauseMenu/PauseMenuBG.visible = false 
 
 	if error == OK:
 		dialogues = json.data
@@ -23,7 +23,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("pause") && $PauseMenu/PauseMenuBG.visible == false :      
 		$PauseMenu/PauseMenuBG.visible = true
 		$PauseMenu/PauseMenuOpening.play("pause_expand")
-		await get_tree().create_timer(0.2).timeout
+		await get_tree().create_timer(0.2).timeout 
 		get_tree().paused = true
 
 func _on_conversation_fadeout():
@@ -32,7 +32,7 @@ func _on_conversation_fadeout():
 	await get_tree().create_timer(1).timeout
 	$Conversation.displayNextMessage(null)
 	$FadeIn.play("FadeIn")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1).timeout     
 	$Conversation.setAnimating(false)
 	pass
 

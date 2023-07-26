@@ -54,7 +54,7 @@ script = ExtResource("1_61i4f")
 z_index = 100
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 
 [node name="FadeIn" type="AnimationPlayer" parent="."]
 libraries = {
