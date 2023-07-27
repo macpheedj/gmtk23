@@ -12,6 +12,15 @@ func _process(_delta):
 		usecontroller = true
 		$"Dossier/Dossier Back".grab_focus()
 		
+	if Input.is_action_just_pressed("Cancel") :
+		$"SelectUIAudio".play()
+		await get_tree().create_timer(0.1).timeout  
+		$PauseMenuClosing.play("pause_contract")
+		usecontroller = false
+		await get_tree().create_timer(0.4).timeout  
+		get_tree().paused = false
+		$PauseMenuBG.visible = false
+		
 func _on_dossier_pressed():  
 	$"SelectUIAudio".play()    
 	$Dossier.visible = true

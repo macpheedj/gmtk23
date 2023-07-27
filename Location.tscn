@@ -103,7 +103,7 @@ _data = {
 }
 
 [node name="Control" type="Control"]
-process_mode = 1
+process_mode = 2
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -131,7 +131,6 @@ stream = ExtResource("7_mnbfk")
 autoplay = true
 
 [node name="BattlefieldButton" type="Button" parent="."]
-process_mode = 1
 layout_mode = 0
 offset_left = 177.0
 offset_top = 305.0
@@ -145,7 +144,6 @@ icon = ExtResource("5_8yrtu")
 expand_icon = true
 
 [node name="MeadowButton" type="Button" parent="."]
-process_mode = 1
 layout_mode = 0
 offset_left = 704.0
 offset_top = 309.0
@@ -160,7 +158,6 @@ icon = ExtResource("8_v0uek")
 expand_icon = true
 
 [node name="StableButton" type="Button" parent="."]
-process_mode = 1
 layout_mode = 0
 offset_left = 1244.0
 offset_top = 314.0
@@ -225,7 +222,6 @@ theme_override_font_sizes/normal_font_size = 48
 text = "Where shall we take our stroll, princess?"
 
 [node name="DossierButton" type="Button" parent="."]
-process_mode = 1
 layout_mode = 0
 offset_left = 797.0
 offset_top = 121.0

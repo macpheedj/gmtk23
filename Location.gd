@@ -5,15 +5,17 @@ var usecontroller = false
 func _ready():
 	$FadeIn.play("fade_in")
 	$BGAnimation.play("BG_Movement")
+	get_tree().paused = true
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("menu_focus") && usecontroller == false && $Dossier.visible == false :
 		usecontroller = true
 		$DossierButton.grab_focus()
 		
-	if Input.is_action_just_pressed("menu_focus") && usecontroller == false && $Dossier.visible == true :
+	if Input.is_action_just_pressed("menu_focus") && $Dossier.visible == true :
 		usecontroller = true
 		$"Dossier/Dossier Back".grab_focus()
+	
 
 func _on_battlefield_button_pressed():
 	$SelectionUIAudio.play()
@@ -72,9 +74,7 @@ func _on_meadow_button_mouse_entered():
 	
 
 func _on_dossier_button_pressed():
-	get_tree().paused = true
 	$Dossier.visible = true
-	$"Dossier/Dossier Back".grab_focus()
 	usecontroller = false
 	
 func _on_dossier_button_mouse_entered():
@@ -98,7 +98,6 @@ func _on_dossier_button_focus_exited():
 
 func _on_dossier_back_pressed():
 	$Dossier.visible = false
-	get_tree().paused = false
 	usecontroller = false
 
 
