@@ -109,6 +109,8 @@ offset_right = 1460.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_neighbor_bottom = NodePath("../Prompt2")
+focus_next = NodePath(".")
 theme_override_font_sizes/font_size = 36
 disabled = true
 
@@ -126,6 +128,10 @@ offset_right = 1460.0
 offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_neighbor_top = NodePath("../Prompt1")
+focus_neighbor_bottom = NodePath("../Prompt3")
+focus_next = NodePath("../Prompt3")
+focus_previous = NodePath("../Prompt1")
 theme_override_font_sizes/font_size = 36
 disabled = true
 
@@ -143,6 +149,10 @@ offset_right = 1460.0
 offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_neighbor_top = NodePath("../Prompt2")
+focus_neighbor_bottom = NodePath("../Prompt4")
+focus_next = NodePath("../Prompt4")
+focus_previous = NodePath("../Prompt2")
 theme_override_font_sizes/font_size = 36
 disabled = true
 
@@ -159,6 +169,8 @@ offset_right = 1460.0
 offset_bottom = 525.0
 grow_horizontal = 2
 grow_vertical = 2
+focus_neighbor_top = NodePath("../Prompt3")
+focus_previous = NodePath("../Prompt3")
 theme_override_font_sizes/font_size = 36
 disabled = true
 

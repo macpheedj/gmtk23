@@ -14,6 +14,7 @@ var dialogueIndex = 0
 var dialogues = null
 var previousSpeaker = null
 var previousSpeakerSide = null
+var usecontroller = false
 
 
 func setup(json):
@@ -117,6 +118,7 @@ func displayPrompt(prompts):
 	$Prompt3.text = prompts[2]
 	$Prompt4.text = prompts[3]
 	togglePrompts()
+	usecontroller = false
 
 
 func advanceMessage():
@@ -142,6 +144,10 @@ func _process(_delta):
 			advanceMessage()
 		else:
 			$Speech/BG/Text.visible_characters = $Speech/BG/Text.text.length()
+			
+	if Input.is_action_just_pressed("menu_focus") && usecontroller == false && $Prompt1.visible == true :
+		$Prompt1.grab_focus()
+		usecontroller = true
 
 
 func _on_type_timer_timeout():
