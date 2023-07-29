@@ -1,208 +1,208 @@
 [
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_default",
-        "message": "Soooo Ladies, do tell, how was your date with the Prince?"
-    },
-    {
-        "speaker": "Chessa",
-        "portrait": "chessa_blush",
-        "message": "I thought it went wonderfully - he is a man of many layers and I like that."
-    },
-    {
-        "speaker": "Sienna",
-        "portrait": "sienna_blush",
-        "message": "Yes - he has a certain strength to him that I find endearing."
-    },
-    {
-        "speaker": "Wilhelmina",
-        "portrait": "wilhelmina_blush",
-        "message": "Indeed, every part of him embodies what it means to be royalty."
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_confused",
-        "message": "Goodness, I must say; I wasn't expecting such... [i]enthusiasm.[/i]"
-    },
-    {
-        "speaker": "Sienna",
-        "portrait": "sienna_default",
-        "message": "How could we not be excited? He is a prince you know..."
-    },
-    {
-        "speaker": "Sienna",
-        "portrait": "sienna_default",
-        "message": "...and a mighty powerful one at that!"
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_angry",
-        "message": "Powerful, huh?"
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_default",
-        "message": "[i](Maybe I can use this to my advantage... it's time to play matchmaker)"
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_default",
-        "message": "I suppose I get where you are coming from... On our date today he did tell me about:",
-        "prompts": [
-            "The time he ate all of his siblings.",
-            "His obsessive belief in the powers of Horse Milk.",
-            "The tomes of poetry he has written through the years.",
-            "His attendant, Crumbit."
-        ],
-        "responses": [
-            {
-                "speaker": "Sienna",
-                "portrait": "sienna_blush",
-                "message": "Oh ho that rascal he most certainly did not! See, that's what I love about him. I have always thought that every loving relationship should be a power struggle. If you aren't vying to be on top what's the point?"
-            },
-            {
-                "speaker": "Sienna",
-                "portrait": "sienna_angry",
-                "message": "Horse milk? No offense Rhae I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
-            },
-            {
-                "speaker": "Sienna",
-                "portrait": "sienna_angry",
-                "message": "Surely you jest? You must have misunderstood him, you should really take this more seriously Rhae. The Gog I know is a much stronger, fiercer man."
-            },
-            {
-                "speaker": "Sienna",
-                "portrait": "sienna_default",
-                "message": "He talked to you about his attendant? Hahaha look out Rhae I fear our prince might be trying to set you up! He probably can tell you lack the strength and cut throat nature to run a country."
-            }
-        ],
-        "updates": [
-            {
-                "princess": "Sienna",
-                "category": "Trivia"
-            },
-            null,
-            null,
-            null
-        ]
-    },
-    {
-        "speaker": "Chessa",
-        "portrait": "chessa_default",
-        "message": "My, my Sienna how very... expected of you. Domineering as ever. I fear your missing so much of our dear Gog though. He has a mystifying depth when you actually bother to look."
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_eyebags",
-        "message": "[i](Depth? She can't be serious... the man is shallower than the pool he spawned from!)[/i]"
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_default",
-        "message": "Oh, Chessa love, how right you are. You'd love to hear about:",
-        "prompts": [
-            "All the in-depth details of his fratricidal vorescapades. I know all the names... and textures...",
-            "The never-ending list of health benefits offered by consuming Pounds of Horse Milk",
-            "The fact that I haven't even begun to exhaust the poetry he recited for me.",
-            "How Crumbit sleeps in a foot locker by the princes bed in case he is needed at night."
-        ],
-        "responses": [
-            {
-                "speaker": "Chessa",
-                "portrait": "chessa_angry",
-                "message": "I can think of nothing I wish to hear of less. Though I suppose that belies his choosing that for you. Trying to chase you away, it would seem. The man I met was deeper than the vastest of oceans."
-            },
-            {
-                "speaker": "Chessa",
-                "portrait": "chessa_default",
-                "message": "I suppose I can understand the worth in such information, but really Rhae? Horse Milk? Where is the romance in [i]that?[/i] The man I met was deeper than the vastest of oceans."
-            },
-            {
-                "speaker": "Chessa",
-                "portrait": "chessa_blush",
-                "message": "Now you are speaking my language... the poetic language of love! The first time I read Mouser's \"The Ratebury Tales,\" I immediately understood what it meant to [i]truly [b]feel[/b][/i]. The depth to the piece was so immense that I felt as if I could drown."
-            },
-            {
-                "speaker": "Chessa",
-                "portrait": "chessa_default",
-                "message": "He told you a shocking amount about his butler... I feel sorry for you Rhae. In our date, he told me tales that made me fall for him immediately. My Gog was deeper than the vastest ocean."
-            }
-        ],
-        "updates": [
-            null,
-            null,
-            {
-                "princess": "Chessa",
-                "category": "Trivia"
-            },
-            null
-        ]
-    },
-    {
-        "speaker": "Wilhelmina",
-        "portrait": "wilhelmina_angry",
-        "message": "Hah Chessa dear, do you not think that a bit melodramatic? Nothing wrong with a man of intellect, of course, but really when it comes to finding a suitor there is nothing more important than [i]pedigree.[/i]"
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_angry",
-        "message": "How right you are Wilhelmina. And nothing says pedigree like:",
-        "prompts": [
-            "Jerome getting stuck in his throat due to an \"Unwieldy Tail Bone\"",
-            "The fact that Horse Milk is far more viscous than other milks.",
-            "Starting most of his poems with \"there once was a man from Mucktucket...\"",
-            "I swear he would call him “Crumpet” sometimes..."
-        ],
-        "responses": [
-            {
-                "speaker": "Wilhelmina",
-                "portrait": "wilhelmina_angry",
-                "message": "Love... you sound famished, maybe have a biscuit with some of that tea, and take a lap. I'm more interested in his upbringing and making sure his background meets my needs."
-            },
-            {
-                "speaker": "Wilhelmina",
-                "portrait": "wilhelmina_blush",
-                "message": "Yes see! This is what I love. A man with a strong upbringing. It takes a strong family to know the importance of a horse centric childhood, his mother clearly raised him well. I too was raised in such a way and in my schooling days I was the pride of the chariot team."
-            },
-            {
-                "speaker": "Wilhelmina",
-                "portrait": "wilhelmina_angry",
-                "message": "Rhae, I finished schooling and never looked back, no need for poetry and philosophy. I'm more interested in his upbringing and making sure his background meets my needs."
-            },
-            {
-                "speaker": "Wilhelmina",
-                "portrait": "wilhelmina_default",
-                "message": "Rhae, having an attendant is important for [i]any[/i] member of the royalty, little though I care for... Crambot? I want to know more about the prince's upbringing, and making sure his background meets my needs."
-            }
-        ],
-        "updates": [
-            null,
-            {
-                "princess": "Wilhelmina",
-                "category": "Trivia"
-            },
-            null,
-            null
-        ]
-    },
-    {
-        "speaker": "Sienna",
-        "portrait": "sienna_default",
-        "message": "That's a fancy way of saying she's in it for money and clout."
-    },
-    {
-        "speaker": "Wilhelmina",
-        "portrait": "wilhelmina_default",
-        "message": "..."
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_default",
-        "message": "Well ladies this has been truly enlightening. Sounds as though our next round of dates is this weekend."
-    },
-    {
-        "speaker": "Rhae",
-        "portrait": "princess_default",
-        "message": "Same time next week for tea?"
-    }
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_default",
+		"message": "Soooo Ladies, do tell, how was your date with the Prince?"
+	},
+	{
+		"speaker": "Chessa",
+		"portrait": "chessa_blush",
+		"message": "I thought it went wonderfully - he is a man of many layers and I like that."
+	},
+	{
+		"speaker": "Sienna",
+		"portrait": "sienna_blush",
+		"message": "Yes - he has a certain strength to him that I find endearing."
+	},
+	{
+		"speaker": "Wilhelmina",
+		"portrait": "wilhelmina_blush",
+		"message": "Indeed, every part of him embodies what it means to be royalty."
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_confused",
+		"message": "Goodness, I must say; I wasn't expecting such... [i]enthusiasm.[/i]"
+	},
+	{
+		"speaker": "Sienna",
+		"portrait": "sienna_default",
+		"message": "How could we not be excited? He is a prince you know..."
+	},
+	{
+		"speaker": "Sienna",
+		"portrait": "sienna_default",
+		"message": "...and a mighty powerful one at that!"
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_angry",
+		"message": "Powerful, huh?"
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_default",
+		"message": "[i](Maybe I can use this to my advantage... it's time to play matchmaker)"
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_default",
+		"message": "I suppose I get where you are coming from... On our date today he did tell me about:",
+		"prompts": [
+			"The time he ate all of his siblings.",
+			"His obsessive belief in the powers of Horse Milk.",
+			"The tomes of poetry he has written through the years.",
+			"His attendant, Crumbit."
+		],
+		"responses": [
+			{
+				"speaker": "Sienna",
+				"portrait": "sienna_blush",
+				"message": "Oh ho that rascal he most certainly did not! See, that's what I love about him. I have always thought that every loving relationship should be a power struggle. If you aren't vying to be on top what's the point?"
+			},
+			{
+				"speaker": "Sienna",
+				"portrait": "sienna_angry",
+				"message": "Horse milk? No offense Rhae I fear he might have been telling you these things to protect you from his true self. The Gog I know is a much stronger, fiercer man."
+			},
+			{
+				"speaker": "Sienna",
+				"portrait": "sienna_angry",
+				"message": "Surely you jest? You must have misunderstood him, you should really take this more seriously Rhae. The Gog I know is a much stronger, fiercer man."
+			},
+			{
+				"speaker": "Sienna",
+				"portrait": "sienna_default",
+				"message": "He talked to you about his attendant? Hahaha look out Rhae I fear our prince might be trying to set you up! He probably can tell you lack the strength and cut throat nature to run a country."
+			}
+		],
+		"updates": [
+			{
+				"princess": "Sienna",
+				"category": "Trivia"
+			},
+			null,
+			null,
+			null
+		]
+	},
+	{
+		"speaker": "Chessa",
+		"portrait": "chessa_default",
+		"message": "My, my Sienna how very... expected of you. Domineering as ever. I fear your missing so much of our dear Gog though. He has a mystifying depth when you actually bother to look."
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_eyebags",
+		"message": "[i](Depth? She can't be serious... the man is shallower than the pool he spawned from!)[/i]"
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_default",
+		"message": "Oh, Chessa love, how right you are. You'd love to hear about:",
+		"prompts": [
+			"All the in-depth details of his fratricidal vorescapades. I know all the names... and textures...",
+			"The never-ending list of health benefits offered by consuming Pounds of Horse Milk",
+			"The fact that I haven't even begun to exhaust the poetry he recited for me.",
+			"How Crumbit sleeps in a foot locker by the princes bed in case he is needed at night."
+		],
+		"responses": [
+			{
+				"speaker": "Chessa",
+				"portrait": "chessa_angry",
+				"message": "I can think of nothing I wish to hear of less. Though I suppose that belies his choosing that for you. Trying to chase you away, it would seem. The man I met was deeper than the vastest of oceans."
+			},
+			{
+				"speaker": "Chessa",
+				"portrait": "chessa_default",
+				"message": "I suppose I can understand the worth in such information, but really Rhae? Horse Milk? Where is the romance in [i]that?[/i] The man I met was deeper than the vastest of oceans."
+			},
+			{
+				"speaker": "Chessa",
+				"portrait": "chessa_blush",
+				"message": "Now you are speaking my language... the poetic language of love! The first time I read Mouser's \"The Ratebury Tales,\" I immediately understood what it meant to [i]truly [b]feel[/b][/i]. The depth to the piece was so immense that I felt as if I could drown."
+			},
+			{
+				"speaker": "Chessa",
+				"portrait": "chessa_default",
+				"message": "He told you a shocking amount about his butler... I feel sorry for you Rhae. In our date, he told me tales that made me fall for him immediately. My Gog was deeper than the vastest ocean."
+			}
+		],
+		"updates": [
+			null,
+			null,
+			{
+				"princess": "Chessa",
+				"category": "Trivia"
+			},
+			null
+		]
+	},
+	{
+		"speaker": "Wilhelmina",
+		"portrait": "wilhelmina_angry",
+		"message": "Hah Chessa dear, do you not think that a bit melodramatic? Nothing wrong with a man of intellect, of course, but really when it comes to finding a suitor there is nothing more important than [i]pedigree.[/i]"
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_angry",
+		"message": "How right you are Wilhelmina. And nothing says pedigree like:",
+		"prompts": [
+			"Jerome getting stuck in his throat due to an \"Unwieldy Tail Bone\"",
+			"The fact that Horse Milk is far more viscous than other milks.",
+			"Starting most of his poems with \"there once was a man from Mucktucket...\"",
+			"I swear he would call him “Crumpet” sometimes..."
+		],
+		"responses": [
+			{
+				"speaker": "Wilhelmina",
+				"portrait": "wilhelmina_angry",
+				"message": "Love... you sound famished, maybe have a biscuit with some of that tea, and take a lap. I'm more interested in his upbringing and making sure his background meets my needs."
+			},
+			{
+				"speaker": "Wilhelmina",
+				"portrait": "wilhelmina_blush",
+				"message": "Yes see! This is what I love. A man with a strong upbringing. It takes a strong family to know the importance of a horse centric childhood, his mother clearly raised him well. I too was raised in such a way and in my schooling days I was the pride of the chariot team."
+			},
+			{
+				"speaker": "Wilhelmina",
+				"portrait": "wilhelmina_angry",
+				"message": "Rhae, I finished schooling and never looked back, no need for poetry and philosophy. I'm more interested in his upbringing and making sure his background meets my needs."
+			},
+			{
+				"speaker": "Wilhelmina",
+				"portrait": "wilhelmina_default",
+				"message": "Rhae, having an attendant is important for [i]any[/i] member of the royalty, little though I care for... Crambot? I want to know more about the prince's upbringing, and making sure his background meets my needs."
+			}
+		],
+		"updates": [
+			null,
+			{
+				"princess": "Wilhelmina",
+				"category": "Trivia"
+			},
+			null,
+			null
+		]
+	},
+	{
+		"speaker": "Sienna",
+		"portrait": "sienna_default",
+		"message": "That's a fancy way of saying she's in it for money and clout."
+	},
+	{
+		"speaker": "Wilhelmina",
+		"portrait": "wilhelmina_default",
+		"message": "..."
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_default",
+		"message": "Well ladies this has been truly enlightening. Sounds as though our next round of dates is this weekend."
+	},
+	{
+		"speaker": "Rhae",
+		"portrait": "princess_default",
+		"message": "Same time next week for tea?"
+	}
 ]

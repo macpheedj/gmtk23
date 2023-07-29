@@ -1,57 +1,57 @@
 [
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_default",
-        "message": "...and so as I was saying, I was the first of my siblings to grow legs therefore becoming a froglet don't you know. [i]RIBBIT[/i]"
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_default",
-        "message": "And wouldn't you have it I began to feel a mighty hunger come on, and poor Jerome and the others were looking awfully..."
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_angry",
-        "message": "[i]CROAK[/i]"
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_default",
-        "message": "...scrumptious."
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_blush",
-        "message": "I popped him in my mouth and he actually tasted quite delightful, and Bob's your uncle there I was gorging myself upon my brothers and sisters."
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_default",
-        "message": "By the time our attendant Crumbit had gotten back to our nursing pond I was downing little Marjorie and poof, I was an only child ha ha ha. [i]CROAK[/i]"
-    },
-    {
-        "speaker": "narrator",
-        "portrait": null,
-        "message": "[i]Prince Gog hands you a small wooden toy.[/i]"
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_default",
-        "message": "For you! A fine companion to remember me by! Ghak har ha!"
-    },
-    {
-        "speaker": "narrator",
-        "portrait": null,
-        "message": "[i]The soldier's worn limbs clank limply in your hand. Half concealed under decades of grime, you feel the outline of a sentence on it's back. \"Proud property of Jerome.\" It gives you a pleading look through cracked painted eyes.[/i]"
-    },
-    {
-        "speaker": "Prince Gog",
-        "portrait": "gog_default",
-        "message": "So Lord Robert Allenby tells me that your people don't necessarily engage in that sort of fratricide but my dear you look as though you could eat any number of your... kind?"
-    },
-    {
-        "speaker": "narrator",
-        "portrait": null,
-        "message": "[i]You ponder the best method to dispose of this wretched gift on your way back to the castle with Prince Gog.[/i]"
-    }
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_default",
+		"message": "...and so as I was saying, I was the first of my siblings to grow legs therefore becoming a froglet don't you know. [i]RIBBIT[/i]"
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_default",
+		"message": "And wouldn't you have it I began to feel a mighty hunger come on, and poor Jerome and the others were looking awfully..."
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_angry",
+		"message": "[i]CROAK[/i]"
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_default",
+		"message": "...scrumptious."
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_blush",
+		"message": "I popped him in my mouth and he actually tasted quite delightful, and Bob's your uncle there I was gorging myself upon my brothers and sisters."
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_default",
+		"message": "By the time our attendant Crumbit had gotten back to our nursing pond I was downing little Marjorie and poof, I was an only child ha ha ha. [i]CROAK[/i]"
+	},
+	{
+		"speaker": "narrator",
+		"portrait": null,
+		"message": "[i]Prince Gog hands you a small wooden toy.[/i]"
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_default",
+		"message": "For you! A fine companion to remember me by! Ghak har ha!"
+	},
+	{
+		"speaker": "narrator",
+		"portrait": null,
+		"message": "[i]The soldier's worn limbs clank limply in your hand. Half concealed under decades of grime, you feel the outline of a sentence on it's back. \"Proud property of Jerome.\" It gives you a pleading look through cracked painted eyes.[/i]"
+	},
+	{
+		"speaker": "Prince Gog",
+		"portrait": "gog_default",
+		"message": "So Lord Robert Allenby tells me that your people don't necessarily engage in that sort of fratricide but my dear you look as though you could eat any number of your... kind?"
+	},
+	{
+		"speaker": "narrator",
+		"portrait": null,
+		"message": "[i]You ponder the best method to dispose of this wretched gift on your way back to the castle with Prince Gog.[/i]"
+	}
 ]
