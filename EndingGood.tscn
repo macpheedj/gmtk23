@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://bocqlgoy75g4k"]
 
-[ext_resource type="Texture2D" uid="uid://cmkhqr1h41nci" path="res://Assets/summer_meadow_solid_image.png" id="1_oerhw"]
 [ext_resource type="Script" path="res://EndingGood.gd" id="1_rmxmp"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="2_r6bri"]
+[ext_resource type="Texture2D" uid="uid://bm0im8gc2drrp" path="res://Assets/MeadowBG.png" id="2_sradv"]
 [ext_resource type="AudioStream" uid="uid://pixmtglky80f" path="res://Assets/ending_good.mp3" id="4_mow4f"]
 
 [sub_resource type="Animation" id="Animation_8cqcj"]
@@ -50,12 +50,12 @@ script = ExtResource("1_rmxmp")
 
 [node name="SummerMeadowSolidImage" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
-scale = Vector2(6, 6)
-texture = ExtResource("1_oerhw")
+texture = ExtResource("2_sradv")
 
 [node name="Conversation" parent="." instance=ExtResource("2_r6bri")]
 
 [node name="Fade" type="ColorRect" parent="."]
+visible = false
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0, 0, 0, 1)
