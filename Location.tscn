@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://cmkhqr1h41nci" path="res://Assets/summer_meadow_solid_image.png" id="8_v0uek"]
 [ext_resource type="Texture2D" uid="uid://bdossjbsnu20m" path="res://Assets/StableText.png" id="10_783p7"]
 [ext_resource type="Texture2D" uid="uid://bh6g2rhqn16r3" path="res://Assets/CastleText.png" id="10_qcnpk"]
+[ext_resource type="Texture2D" uid="uid://r45sttpptfll" path="res://Assets/locationBG.png" id="12_odalb"]
 [ext_resource type="AudioStream" uid="uid://dbumt5gxgymp6" path="res://Assets/Dossier Select.wav" id="12_yea1u"]
-[ext_resource type="Texture2D" uid="uid://cyrn3ed6axd3x" path="res://Assets/TextBox.png" id="13_m5boe"]
 [ext_resource type="FontFile" uid="uid://b1jqa6td5gjao" path="res://Assets/PressStart2P-Regular.ttf" id="13_y11yo"]
 [ext_resource type="Texture2D" uid="uid://dfnla232atf2f" path="res://Assets/Check Dossier Button.png" id="15_6nbek"]
 [ext_resource type="PackedScene" uid="uid://ddmae0xvbhevp" path="res://Dossier.tscn" id="15_g44ma"]
@@ -209,7 +209,7 @@ offset_left = 341.0
 offset_top = 711.0
 offset_right = 1491.0
 offset_bottom = 961.0
-texture = ExtResource("13_m5boe")
+texture = ExtResource("12_odalb")
 
 [node name="TextPrompt" type="RichTextLabel" parent="."]
 layout_mode = 0

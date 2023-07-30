@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="2_fqjxx"]
 [ext_resource type="PackedScene" uid="uid://b6wj8m8jdv7ks" path="res://conversation.tscn" id="3_kolvh"]
 [ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="4_6qvfq"]
-[ext_resource type="PackedScene" path="res://PauseMenu.tscn" id="5_76vwh"]
+[ext_resource type="PackedScene" uid="uid://7njven2nclbo" path="res://PauseMenu.tscn" id="5_76vwh"]
 
 [sub_resource type="Animation" id="Animation_foixl"]
 resource_name = "FadeIn"
