@@ -6,6 +6,9 @@
 
 ## Changelog
 
+v1.3
+	-added controller support
+
 - v1.21
 	-instatiated pause menu within each scene correctly. Now easier to edit pause menu & dossier.
 
