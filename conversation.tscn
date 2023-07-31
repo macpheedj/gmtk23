@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6wj8m8jdv7ks"]
+[gd_scene load_steps=5 format=3 uid="uid://b6wj8m8jdv7ks"]
 
 [ext_resource type="Script" path="res://conversation.gd" id="1_mfhgd"]
+[ext_resource type="Texture2D" uid="uid://dj62k1437wo6v" path="res://Assets/promptlength3.png" id="2_7cgjb"]
+[ext_resource type="Texture2D" uid="uid://8jqx3uhucmv" path="res://Assets/PromptLength1.png" id="2_hpnrj"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="2_ko8ud"]
 
 [node name="Conversation" type="Node2D"]
@@ -109,10 +111,15 @@ offset_right = 1460.0
 offset_bottom = 150.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(500, 37)
 focus_neighbor_bottom = NodePath("../Prompt2")
 focus_next = NodePath(".")
 theme_override_font_sizes/font_size = 36
 disabled = true
+text = "testytestytestytestytestytestytestytestytestytestytestytestytestytestytesty"
+icon = ExtResource("2_7cgjb")
+flat = true
+icon_alignment = 1
 
 [node name="Prompt2" type="Button" parent="."]
 visible = false
@@ -128,12 +135,16 @@ offset_right = 1460.0
 offset_bottom = 275.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(500, 37)
 focus_neighbor_top = NodePath("../Prompt1")
 focus_neighbor_bottom = NodePath("../Prompt3")
 focus_next = NodePath("../Prompt3")
 focus_previous = NodePath("../Prompt1")
 theme_override_font_sizes/font_size = 36
 disabled = true
+icon = ExtResource("2_hpnrj")
+flat = true
+icon_alignment = 1
 
 [node name="Prompt3" type="Button" parent="."]
 visible = false
@@ -149,12 +160,16 @@ offset_right = 1460.0
 offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(500, 37)
 focus_neighbor_top = NodePath("../Prompt2")
 focus_neighbor_bottom = NodePath("../Prompt4")
 focus_next = NodePath("../Prompt4")
 focus_previous = NodePath("../Prompt2")
 theme_override_font_sizes/font_size = 36
 disabled = true
+icon = ExtResource("2_hpnrj")
+flat = true
+icon_alignment = 1
 
 [node name="Prompt4" type="Button" parent="."]
 visible = false
@@ -169,10 +184,14 @@ offset_right = 1460.0
 offset_bottom = 525.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(500, 37)
 focus_neighbor_top = NodePath("../Prompt3")
 focus_previous = NodePath("../Prompt3")
 theme_override_font_sizes/font_size = 36
 disabled = true
+icon = ExtResource("2_hpnrj")
+flat = true
+icon_alignment = 1
 
 [node name="Boop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ko8ud")
