@@ -16,7 +16,6 @@ var previousSpeaker = null
 var previousSpeakerSide = null
 var usecontroller = false
 
-
 func setup(json):
 	dialogues = json
 	countSpeakers()
@@ -117,6 +116,23 @@ func displayPrompt(prompts):
 	$Prompt2.text = prompts[1]
 	$Prompt3.text = prompts[2]
 	$Prompt4.text = prompts[3]
+	
+	#Re-sizing prompt texture to fit different sizes of text. Real god level coding right here.
+	for x in prompts.size():
+		var promptnum = get_node("Prompt" + str(x+1))
+		if prompts[x].length() < 55: 
+			promptnum.icon = load("res://Assets/PromptLength1.png")
+		if prompts[x].length() >= 55: 
+			promptnum.icon = load("res://Assets/promptlength2.png")
+		if prompts[x].length() >= 65: 
+			promptnum.icon = load("res://Assets/promptlength3.png")
+		if prompts[x].length() >= 75: 
+			promptnum.icon = load("res://Assets/promptlength4.png")
+		if prompts[x].length() >= 85: 
+			promptnum.icon = load("res://Assets/promptlength5.png")
+		if prompts[x].length() >= 95: 
+			promptnum.icon = load("res://Assets/promptlength6.png")
+
 	togglePrompts()
 	usecontroller = false
 
