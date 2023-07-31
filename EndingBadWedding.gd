@@ -28,8 +28,8 @@ func set_background():
 	var princess = State.get_target_princess().id
 	var princess_map = {
 		State.Princess.Chessa: {
-			background = "res://Assets/summer_meadow_solid_image.png",
-			scale = Vector2(6, 6),
+			background = "res://Assets/MeadowBG.png",
+			scale = Vector2(1, 1),
 		},
 		State.Princess.Sienna: {
 			background = "res://Assets/castle_background.png",
