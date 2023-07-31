@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://Location.gd" id="1_crnwd"]
 [ext_resource type="Texture2D" uid="uid://xpppda64m0me" path="res://Assets/Gog_tiled_BG.png" id="2_i7bmp"]
 [ext_resource type="Texture2D" uid="uid://begq5evsdyt3d" path="res://Assets/Meadow.png" id="2_x80yp"]
+[ext_resource type="Texture2D" uid="uid://bm0im8gc2drrp" path="res://Assets/MeadowBG.png" id="5_3b8tu"]
 [ext_resource type="Texture2D" uid="uid://ml5vcpw4mr7m" path="res://Assets/castle_background.png" id="5_8yrtu"]
 [ext_resource type="Texture2D" uid="uid://baalf0r2d5sd2" path="res://Assets/stable_background.png" id="6_5xak0"]
 [ext_resource type="AudioStream" uid="uid://2ktbmviy582b" path="res://Assets/MainThemeFinal.mp3" id="7_mnbfk"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="8_7065l"]
-[ext_resource type="Texture2D" uid="uid://cmkhqr1h41nci" path="res://Assets/summer_meadow_solid_image.png" id="8_v0uek"]
 [ext_resource type="Texture2D" uid="uid://bdossjbsnu20m" path="res://Assets/StableText.png" id="10_783p7"]
 [ext_resource type="Texture2D" uid="uid://bh6g2rhqn16r3" path="res://Assets/CastleText.png" id="10_qcnpk"]
 [ext_resource type="Texture2D" uid="uid://r45sttpptfll" path="res://Assets/locationBG.png" id="12_odalb"]
@@ -154,7 +154,7 @@ focus_neighbor_top = NodePath("../DossierButton")
 focus_neighbor_right = NodePath("../StableButton")
 focus_next = NodePath("../StableButton")
 focus_previous = NodePath("../BattlefieldButton")
-icon = ExtResource("8_v0uek")
+icon = ExtResource("5_3b8tu")
 expand_icon = true
 
 [node name="StableButton" type="Button" parent="."]
