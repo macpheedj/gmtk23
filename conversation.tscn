@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6wj8m8jdv7ks"]
+[gd_scene load_steps=6 format=3 uid="uid://b6wj8m8jdv7ks"]
 
 [ext_resource type="Script" path="res://conversation.gd" id="1_mfhgd"]
 [ext_resource type="Texture2D" uid="uid://dj62k1437wo6v" path="res://Assets/promptlength3.png" id="2_7cgjb"]
 [ext_resource type="Texture2D" uid="uid://8jqx3uhucmv" path="res://Assets/PromptLength1.png" id="2_hpnrj"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="2_ko8ud"]
+[ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="5_2na68"]
 
 [node name="Conversation" type="Node2D"]
 script = ExtResource("1_mfhgd")
@@ -195,6 +196,14 @@ icon_alignment = 1
 
 [node name="Boop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_ko8ud")
+
+[node name="Pause Prompt" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.588235)
+offset_left = 1615.0
+offset_top = 12.0
+offset_right = 1835.0
+offset_bottom = 92.0
+texture = ExtResource("5_2na68")
 
 [connection signal="timeout" from="TypeTimer" to="." method="_on_type_timer_timeout"]
 [connection signal="pressed" from="Prompt1" to="." method="_on_prompt_1_pressed"]

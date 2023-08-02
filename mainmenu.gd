@@ -1,7 +1,8 @@
 extends Control
 
 #false = mouse/keyboard. true = controller
-var usecontroller = false 
+var usecontroller = false
+
 
 func _ready():
 	$FadeIn.play("Fade_In")
@@ -29,6 +30,8 @@ func _on_play_pressed():
 	var frogset = FileAccess.open("user://frogdossier.txt", FileAccess.WRITE)
 	var frogsettext = "Enter notes about Gog here."
 	frogset.store_string(frogsettext)
+	
+	State.activecontroller = false
 	
 	$SelectUIAudio.play()
 	$FadeOut.play("Fade_Out")

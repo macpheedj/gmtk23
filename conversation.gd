@@ -87,7 +87,7 @@ func displayNextMessage(overrideDialogue):
 	if $TypeTimer.is_stopped():
 		$TypeTimer.start()
 
-	if dialogue.speaker == "narrator":
+	if dialogue.speaker == "narrator": 
 		narrate(dialogue.message)
 		return
 
@@ -164,6 +164,18 @@ func _process(_delta):
 	if Input.is_action_just_pressed("menu_focus") && usecontroller == false && $Prompt1.visible == true :
 		$Prompt1.grab_focus()
 		usecontroller = true
+		
+	if Input.is_action_just_pressed("controller_detect") && State.activecontroller == false :
+		State.activecontroller = true
+		
+	if Input.is_action_just_pressed("keyboard_mouse_detect") && State.activecontroller == true :
+		State.activecontroller = false
+		
+	if State.activecontroller == true :
+		$"Pause Prompt".texture = load("res://Assets/Pause Start Prompt.png")
+
+	if State.activecontroller == false :
+		$"Pause Prompt".texture = load("res://Assets/Pause Prompt.png")
 
 
 func _on_type_timer_timeout():
