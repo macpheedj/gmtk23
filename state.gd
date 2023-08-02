@@ -25,6 +25,8 @@ var princess_states: Dictionary = {
 
 var target_princess: Princess
 
+var activecontroller
+
 func get_state():
 	return princess_states
 
