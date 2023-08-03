@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6wj8m8jdv7ks"]
+[gd_scene load_steps=9 format=3 uid="uid://b6wj8m8jdv7ks"]
 
 [ext_resource type="Script" path="res://conversation.gd" id="1_mfhgd"]
 [ext_resource type="Texture2D" uid="uid://dj62k1437wo6v" path="res://Assets/promptlength3.png" id="2_7cgjb"]
 [ext_resource type="Texture2D" uid="uid://8jqx3uhucmv" path="res://Assets/PromptLength1.png" id="2_hpnrj"]
 [ext_resource type="AudioStream" uid="uid://bte7sxjd6b4nq" path="res://Assets/Menu Select.wav" id="2_ko8ud"]
+[ext_resource type="Texture2D" uid="uid://cpb8mlrfim2et" path="res://Assets/SpeechBG.png" id="2_uvdrx"]
+[ext_resource type="Texture2D" uid="uid://bb7qmtnng5jrm" path="res://Assets/SpeakerBG.png" id="3_lhqqs"]
 [ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="5_2na68"]
+
+[sub_resource type="Theme" id="Theme_jj08p"]
+Fonts/fonts/Test = null
 
 [node name="Conversation" type="Node2D"]
 script = ExtResource("1_mfhgd")
@@ -20,22 +25,21 @@ offset_left = 98.0
 offset_top = 678.0
 offset_right = 1822.0
 offset_bottom = 982.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 metadata/_edit_group_ = true
 
-[node name="BG" type="ColorRect" parent="Speech"]
+[node name="BG" type="TextureRect" parent="Speech"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 1722.0
-offset_bottom = 302.0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_uvdrx")
 
 [node name="Text" type="RichTextLabel" parent="Speech/BG"]
-layout_mode = 0
-offset_left = 100.0
-offset_top = 50.0
-offset_right = 1620.0
-offset_bottom = 250.0
+offset_left = 102.0
+offset_top = 52.0
+offset_right = 1622.0
+offset_bottom = 252.0
+theme = SubResource("Theme_jj08p")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 36
 theme_override_font_sizes/bold_font_size = 36
@@ -49,24 +53,24 @@ visible_ratio = 0.0
 
 [node name="SpeakerR" type="ColorRect" parent="."]
 visible = false
-offset_left = 1318.0
+offset_left = 1322.0
 offset_top = 648.0
-offset_right = 1722.0
+offset_right = 1726.0
 offset_bottom = 702.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 metadata/_edit_group_ = true
 
-[node name="BG" type="ColorRect" parent="SpeakerR"]
+[node name="BG" type="TextureRect" parent="SpeakerR"]
 layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_lhqqs")
+
+[node name="Name" type="RichTextLabel" parent="SpeakerR/BG"]
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 402.0
-offset_bottom = 52.0
-
-[node name="Name" type="RichTextLabel" parent="SpeakerR/BG"]
-layout_mode = 0
-offset_right = 400.0
-offset_bottom = 53.0
+offset_bottom = 55.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
@@ -77,20 +81,21 @@ offset_left = 198.0
 offset_top = 648.0
 offset_right = 602.0
 offset_bottom = 702.0
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 metadata/_edit_group_ = true
 
-[node name="BG" type="ColorRect" parent="SpeakerL"]
+[node name="BG" type="TextureRect" parent="SpeakerL"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_lhqqs")
+
+[node name="Name" type="RichTextLabel" parent="SpeakerL/BG"]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 402.0
-offset_bottom = 52.0
-
-[node name="Name" type="RichTextLabel" parent="SpeakerL/BG"]
-layout_mode = 0
-offset_right = 400.0
-offset_bottom = 53.0
+offset_bottom = 55.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 36
 bbcode_enabled = true
