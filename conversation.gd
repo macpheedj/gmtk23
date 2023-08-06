@@ -133,7 +133,7 @@ func displayPrompt(prompts):
 			promptnum.icon = load("res://Assets/promptlength4.png")
 		if prompts[x].length() >= 85: 
 			promptnum.icon = load("res://Assets/promptlength5.png")
-		if prompts[x].length() >= 95: 
+		if prompts[x].length() >= 100: 
 			promptnum.icon = load("res://Assets/promptlength6.png")
 
 	togglePrompts()
