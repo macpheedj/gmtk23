@@ -16,6 +16,9 @@ var previousSpeaker = null
 var previousSpeakerSide = null
 var usecontroller = false
 
+func _ready():
+	$EOMPromptFloat.play("EOM_Float")
+
 func setup(json):
 	dialogues = json
 	countSpeakers()
@@ -158,6 +161,7 @@ func _process(_delta):
 	if not awaitingPrompt and Input.is_action_just_pressed("text_advance"):
 		if isFinishedTyping():
 			advanceMessage()
+			$EndOfMessagePrompt.visible = false
 		else:
 			$Speech/BG/Text.visible_characters = $Speech/BG/Text.text.length()
 			
@@ -183,6 +187,7 @@ func _on_type_timer_timeout():
 		$Speech/BG/Text.visible_characters += 1
 	else:
 		$TypeTimer.stop()
+		$EndOfMessagePrompt.visible = true
 		if dialogues[dialogueIndex].has("prompts") and shownPrompts.find(dialogueIndex) == -1:
 			awaitingPrompt = true
 			displayPrompt(dialogues[dialogueIndex].prompts)

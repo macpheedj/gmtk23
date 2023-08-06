@@ -10,7 +10,7 @@ func _ready():
 	var content = file.get_as_text()
 	var error = json.parse(content)
 	$PauseMenu/PauseMenuBG.visible = false 
-
+ 
 	if error == OK:
 		dialogues = json.data
 		$Conversation.end.connect(_on_conversation_end)
