@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6wj8m8jdv7ks"]
+[gd_scene load_steps=13 format=3 uid="uid://b6wj8m8jdv7ks"]
 
 [ext_resource type="Script" path="res://conversation.gd" id="1_mfhgd"]
 [ext_resource type="Texture2D" uid="uid://dj62k1437wo6v" path="res://Assets/promptlength3.png" id="2_7cgjb"]
@@ -7,9 +7,35 @@
 [ext_resource type="Texture2D" uid="uid://cpb8mlrfim2et" path="res://Assets/SpeechBG.png" id="2_uvdrx"]
 [ext_resource type="Texture2D" uid="uid://bb7qmtnng5jrm" path="res://Assets/SpeakerBG.png" id="3_lhqqs"]
 [ext_resource type="Texture2D" uid="uid://bje6b1mp3u2af" path="res://Assets/Pause Prompt.png" id="5_2na68"]
+[ext_resource type="Texture2D" uid="uid://f8ump2b2o8ty" path="res://Assets/EOM_Prompt.png" id="8_sduyi"]
 
 [sub_resource type="Theme" id="Theme_jj08p"]
 Fonts/fonts/Test = null
+
+[sub_resource type="Animation" id="Animation_mvdyi"]
+resource_name = "EOMPrompt_Float"
+
+[sub_resource type="Animation" id="Animation_s6hwf"]
+resource_name = "EOM_Float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EndOfMessagePrompt:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1750, 925), Vector2(1750, 923), Vector2(1750, 925)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5u7ry"]
+_data = {
+"EOMPrompt_Float": SubResource("Animation_mvdyi"),
+"EOM_Float": SubResource("Animation_s6hwf")
+}
 
 [node name="Conversation" type="Node2D"]
 script = ExtResource("1_mfhgd")
@@ -35,6 +61,7 @@ offset_bottom = 40.0
 texture = ExtResource("2_uvdrx")
 
 [node name="Text" type="RichTextLabel" parent="Speech/BG"]
+layout_mode = 0
 offset_left = 102.0
 offset_top = 52.0
 offset_right = 1622.0
@@ -67,6 +94,7 @@ offset_bottom = 40.0
 texture = ExtResource("3_lhqqs")
 
 [node name="Name" type="RichTextLabel" parent="SpeakerR/BG"]
+layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 402.0
@@ -210,8 +238,23 @@ offset_right = 1835.0
 offset_bottom = 92.0
 texture = ExtResource("5_2na68")
 
+[node name="EndOfMessagePrompt" type="TextureRect" parent="."]
+visible = false
+offset_left = 1750.0
+offset_top = 925.0
+offset_right = 1774.0
+offset_bottom = 949.0
+texture = ExtResource("8_sduyi")
+expand_mode = 1
+
+[node name="EOMPromptFloat" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5u7ry")
+}
+
 [connection signal="timeout" from="TypeTimer" to="." method="_on_type_timer_timeout"]
 [connection signal="pressed" from="Prompt1" to="." method="_on_prompt_1_pressed"]
 [connection signal="pressed" from="Prompt2" to="." method="_on_prompt_2_pressed"]
 [connection signal="pressed" from="Prompt3" to="." method="_on_prompt_3_pressed"]
 [connection signal="pressed" from="Prompt4" to="." method="_on_prompt_4_pressed"]
+[connection signal="animation_finished" from="EOMPromptFloat" to="." method="_on_eom_prompt_float_animation_finished"]
