@@ -9,7 +9,7 @@ func _ready():
 	var file = FileAccess.open("res://Dialogue/gossip_phase_1.json", FileAccess.READ)
 	var content = file.get_as_text()
 	var error = json.parse(content)
-	$PauseMenu/PauseMenuBG.visible = false 
+	$PauseMenu/PauseMenuBG.visible = false
  
 	if error == OK:
 		dialogues = json.data
